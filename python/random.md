@@ -12,16 +12,20 @@
 * `some_string.lower()` to convert to lowercase
 * `ord('a')` to get the `int` value of a character
 * `chr(some_int_value)` to get the character for an `int` value
-* `zip`
+* `zip(iterable1, iterable2)`
   * Takes two iterables of equal size (other functions to deal with unequal size
     cases) and combines the first element of the first iterable with the first
     element of the second iterable, and so on, to produce an iterable of tuples
   * `zip([1, 2, 3, 4], [4, 3, 2, 1])` would output `[ (1, 4), (2, 3), (3, 2), (4, 1) ]`
 * `lambda` is just a way to create an anonymous function
   * `lambda x: x * x` is an anonymous function that produces the square of an input
-* `map`
+* `map(function, iterable)`
   * Takes a function and an iterable, and applies the function to each element
     of the iterable
   * `map(lambda x: x * x, [1, 2, 3])` would apply the square lambda function to
     each element in the list `[1, 2, 3]` outputting a `map` object with the
     elements `[1, 4, 9]`
+* `enumerate(iterable)`
+  * Takes an iterable and returns another iterable with the index and value of
+    the first iterable
+  * `enumerate(['a', 'b', 'c'])` returns `[(0, 'a'), (1, 'b'), (2, 'c')]`
