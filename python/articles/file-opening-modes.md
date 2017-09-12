@@ -1,4 +1,4 @@
-[# The Different Modes for Opening Files](https://stackoverflow.com/a/23566951/5225575)
+# [The Different Modes for Opening Files](https://stackoverflow.com/a/23566951/5225575)
 
 * `r`
   * Opens a file for reading only

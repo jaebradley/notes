@@ -1,4 +1,4 @@
-[# Publishing a Package on PyPi](https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/)
+# [Publishing a Package on PyPi](https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/)
 
 ## Directory Structure
 

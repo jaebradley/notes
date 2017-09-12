@@ -30,7 +30,6 @@
     the first iterable
   * `enumerate(['a', 'b', 'c'])` returns `[(0, 'a'), (1, 'b'), (2, 'c')]`
 * [Generate a relative file path](https://stackoverflow.com/a/32973383/5225575)
-  *
   ```python
   import os
 
