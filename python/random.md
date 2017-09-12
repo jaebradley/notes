@@ -29,3 +29,17 @@
   * Takes an iterable and returns another iterable with the index and value of
     the first iterable
   * `enumerate(['a', 'b', 'c'])` returns `[(0, 'a'), (1, 'b'), (2, 'c')]`
+* [Generate a relative file path](https://stackoverflow.com/a/32973383/5225575)
+  ```python
+  import os
+
+  current_directory = os.path.dirname(os.path.realpath('__file__'))
+
+  #For accessing the file in the parent folder of the current folder
+  filename = os.path.join(fileDir, '../same.txt')
+  ```
+* [`JSON`](http://stackabuse.com/reading-and-writing-json-to-a-file-in-python/)
+  * `dump` takes a Python object and writes it to the specified file (or file-like) object
+  * `dumps` takes a Python object and returns the `JSON` string
+  * `load` reads the `JSON` string from a file (or file-like) object and parses it into a Python `dict`
+  * `loads` allows you to pass in the `JSON` string itself
