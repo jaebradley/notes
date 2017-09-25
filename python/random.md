@@ -49,22 +49,22 @@
   ```python
   ''.join([character.upper() if character.islower() else character.lower() for character in s])
   ```
-  * String Validation
-    * `isalnum` - checks if all characters are alphanumeric (`a-z`, `A-Z`, `0-9`)
-    * `isalpha` - checks if all characters of a string are alphabetical (`a-z`, `A-Z`)
-    * `isdigit` - checks if all characters of a string are `0-9`
-    * `islower` - checks if all characters are lowercase characters (`a-z`)
-    * `isupper` - checks if all characters are uppercase characters (`A-Z`)
-  * String Alignment
-    * `ljust(width, fill_character)` - returns a left-aligned string of the given width with extra space taken up by the specified fill character
-    * `center(width, fill_character)` - like `ljust` but center-aligned
-    * `rjust(width, fill_character)` - like `ljust` but right-aligned
-  * `textwrap` module
-    * `wrap` - converts a string into a list of strings with a max length
-    ```python
-    import textwrap
-    string = "This is a very very very very very long string."
-    wrapped_values = textwrap.wrap(string, 8)
-    # wrapped_values => ['This is', 'a very', 'very', 'very', 'very', 'very', 'long', 'string.']
-    ```
-    * `fill` - takes the list returned by `wrap` and returns a string with each element of the list on a new line
+ * String Validation
+   * `isalnum` - checks if all characters are alphanumeric (`a-z`, `A-Z`, `0-9`)
+   * `isalpha` - checks if all characters of a string are alphabetical (`a-z`, `A-Z`)
+   * `isdigit` - checks if all characters of a string are `0-9`
+   * `islower` - checks if all characters are lowercase characters (`a-z`)
+   * `isupper` - checks if all characters are uppercase characters (`A-Z`)
+ * String Alignment
+   * `ljust(width, fill_character)` - returns a left-aligned string of the given width with extra space taken up by the specified fill character
+   * `center(width, fill_character)` - like `ljust` but center-aligned
+   * `rjust(width, fill_character)` - like `ljust` but right-aligned
+ * `textwrap` module
+   * `wrap` - converts a string into a list of strings with a max length
+   ```python
+   import textwrap
+   string = "This is a very very very very very long string."
+   wrapped_values = textwrap.wrap(string, 8)
+   # wrapped_values => ['This is', 'a very', 'very', 'very', 'very', 'very', 'long', 'string.']
+   ```
+   * `fill` - takes the list returned by `wrap` and returns a string with each element of the list on a new line
