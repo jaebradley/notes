@@ -69,7 +69,30 @@
   * The `g` means to globally replace on each line, or else it would only update the first match
 
 ## `print_number_sequence`
- * Print the numbers `1` to `100` separated by spaces
- * `seq -s ' ' 1 100`
- * `seq` prints a sequence of numbers
- * The `-s` splits the numbers by some string. `\n` is the default.
+  * Print the numbers `1` to `100` separated by spaces
+  * `seq -s ' ' 1 100`
+  * `seq` prints a sequence of numbers
+  * The `-s` splits the numbers by some string. `\n` is the default.
+
+## `replace_text_in_files`
+  * There are text files (`.txt` extension) that contain the phrase `challenges are difficult`. Delete this phrase recursively from all text files.
+  * `find . -name '*.txt' -exec sed -i 's/challenges are difficult//g' {} +`
+
+## `sum_all_numbers`
+  * The file `sum-me.txt` has a list of numbers, one per line. Print the sum of these numbers.
+  * `cat sum-me.txt | xargs | sed 's/ /+/g' | bc`
+  * Reads from file
+  * `xargs` takes the input and space-delimits the text
+  * `sed` replaces the space with `+`s
+  * `bc` executes the expression, which is a sum
+
+## `just_the_files`
+  * Print all files in the current directory recursively without the leading directory path
+  * `find . -type f | xargs -n 1 basename`
+  * Find all files
+  * `-n` splits the output with 1 item per line
+  * `basename` gets the basename of the file
+
+## `remove_extensions_from_files`
+  * Rename all files removing the extension from them in the current directory recursively.
+  * `find . -type f | while read f; do mv "$f" "${f%.*}"; done`
