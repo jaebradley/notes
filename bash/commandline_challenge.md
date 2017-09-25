@@ -28,3 +28,48 @@
 ## `search_for_files_containing_string`
   * Print all files in the current directory that contain the string `500`
   * `grep '500' * -l`
+
+## `search_for_files_by_extension`
+  * Print the relative file paths, one path per line for all filenames that start with `access.log` in the current directory
+  *  `find . -name 'access.log*'`
+
+## `search_for_string_in_files_recursive`
+  * Print all matching lines (without the filename or the file path) in all files under the current directory that start with `access.log` that contain the string `500`.
+  * `find . -name 'access.log*' | xargs grep -l '500'`
+
+## `extract_ip_addresses`
+  * Extract all IP addresses from files that start with `access.log` printing one IP address per line.
+  * `find . -name 'access.log*' | xargs grep -Eo '^[^ ]+'`
+
+## `delete_files`
+  * Delete all of the files in this challenge directory including all subdirectories and their contents
+  * `find -delete`
+
+## `count_files`
+  * Count the number of files in the current working directory. Print the number of files as a single integer.
+  * `ls -ap | grep -v / | wc -l`
+    * `-a` includes entries that start with a `.`
+    * `-p` prefaces folders with a `/`
+    * `-v` inverts the match - in this case, finding all values without a `/` (so excluding files)
+    * `wc -l` counts the lines in the previous output
+
+## `simple_sort`
+  * Print the contents of access.log sorted.
+  * `sort access.log`
+
+## `count_string_in_line`
+  * Print the number of lines in `access.log` that contain the string `GET`.
+  * `grep 'GET' access.log | wc -l`
+
+## `split_on_a_char`
+  * The file `split-me.txt` contains a list of numbers separated by a `;` character. Split the numbers on the `;` character, one number per line.
+  * `sed 's/;/\n/g' split-me.txt`
+  * `sed` is the `Stream EDitor` - most commonly used for text replacement
+  * The `s` stands for substitute
+  * The `g` means to globally replace on each line, or else it would only update the first match
+
+## `print_number_sequence`
+ * Print the numbers `1` to `100` separated by spaces
+ * `seq -s ' ' 1 100`
+ * `seq` prints a sequence of numbers
+ * The `-s` splits the numbers by some string. `\n` is the default.
