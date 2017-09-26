@@ -1,4 +1,4 @@
-# [Commandline Challenge](https://cmdchallenge.com)
+# Commandline Challenge
 
 
 ## `hello_world`
@@ -96,3 +96,12 @@
 ## `remove_extensions_from_files`
   * Rename all files removing the extension from them in the current directory recursively.
   * `find . -type f | while read f; do mv "$f" "${f%.*}"; done`
+
+## `print_nth_line`
+  * Print the `25`th line of the file `faces.txt`
+  * `head -n faces.txt | tail -n 1`
+
+## `reverse_readme`
+  * Print the lines of README in reverse line order
+  * `tac README`
+  * `tail -r README`
