@@ -55,8 +55,24 @@
 ### Plugins
 
 * [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
+  * `brew`
+  * `django`
+  * `encode64`
+  * `git`
+  * `httpie`
+  * `jira`
+  * `jsontools`
+  * `osx`
+  * `pip`
+  * `python`
+  * `sublime`
+  * `urltools`
+  * `vagrant`
+  * `web-search`
 * [`Speed Test by Ookla`](https://www.npmjs.com/package/speed-test)
 * [`Mac CLI`](https://github.com/guarinogabriel/mac-cli/?ref=producthunt)
+* [`nvm`](https://github.com/creationix/nvm)
+* [`http-status-identifier-cli`](https://github.com/jaebradley/http-status-identifier-cli)
 
 ## Other Useful Tools
 
@@ -65,6 +81,7 @@
 * [`Pocket`](https://getpocket.com/apps/desktop/)
 * [`Padbury Clock Screensaver`](http://padbury.me/clock/?ref=producthunt)
 * [`Flume`](http://blog.flumeapp.com/post/145212126271/introducing-flume-20-and-flume-pro?ref=producthunt)
+* [`Spotify`](https://www.spotify.com/us/download/other/)
 
 ### Chrome Extensions
 
@@ -75,3 +92,8 @@
 * [`Save to Pocket`](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?hl=en)
 * [`Sense`](https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=en)
 * [`GIPHY for Chrome`](https://chrome.google.com/webstore/detail/giphy-for-chrome/jlleokkdhkflpmghiioglgmnminbekdi?hl=en)
+
+### Plugins
+
+* [`uber-cli`](https://github.com/jaebradley/uber-cli)
+* [`getmethefuckthere`](https://github.com/jaebradley/getmethefuckthere)
