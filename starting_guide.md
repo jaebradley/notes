@@ -73,6 +73,11 @@
 * [`Mac CLI`](https://github.com/guarinogabriel/mac-cli/?ref=producthunt)
 * [`nvm`](https://github.com/creationix/nvm)
 * [`http-status-identifier-cli`](https://github.com/jaebradley/http-status-identifier-cli)
+* [`is-up-cli`](https://github.com/sindresorhus/is-up-cli)
+* [`yank`](https://github.com/mptre/yank)
+* [`peco`](https://github.com/peco/peco)
+* [`trash-cli`](https://github.com/sindresorhus/trash-cli)
+* [`empty-trash-cli`](https://github.com/sindresorhus/empty-trash-cli)
 
 ## Other Useful Tools
 
@@ -97,3 +102,5 @@
 
 * [`uber-cli`](https://github.com/jaebradley/uber-cli)
 * [`getmethefuckthere`](https://github.com/jaebradley/getmethefuckthere)
+* [`medium-cli`](https://github.com/djadmin/medium-cli)
+* [`wttr.in`](https://github.com/chubin/wttr.in)
