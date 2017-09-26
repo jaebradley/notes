@@ -15,6 +15,11 @@
 * [`Skitch`](https://itunes.apple.com/us/app/skitch-snap-mark-up-share/id425955336?mt=12)
 * [`Lacona`](https://www.lacona.io)
 * [`Flycut`](https://github.com/TermiT/Flycut)
+* [`RescueTime`](https://www.rescuetime.com/)
+* [`CheatSheet`](https://www.mediaatelier.com/CheatSheet/?ref=producthunt)
+* [`Franz`](http://meetfranz.com/?ref=producthunt)
+* [`Caffeine`](https://www.macupdate.com/app/mac/24120/caffeine/download?ref=producthunt)
+* [`Bartender 3`](https://www.macbartender.com/?ref=producthunt)
 
 ### Chrome Extensions
 
@@ -50,13 +55,16 @@
 ### Plugins
 
 * [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
-* [`Speed Test by Ookla`]
+* [`Speed Test by Ookla`](https://www.npmjs.com/package/speed-test)
+* [`Mac CLI`](https://github.com/guarinogabriel/mac-cli/?ref=producthunt)
 
 ## Other Useful Tools
 
 ### Applications
 
 * [`Pocket`](https://getpocket.com/apps/desktop/)
+* [`Padbury Clock Screensaver`](http://padbury.me/clock/?ref=producthunt)
+* [`Flume`](http://blog.flumeapp.com/post/145212126271/introducing-flume-20-and-flume-pro?ref=producthunt)
 
 ### Chrome Extensions
 
