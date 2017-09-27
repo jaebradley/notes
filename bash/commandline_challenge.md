@@ -1,4 +1,4 @@
-# [Commandline Challenge](https://cmdchallenge.com)
+# Commandline Challenge
 
 
 ## `hello_world`
@@ -96,3 +96,17 @@
 ## `remove_extensions_from_files`
   * Rename all files removing the extension from them in the current directory recursively.
   * `find . -type f | while read f; do mv "$f" "${f%.*}"; done`
+
+## `files_starting_with_a_number`
+  * There are a mix of files in this directory that start with letters and numbers. Print the filenames of all files that start with a number recursively in the current directory.
+  * `find . -name "[0-9]*" -type f -printf "%f\n"` (GNU)
+  * `find . -name "[0-9]*" -type f -exec basename {} +` (OSX)
+
+## `print_nth_line`
+  * Print the `25`th line of the file `faces.txt`
+  * `head -n faces.txt | tail -n 1`
+
+## `reverse_readme`
+  * Print the lines of README in reverse line order
+  * `tac README`
+  * `tail -r README`
