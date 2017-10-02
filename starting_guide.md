@@ -5,21 +5,32 @@
 ### Applications
 
 * [`Bear`](http://www.bear-writer.com/)
+  * A note-taking app - I previously used `Evernote`. I find `Bear` to have a slicker interface and it's native Markdown support is great.
 * [`Spectacle`](https://www.spectacleapp.com/)
-  * Move and resize windows
+  * Window resizer / mover
 * Communication
   * [`Slack`](https://slack.com/downloads/osx)
   * [`HipChat`](https://www.hipchat.com/downloads)
 * [`Todoist`](https://en.todoist.com/downloads)
+  * Todo list tool
 * [`tyke`](tyke.io)
+  * Simple note-taking app
 * [`Skitch`](https://itunes.apple.com/us/app/skitch-snap-mark-up-share/id425955336?mt=12)
+  * Take better screenshots
 * [`Lacona`](https://www.lacona.io)
+  * A better `Alfred` / `Spotlight`
 * [`Flycut`](https://github.com/TermiT/Flycut)
+  * Keeps track of last copied strings
 * [`RescueTime`](https://www.rescuetime.com/)
+  * Keep track of your usage
 * [`CheatSheet`](https://www.mediaatelier.com/CheatSheet/?ref=producthunt)
+  * See the keyboard shortcuts when holding the `command` key
 * [`Franz`](http://meetfranz.com/?ref=producthunt)
+  * Combine different messaging applications into a single interface
 * [`Caffeine`](https://www.macupdate.com/app/mac/24120/caffeine/download?ref=producthunt)
+  * Keep the computer up and running
 * [`Bartender 3`](https://www.macbartender.com/?ref=producthunt)
+  * Keep your menu bar clean
 
 ### Chrome Extensions
 
@@ -44,6 +55,7 @@
   * [`Sublime`](https://www.sublimetext.com/3)
 * [`GitHub Desktop App`](https://desktop.github.com/)
 * [`Postman`](https://www.getpostman.com/)
+  * App for making `HTTP` requests
 * [`Kite`](https://kite.com)
 
 ### Chrome Extensions
