@@ -8,9 +8,7 @@
   * A note-taking app - I previously used `Evernote`. I find `Bear` to have a slicker interface and it's native Markdown support is great.
 * [`Spectacle`](https://www.spectacleapp.com/)
   * Window resizer / mover
-* Communication
-  * [`Slack`](https://slack.com/downloads/osx)
-  * [`HipChat`](https://www.hipchat.com/downloads)
+* [`Slack`](https://slack.com/downloads/osx) / [`HipChat`](https://www.hipchat.com/downloads)
 * [`Todoist`](https://en.todoist.com/downloads)
   * Todo list tool
 * [`tyke`](tyke.io)
@@ -25,7 +23,7 @@
   * Keep track of your usage
 * [`CheatSheet`](https://www.mediaatelier.com/CheatSheet/?ref=producthunt)
   * See the keyboard shortcuts when holding the `command` key
-* [`~~Franz~~`](http://meetfranz.com/?ref=producthunt)
+* [`~Franz~`](http://meetfranz.com/?ref=producthunt)
   * Combine different messaging applications into a single interface
 * [`Station`](https://getstation.com)
   * A better version of `Franz`
@@ -53,10 +51,10 @@
 
 ### Applications
 
-* IDE
+* *IDE*
   * [`PyCharm`](https://www.jetbrains.com/pycharm/)
   * [`Intellij IDEA`](https://www.jetbrains.com/idea/)
-* Text Editor
+* *Text Editor*
   * [`Atom`](https://atom.io/)
   * [`Sublime`](https://www.sublimetext.com/3)
 * [`GitHub Desktop App`](https://desktop.github.com/)
@@ -90,10 +88,13 @@
 * [`Speed Test by Ookla`](https://www.npmjs.com/package/speed-test)
 * [`Mac CLI`](https://github.com/guarinogabriel/mac-cli/?ref=producthunt)
 * [`nvm`](https://github.com/creationix/nvm)
+  * Node version manager
 * [`http-status-identifier-cli`](https://github.com/jaebradley/http-status-identifier-cli)
 * [`is-up-cli`](https://github.com/sindresorhus/is-up-cli)
 * [`yank`](https://github.com/mptre/yank)
+  * Terminal output to clipboard
 * [`peco`](https://github.com/peco/peco)
+  * Simplistic interactive filtering tool
 * [`trash-cli`](https://github.com/sindresorhus/trash-cli)
 * [`empty-trash-cli`](https://github.com/sindresorhus/empty-trash-cli)
 
@@ -102,8 +103,10 @@
 ### Applications
 
 * [`Pocket`](https://getpocket.com/apps/desktop/)
+  * Store articles for offline reading
 * [`Padbury Clock Screensaver`](http://padbury.me/clock/?ref=producthunt)
 * [`Flume`](http://blog.flumeapp.com/post/145212126271/introducing-flume-20-and-flume-pro?ref=producthunt)
+  * Instagram app
 * [`Spotify`](https://www.spotify.com/us/download/other/)
 
 ### Chrome Extensions
@@ -120,5 +123,7 @@
 
 * [`uber-cli`](https://github.com/jaebradley/uber-cli)
 * [`getmethefuckthere`](https://github.com/jaebradley/getmethefuckthere)
+  * Google Maps CLI
 * [`medium-cli`](https://github.com/djadmin/medium-cli)
 * [`wttr.in`](https://github.com/chubin/wttr.in)
+  * Weather CLI
