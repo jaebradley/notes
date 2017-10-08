@@ -25,12 +25,18 @@
   * Keep track of your usage
 * [`CheatSheet`](https://www.mediaatelier.com/CheatSheet/?ref=producthunt)
   * See the keyboard shortcuts when holding the `command` key
-* [`Franz`](http://meetfranz.com/?ref=producthunt)
+* [`~~Franz~~`](http://meetfranz.com/?ref=producthunt)
   * Combine different messaging applications into a single interface
+* [`Station`](https://getstation.com)
+  * A better version of `Franz`
 * [`Caffeine`](https://www.macupdate.com/app/mac/24120/caffeine/download?ref=producthunt)
   * Keep the computer up and running
 * [`Bartender 3`](https://www.macbartender.com/?ref=producthunt)
   * Keep your menu bar clean
+* [`RescueTime`](https://www.rescuetime.com/dashboard)
+  * Track the time you spend on your computer
+* [`Gyroscope`](https://gyrosco.pe/dashboard/)
+  * UI that combines various productivity products (`RunKeeper`, `Moves`, `RescueTime`, `Apple Health`, etc.)
 
 ### Chrome Extensions
 
