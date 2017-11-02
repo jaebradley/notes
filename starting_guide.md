@@ -61,6 +61,7 @@
 * [`Postman`](https://www.getpostman.com/)
   * App for making `HTTP` requests
 * [`Kite`](https://kite.com)
+* [`Gitify`](https://github.com/manosim/gitify)
 
 ### Chrome Extensions
 
