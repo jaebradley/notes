@@ -1,9 +1,11 @@
 # Benefits of Immutability in React
 
 ## Object Equality (i.e. references)
-> Let's say you have a regular JS array. There is a reference to it in memory and it has a certain value. Now you change an element in that array. You've just mutated it. In JS, the reference in memory doesn't change, but now the value of what it's pointing to has. So in order to know if the value has changed, you need to do a comparison on every element on that array, which is expensive.\n
-Now let's say you have a immutable array (such as from the Immutable FB library or Mori). If you change an element in that array, you get a new array and a new array reference in memory. In other words, if you check that the reference in memory is the same, you are guaranteed that the value is the same (in this case, the array). So checking for equality is fast and cheap because you are only checking the reference, not each value in the array.\n
-One way this is important in React is that now if your component state (or entire app state) is represented by an immutable data structure, you can just check for reference equality in the shouldComponentUpdate() method when deciding to re-render that component. If the reference is equal, you are guaranteed that the data backing that component hasn't changed and you can return false, telling React not to re-render.
+> Let's say you have a regular JS array. There is a reference to it in memory and it has a certain value. Now you change an element in that array. You've just mutated it. In JS, the reference in memory doesn't change, but now the value of what it's pointing to has. So in order to know if the value has changed, you need to do a comparison on every element on that array, which is expensive.
+
+> Now let's say you have a immutable array (such as from the Immutable FB library or Mori). If you change an element in that array, you get a new array and a new array reference in memory. In other words, if you check that the reference in memory is the same, you are guaranteed that the value is the same (in this case, the array). So checking for equality is fast and cheap because you are only checking the reference, not each value in the array.
+
+> One way this is important in React is that now if your component state (or entire app state) is represented by an immutable data structure, you can just check for reference equality in the shouldComponentUpdate() method when deciding to re-render that component. If the reference is equal, you are guaranteed that the data backing that component hasn't changed and you can return false, telling React not to re-render.
 
 [Source](https://news.ycombinator.com/item?id=8108394)
 
