@@ -24,7 +24,7 @@
   * If the `catch` method is not called, any error that occurs when the `onFulfilled` method is called gets swallowed
 
 
-## Examples
+## [Examples](https://runkit.com/jaebradley/59ff65c381a8a80011b3cab1)
 
 ### Making an HTTP request
 
