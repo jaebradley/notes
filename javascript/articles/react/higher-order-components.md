@@ -60,3 +60,40 @@ class ParentComponent extends Component {
   }
 }
 ```
+
+### Accessing instances vis Refs
+
+* When `WrappedComponent` is rendered, the `ref` call back is executed, and thus, will have access to the `WrappedComponent` instance
+* Useful for reading / adding instance props and calling instance methods
+
+```javascript
+function refsHOC(WrappedComponent) {
+  return class RefsHOC extends React.Component {
+    callSomeMethod(wrappedComponentInstance) {
+      wrappedComponentInstance.method();
+    }
+
+    render() {
+      const props = Object.assign({}, this.props, {ref: this.callSomeMethod.bind(this)});
+      return <WrappedComponent {this.props} />
+    };
+  };
+};
+```
+
+### Parameterized HOCs
+
+```javascript
+function HOCFactoryFactory(...params) {
+  // do something with parameters
+  return function HOCFactory(WrappedComponent) {
+    return class HOC extends React.Component {
+      render() {
+        return <WrappedComponent {this.props} />
+      }
+    };
+  };
+};
+```
+
+Can be used like `HOCFactoryFactory(params)(WrappedComponent)`
