@@ -109,6 +109,8 @@
 * [`Flume`](http://blog.flumeapp.com/post/145212126271/introducing-flume-20-and-flume-pro?ref=producthunt)
   * Instagram app
 * [`Spotify`](https://www.spotify.com/us/download/other/)
+* [`itsycal`](https://www.mowglii.com/itsycal/)
+  * Macbar calendar plugin
 
 ### Chrome Extensions
 
