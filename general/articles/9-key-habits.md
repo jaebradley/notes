@@ -1,4 +1,4 @@
-# [9 Key Habits That Will Make You Automatically Attract Enormous Success](9 Key Habits That Will Make You Automatically Attract Enormous Success)
+# [9 Key Habits That Will Make You Automatically Attract Enormous Success](https://medium.com/personal-growth/9-key-habits-that-will-make-you-automatically-attract-enormous-success-ad8af090cefd)
 
 * > Most people have an extremely limiting mindset of themselves. Some even wear these limitations as a backwards badge of honor:
   > * Oh, I have no idea how to write a book.”
