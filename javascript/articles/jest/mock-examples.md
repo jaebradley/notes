@@ -54,5 +54,5 @@ describe('selectLanguage', () => {
     expect(inquirer.prompt).toHaveBeenCalledTimes(1);
     expect(inquirer.prompt).toHaveBeenCalledWith(expected);
   });
-  });
+});
 ```
