@@ -21,4 +21,13 @@
     * `componentWillUpdate`
     * `render`
     * `componentDidUpdate`
-  * Paints only changed value to DOM
+
+  ### What happens when we render?
+
+  * React checks if the previous and next rendered elements are of the same type and key
+    * If so, then the component's `render` is called
+
+* Reconciliation after clicking `Add`
+  * Starts from component and then works way through tree
+  * Since `h2` containing `Output: 150` changed, React will update DOM
+
