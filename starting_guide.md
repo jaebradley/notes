@@ -67,7 +67,23 @@
 
 * [`JSON Viewer`](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en)
 * [`React Developer Tools`](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-* [`Refined GitHub`](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+* `GitHub`
+  * [`Refined GitHub`](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    * [Repository](https://github.com/sindresorhus/refined-github)
+  * [`GitHub Hovercard`](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk)
+    * [Example website](https://justineo.github.io/github-hovercard/)
+  * [`OctoLinker`](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp)
+    * [Repository](https://github.com/OctoLinker/OctoLinker)
+  * [`OctoTree`](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+    * [Repository](https://github.com/buunguyen/octotree)
+  * [`OctoTern`](https://chrome.google.com/webstore/detail/octotern/fhgodjaafcddpfdpfmoimnjpelemhnmm)
+    * [Repository](https://github.com/mattzeunert/OctoTern)
+  * [`Isometric Contributions`](https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien?hl=en&gl=US)
+    * [Repository](https://github.com/jasonlong/isometric-contributions)
+  * [`CodeCov`](https://chrome.google.com/webstore/detail/codecov-extension/keefkhehidemnokodkdkejapdgfjmijf)
+    * [Repository](https://github.com/codecov/browser-extension)
+  * [`GifHub`](https://chrome.google.com/webstore/detail/gifhub/lponagpckglibniamicamklhfkoebpeb/)
+    * [Repository](https://github.com/DrewML/GifHub)
 
 ### Plugins
 
