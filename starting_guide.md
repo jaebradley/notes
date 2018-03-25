@@ -4,8 +4,10 @@
 
 ### Applications
 
-* [`Bear`](http://www.bear-writer.com/)
+* [~~`Bear`~~](http://www.bear-writer.com/)
   * A note-taking app - I previously used `Evernote`. I find `Bear` to have a slicker interface and it's native Markdown support is great.
+* [`Joplin`](https://github.com/laurent22/joplin)
+  * I switched over all my note-taking to `Joplin` - mostly because it's open-source and is free. It's definitely not as shiny than `Bear`.
 * [`Spectacle`](https://www.spectacleapp.com/)
   * Window resizer / mover
 * [`Slack`](https://slack.com/downloads/osx) / [`HipChat`](https://www.hipchat.com/downloads)
@@ -23,10 +25,10 @@
   * Keep track of your usage
 * [`CheatSheet`](https://www.mediaatelier.com/CheatSheet/?ref=producthunt)
   * See the keyboard shortcuts when holding the `command` key
-* [`~Franz~`](http://meetfranz.com/?ref=producthunt)
+* [`Franz`](http://meetfranz.com/?ref=producthunt)
   * Combine different messaging applications into a single interface
 * [`Station`](https://getstation.com)
-  * A better version of `Franz`
+  * ~~A better version of `Franz`~~ Logs you out on app update, really annoying
 * [`Caffeine`](https://www.macupdate.com/app/mac/24120/caffeine/download?ref=producthunt)
   * Keep the computer up and running
 * [`Bartender 3`](https://www.macbartender.com/?ref=producthunt)
@@ -55,6 +57,9 @@
   * [`PyCharm`](https://www.jetbrains.com/pycharm/)
   * [`Intellij IDEA`](https://www.jetbrains.com/idea/)
 * *Text Editor*
+  * After becoming an `Atom` fan boi, I tried `Visual Studio Code` this past year, and it was way better, so I switched
+  * [`Visual Studio Code`](https://code.visualstudio.com/)
+    * [My settings](https://gist.github.com/jaebradley/6324e4ae42488dfac68aba318d1f69f8)
   * [`Atom`](https://atom.io/)
   * [`Sublime`](https://www.sublimetext.com/3)
 * [`GitHub Desktop App`](https://desktop.github.com/)
