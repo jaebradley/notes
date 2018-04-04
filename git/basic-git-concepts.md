@@ -27,3 +27,21 @@
   * Conversely, if you don't find a hash in your object store, you can be confident you don't hold a copy of that object
 * Consider the most recent commit - since it contains, as part of its content, the hash of its parent commits, and of its tree, and since that in turn contains the hash of all of its subtrees and blobs, etc. etc. it follows that the hash of the original commit uniquely identifies the state of the whole data structure rooted at that commit.
   * This means we can compare two objects without transmitting either in full
+
+## Tree Hierarchies
+
+* If we create new subdirectory that contains an identical copy of hello.txt the subdirectory will have the same SHA1 hash as the parent directory because it's contents are identical
+  * In git objects there will be three unique objects - blob containing "hello world", tree containing hello.txt, and a second tree that contains another reference to hello.txt
+
+## Commits
+
+* Commits contain your name and the time you made the commit, so even commits with the same tree are going to differ.
+  * Different commits often refer to the same tree
+    * When this happens, Git is smart enough to transfer around only the new commit object, which is much smaller than the tree and blob objects
+* Commits consist of
+  * The name of a tree object that actually identifies the associated files
+  * The name of the person who composed the new version (the author) and the time it was authored
+  * The name of the person who placed the new version into the repository (the committer) and the time it was committed
+  * A description of the reason for this revision (commit message)
+* Commits are stored in a graph structure
+  * When you make a new commit, you can give it one or more parent commits that basically tell the history of your project
