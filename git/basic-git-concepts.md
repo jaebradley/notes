@@ -1,9 +1,9 @@
 # Basic Git Concepts
 
-* [Git Object Types](#gitobjecttypes)
-* [Git Tracks Content](#gittrackscontent)
-* [Git SHA1 Hash Function](#gitsha1hashfunction)
-* [Tree Hierarchies](#treehierarchies)
+* [Git Object Types](#git-object-types)
+* [Git Tracks Content](#git-tracks-content)
+* [Git SHA1 Hash Function](#git-sha1-hash-function)
+* [Tree Hierarchies](#tree-hierarchies)
 * [Commits](#commits)
 
 ## Git Object Types
