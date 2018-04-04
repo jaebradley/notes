@@ -1,6 +1,12 @@
 # Basic Git Concepts
 
-## Git object Types
+* [Git Object Types](#gitobjecttypes)
+* [Git Tracks Content](#gittrackscontent)
+* [Git SHA1 Hash Function](#gitsha1hashfunction)
+* [Tree Hierarchies](#treehierarchies)
+* [Commits](#commits)
+
+## Git Object Types
 
 * Blobs
   * Each version of a file is represented as a blob.
