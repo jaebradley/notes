@@ -154,3 +154,4 @@
 * [`medium-cli`](https://github.com/djadmin/medium-cli)
 * [`wttr.in`](https://github.com/chubin/wttr.in)
   * Weather CLI
+* [`emoji-cli`](https://www.npmjs.com/package/emoji-cli)
