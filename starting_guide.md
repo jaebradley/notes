@@ -122,6 +122,7 @@
 * [`trash-cli`](https://github.com/sindresorhus/trash-cli)
 * [`empty-trash-cli`](https://github.com/sindresorhus/empty-trash-cli)
 * [`fkill-cli`](https://github.com/sindresorhus/fkill-cli)
+* [`tree-cli`](https://github.com/MrRaindrop/tree-cli)
 
 ## Other Useful Tools
 
