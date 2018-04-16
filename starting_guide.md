@@ -134,8 +134,25 @@
 * [`Flume`](http://blog.flumeapp.com/post/145212126271/introducing-flume-20-and-flume-pro?ref=producthunt)
   * Instagram app
 * [`Spotify`](https://www.spotify.com/us/download/other/)
+* [`SpotMenu`](https://github.com/kmikiy/SpotMenu)
+  * Spotify and iTunes in your menu bar
 * [`itsycal`](https://www.mowglii.com/itsycal/)
   * Macbar calendar plugin
+* [`regexr`](https://github.com/lukakerr/regxr)
+  * Regex pattern matcher
+* [`GifCapture`](https://github.com/onmyway133/GifCapture)
+  * Capture gifs
+* [`SoundCleod`](https://github.com/salomvary/soundcleod)
+  * SoundCloud application
+* [`GitUp`](http://gitup.co/)
+  * A `git` GUI
+* [`insomnia`](https://github.com/getinsomnia/insomnia)
+  * A REST API Client
+* [`hyper`](https://github.com/zeit/hyper)
+  * A terminal built using web technologies
+* [`yoda`](http://whoisandy.github.io/yoda/)
+  * Browse and download YouTube videos
+
 
 ### Chrome Extensions
 
