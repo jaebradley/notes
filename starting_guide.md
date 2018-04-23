@@ -163,6 +163,7 @@
 * [`Save to Pocket`](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?hl=en)
 * [`Sense`](https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=en)
 * [`GIPHY for Chrome`](https://chrome.google.com/webstore/detail/giphy-for-chrome/jlleokkdhkflpmghiioglgmnminbekdi?hl=en)
+* [`indices`](https://chrome.google.com/webstore/detail/indices/ilicifhajkigmalgipoidbmgbjgmoeck)
 
 ### Plugins
 
