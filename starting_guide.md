@@ -25,10 +25,10 @@
   * Keep track of your usage
 * [`CheatSheet`](https://www.mediaatelier.com/CheatSheet/?ref=producthunt)
   * See the keyboard shortcuts when holding the `command` key
-* [`Franz`](http://meetfranz.com/?ref=producthunt)
+* [~~`Franz`~~](http://meetfranz.com/?ref=producthunt)
   * Combine different messaging applications into a single interface
 * [`Station`](https://getstation.com)
-  * ~~A better version of `Franz`~~ Logs you out on app update, really annoying
+  * It's better now, I prefer it to `Franz`
 * [`Caffeine`](https://www.macupdate.com/app/mac/24120/caffeine/download?ref=producthunt)
   * Keep the computer up and running
 * [`Bartender 3`](https://www.macbartender.com/?ref=producthunt)
@@ -67,6 +67,7 @@
   * App for making `HTTP` requests
 * [`Kite`](https://kite.com)
 * [`Gitify`](https://github.com/manosim/gitify)
+* [`homebrew`](https://brew.sh/)
 
 ### Chrome Extensions
 
