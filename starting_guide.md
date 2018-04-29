@@ -155,6 +155,7 @@
   * A terminal built using web technologies
 * [`yoda`](http://whoisandy.github.io/yoda/)
   * Browse and download YouTube videos
+* [`graphiql`](https://github.com/skevy/graphiql-app)
 
 
 ### Chrome Extensions
