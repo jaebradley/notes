@@ -90,8 +90,10 @@
     * [Repository](https://github.com/codecov/browser-extension)
   * [`GifHub`](https://chrome.google.com/webstore/detail/gifhub/lponagpckglibniamicamklhfkoebpeb/)
     * [Repository](https://github.com/DrewML/GifHub)
-   * [`Clipboardy`](https://chrome.google.com/webstore/detail/clipboardy/gkafpbdjggkmmngaamlghmigadfaalhc)
+  * [`Clipboardy`](https://chrome.google.com/webstore/detail/clipboardy/gkafpbdjggkmmngaamlghmigadfaalhc)
     * [Repository](https://github.com/panzerdp/clipboardy)
+  * [`Codecopy`](https://chrome.google.com/webstore/detail/codecopy/fkbfebkcoelajmhanocgppanfoojcdmg)
+   * [Repository](https://github.com/zenorocha/codecopy)
 
 ### Plugins
 
