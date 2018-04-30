@@ -2,7 +2,7 @@
 
 Let's say you wanted to add a `jae` prefix to the beginning of all the string content in a React component (I mean, sounds like a great idea).
 
-One way to achieve this is to use a higher-order component and the `React.Children` API to wraps the React elements that need to be prefixed.
+One way to achieve this is to use a higher-order component and [the `React.Children` API](https://reactjs.org/docs/react-api.html#reactchildren) to wrap the React elements that need to be prefixed.
 
 For example, this `Translation` component
 
@@ -69,3 +69,19 @@ And will output
 ![alt-text](https://imgur.com/TIvdUEQ.png)
 
 Here's [the full `StackBlitz` example](https://stackblitz.com/edit/jae-hoc-translation-example?file=index.js).
+
+## [`cloneElement`](https://reactjs.org/docs/react-api.html#cloneelement)
+
+```javascript
+React.cloneElement(
+  element,
+  [props],
+  [...children]
+)
+```
+
+> Clone and return a new React element using `element` as starting point - resulting element will have original element's props with new props merged in shallowly.
+> New children will replace existing children.
+> `key` and `ref` from original element will be preserved, as well as children with `ref`s
+
+* [Another `StackBlitz` example that reverses strings](https://stackblitz.com/edit/string-reverser-hoc?file=Reverser.js)
