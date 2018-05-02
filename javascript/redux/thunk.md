@@ -52,3 +52,24 @@ Basically, it looks like `createThunkMiddleware` takes a variable
       * which returns a `function` that takes a parameter called `action`
         * which executes the `action` parameter with `dispatch`, `getState`, and the passed in `extraArgument` and returns the result
         * or it returns the execution of `next` on the `action` parameter
+
+Here's a similar method
+
+```javascript
+const logger = store => next => action => {
+  console.log('store: ', store);
+  console.log('next: ', next);
+  console.log('action: ', action);
+}
+logger('fuck')('you')('jae');
+
+// outputs
+// store:
+// fuck
+// next:
+// you
+// action:
+// jae
+```
+
+So `thunk` is probably going to be used like `thunk(store)(store.dispatch.next)(someAction)` where `store` has `dispatch` and `getState` methods
