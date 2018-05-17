@@ -126,6 +126,7 @@
 * [`empty-trash-cli`](https://github.com/sindresorhus/empty-trash-cli)
 * [`fkill-cli`](https://github.com/sindresorhus/fkill-cli)
 * [`tree-cli`](https://github.com/MrRaindrop/tree-cli)
+* [`npm-check-updates`](https://github.com/tjunnone/npm-check-updates)
 
 ## Other Useful Tools
 
