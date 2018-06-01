@@ -1,6 +1,7 @@
 # Manual Mock Example
 
 * [Manual Mock Docs](https://facebook.github.io/jest/docs/en/manual-mocks.html)
+* [`ES6` Class Mocks](https://facebook.github.io/jest/docs/en/es6-class-mocks.html)
 
 ## Discussion
 
