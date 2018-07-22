@@ -6,8 +6,10 @@
 ```javascript
 // outputs to ./dist/app.js
 {
-  output: path.resolve(__dirname, 'dist'),
-  filename: 'app.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'app.js',
+  }
 }
 ```
 
