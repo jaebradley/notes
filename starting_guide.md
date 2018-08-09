@@ -127,6 +127,7 @@
 * [`fkill-cli`](https://github.com/sindresorhus/fkill-cli)
 * [`tree-cli`](https://github.com/MrRaindrop/tree-cli)
 * [`npm-check-updates`](https://github.com/tjunnone/npm-check-updates)
+* [`git-standup`](https://github.com/kamranahmedse/git-standup)
 
 ## Other Useful Tools
 
