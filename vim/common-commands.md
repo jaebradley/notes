@@ -72,3 +72,9 @@
 * `%` matching parentheses
 * `fx` move to next `x`
 * `Fx` move to previous `x`
+
+## Registers
+
+* `"+yy` to copy line to system copy / paste
+* `"+p` to paste from system copy / paste
+* `"k` to paste to register `k`
