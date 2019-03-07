@@ -49,3 +49,9 @@ function useMousePosition() {
   return position;
 }
 ```
+
+* This hook can now be reused across different components
+* Where the component is getting data from is clear - it's declared in the `render` function directly
+* The hook eliminates the need to use multiple component lifecycle methods
+* Does not lead to the same level of nesting that exists when using render props
+* Hooks cannot be conditional - this makes sense considering that there aren't really conditional render props either or whether the set of render props differs from render to render
