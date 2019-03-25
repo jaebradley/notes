@@ -68,3 +68,83 @@ function reverseLevelOrder(root) {
   }
 }
 ```
+
+## Same Trees
+
+* If both nodes are `null`, then true
+* If one is `null` but other is not, then false
+* If both are not `null`, then compare data and recursively check left and right subtrees
+
+```javascript
+function check(firstNode, secondNode) {
+  if (firstNode === null && secondNode === null) {
+    return true;
+  }
+
+  if (firstNode === null || secondNode === null) {
+    return false;
+  }
+
+  return firstNode.val === secondNode.val
+    && check(firstNode.left) === check(secondNode.left)
+    && check(firstNode.right) === check(secondNode.right);
+}
+```
+
+## Mirror image tree
+
+```javascript
+function mirror(root) {
+  if (root) {
+    mirror(root.left);
+    mirror(root.right);
+
+    const left = root.left;
+    root.left = root.right;
+    root.right = left;
+  }
+}
+```
+
+## Two traversal sequences construct binary tree uniquely
+
+* Must have inorder traversal as one of the traversal sequences
+* Because other traversals do not distinguish between
+
+```bash
+  A
+ /
+B
+
+A
+  \
+   B
+```
+
+## Print ancestors for a node
+
+* If left or right of node is node to identify, then print current node's data
+* Else if not node, then recursively call print function for left node, and then recursively call print function for right node
+  * If right or left is ancestor, then print current node (since it's ancestor of ancestor)
+
+```javascript
+function print(root, node) {
+  if (root) {
+    if (
+      root.left === node
+        || root.right === node
+        || print(root.left, node)
+        || print(root.right, node)
+    ) {
+      // print node data here
+      return true;
+    }
+  }
+
+  return false;
+}
+```
+
+## How many different binary trees are possible with `n` nodes
+
+* `2^n - n`
