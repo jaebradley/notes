@@ -26,4 +26,3 @@ window.on('scroll', debounce(handleScroll, 300));
   * Debounce doesn't help because it would only trigger once user stops scrolling
   * Throttle guarantees that we're always checking distance from bottom
 
-```
