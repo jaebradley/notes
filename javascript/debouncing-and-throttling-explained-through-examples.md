@@ -17,6 +17,7 @@ window.on('scroll', function() { debounce(handleScroll, 300); });
 
 // Right
 window.on('scroll', debounce(handleScroll, 300));
+```
 
 ## Throttle
 
