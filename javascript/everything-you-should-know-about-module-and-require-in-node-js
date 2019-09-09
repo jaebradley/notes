@@ -1,0 +1,13 @@
+# [Everything you should know about 'module' & 'require' in Node.js](https://medium.com/free-code-camp/require-module-in-node-js-everything-about-module-require-ccccd3ad383)
+
+* Every JavaScript file is wrapped by a function in Node
+  * Function has five input arguments, `exports`, `require`, `module`, `__filename`, and `__dirname`
+  * Function body is code in JavaScript file
+  * Wrapper function provides private scoping so that variables are scoped to file / module and not globally
+* Use `module` object to export things for use by other modules
+  * Default value of `module.exports` is an empty object
+  * By adding properties on the `module.exports` object, these properties will be accessible outside the module
+* `require` keyword refers to function used to import all properties defined in `module.exports` object
+  * Trying to access properties that were not exported will result in the property being `undefined` (and not a `ReferenceError` like one might expect)
+  * This is because accessing an unknown object property results in `undefined`
+
