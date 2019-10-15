@@ -19,4 +19,10 @@
   * Execute command in standard mode
 * Move to specific forward jump (e.g. `3g,` is three jumps forward)
   * Note the semi-colon on the first case and the comma in the second
+* If want `j` and `k` to be added to jump list can update `.vimrc`
+
+```bash
+noremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'gk'
+noremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'gj'
+```
 
