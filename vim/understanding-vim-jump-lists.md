@@ -1,4 +1,4 @@
-# [Understanding Vim's Jump List](https://medium.com/@kadek/understanding-vims-jump-list-7e1bfc72cdf0)
+# [Understanding Vim's Jump List](https://medium.com/breathe-publication/understanding-vims-jump-list-7e1bfc72cdf0)
 
 * "jumps" are remembered in a "jump list" via `:jumps` command
 * Some things that qualify as "jumps"
@@ -19,4 +19,10 @@
   * Execute command in standard mode
 * Move to specific forward jump (e.g. `3g,` is three jumps forward)
   * Note the semi-colon on the first case and the comma in the second
+* If want `j` and `k` to be added to jump list can update `.vimrc`
+
+```bash
+noremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'gk'
+noremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'gj'
+```
 
