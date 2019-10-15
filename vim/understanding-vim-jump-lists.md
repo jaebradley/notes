@@ -1,4 +1,4 @@
-# [Understanding Vim's Jump List](https://medium.com/@kadek/understanding-vims-jump-list-7e1bfc72cdf0)
+# [Understanding Vim's Jump List](https://medium.com/breathe-publication/understanding-vims-jump-list-7e1bfc72cdf0)
 
 * "jumps" are remembered in a "jump list" via `:jumps` command
 * Some things that qualify as "jumps"
