@@ -1,4 +1,4 @@
-# [Why I Love Vim: it's the lesser-known features that make it so amazing](https://medium.freecodecamp.org/learn-linux-vim-basic-features-19134461ab85)
+# [Why I Love Vim: it's the lesser-known features that make it so amazing](https://medium.com/free-code-camp/learn-linux-vim-basic-features-19134461ab85)
 
 ## Tab pages
 
@@ -10,6 +10,7 @@
 * `vim -p file1 file2` opens multiple files in tabs
 * `:tabclose` to close a single tab
 * `:tabonly` to close all tabs except current one
+* `vim -p filename1 filename2` opens files in tabs
 
 ## Tab sessions
 
@@ -56,3 +57,5 @@
 * `ctrl + w + =` - make windows equal size
 * `ctrl + w + _` - maximize windows vertically 
 * `ctrl + w + arrow key`  - move to window in direction
+
+* see line-numbers with `:set nu`
