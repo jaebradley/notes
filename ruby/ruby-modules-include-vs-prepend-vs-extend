@@ -1,0 +1,13 @@
+# [Ruby modules: Include vs. Prepend vs. Extend](https://medium.com/@leo_hetsch/ruby-modules-include-vs-prepend-vs-extend-f09837a5b073)
+
+* Ruby classes have an `ancestors` method that contains all the classes that the class is inherited from and the modules they include
+* When an instance method is called, Ruby looks through ancestors array to find the method
+* `include` will insert module in the ancestors chain between the existing class and it's super-class (many times this is `Object`)
+  * Calling methods on the class instance - if Ruby does not find method on class, it will go a level up and find it on module
+  * If two or more modules are included, the last module inserted will be the first module after current class in ancestors chain
+* `extend` imports module methods as class methods
+  * Ruby would insert module in ancestors chain of the singleton class of the current class
+  * Singleton class are where class methods for current class are defined
+* `prepend` imports module _before_ current class in ancestors chain
+  * When calling an instance method, Ruby will look at module first before looking at class method definitions
+
