@@ -10,7 +10,7 @@
 * If a module does not specify how to handle updates to itself, modules that imported it get included in hot update bundle
 * Edit `Button.js` component imported by `UserProfile` and `NavBar`
   * Both are imported by `App`
-  * If `index`.js` imports `App` and it has an `module.hot.accept('./App', someCallback)`, webpack will generate update bundle with all files and run callback
+  * If `index`.js imports `App` and it has an `module.hot.accept('./App', someCallback)`, webpack will generate update bundle with all files and run callback
 
 ```javascript
 // Whenever a new version of App.js is available
@@ -30,7 +30,7 @@ module.hot.accept('./App', function () {
 ### Detaching React Instances
 
 * More realistic if React state subscriptions were independent of lifecycle hooks or if React did not rely on classes and instances as much
-* Subtle problems like how to deal with subscriptions in `componentDidMount 
+* Subtle problems like how to deal with subscriptions in `componentDidMount`
 * Even if there was a way of replacing old instances with new instances without destroying DOM or state, old instances would still keep existing subscriptions and new instances would not be subscribed at all
 * To subscribe new instances, need to fire lifecycle hooks on them during replacement
 * However, `componentDidMount` would run twice on same DOM nodes, which could break assumptions that React components tend to make
