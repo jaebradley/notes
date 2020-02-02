@@ -12,3 +12,8 @@
   * So how do we know when we _can_ trust our own judgement? And what if we don't care?
 * We're told to "stand up for ourseles" but also to "surrender to love" - we're told to "say no" but never "shut down"
 * We're not supposed to sacrifice our dreams for relationships, but most dreams are fantasies anyway
+
+## [How to Get a Girlfriend the Easy Way](https://psiloveyou.xyz/how-to-get-a-girlfriend-the-easy-way-35db305ab5c2)
+
+* We almost think something's not worth having unless we killed ourselves to get it
+* We tend to deal with insecurity in the worst way - if we don't think we're smart or funny or attractice, we try to convince someone else we are. We want them to think it and say it because we can't.
