@@ -28,3 +28,10 @@
 * One of the hardest commitments to make is to hit pause on that carousel, step back, and take care of yourself - it's also one of the most important
   * It's not egositic to put yourself first - it's generous
 * To live life is to live inconsistently - to love life is to love inconsistency
+
+## [20 Simple Ways to Live Your Life to the Fullest in 2020](https://medium.com/publishous/20-simple-ways-to-live-your-life-to-the-fullest-in-2020-2b67afd2fa97)
+
+* Take 1 hour a week to let your hair down and relax in a nearby park
+* We will never have a perfect day, every day - but there should be a bare minimum you can get done to make it amazing
+* Would your issue matter 5 mins, 5 days, 5 months, or 5 years from now?
+* JOMO (Joy Of Missing Out) - do something because you want to do it and it makes you happy
