@@ -65,3 +65,33 @@
   * It doesn't compete with others, but with itself
 * Anytime you make it your goal to make as much money as someone else, you are disrespecting yourself and your individuality, unconsciously telling yourself that you, yourself, are not a person worthy of respect,  so you must seek it by imitating others
 * True achievement / ambition isn't really about better or worse, but about becoming different - it's about novelty and interestingness and growth, all of which are nonlinear
+
+## [The Paradox of Life: How to Both Accept Yourself and Change Yourself](https://medium.com/@jeffreylam/the-paradox-of-life-how-to-both-accept-yourself-and-change-yourself-4b993d87eb2a)
+
+* Radical Acceptance rests on letting go of the illusion of control and a willingness to notice and accept things as they are right now, without judging
+* Once the piece falls down the screen, the piece cannot be changed
+  * Instead of getting mad at the Tetris gods, or passively accepting the situation, focus on placing the piece in the best place
+* Radical Acceptance facilitates change because the sooner you unconditionally accept the situation for what it is, the sooner you can make a decision about the best place to put the piece
+* The curious paradox is that when I accept myself just as I am, then I can change
+
+## [Alone Time Is Essential to a Healthy Social Life](https://forge.medium.com/alone-time-is-essential-to-a-healthy-social-life-a88e475db5a0)
+
+* The best interactions make us feel very connected but don't take a lot of effort like hanging out with your best friend - a nourishing social interaction
+* Other factors include level of closeness felt with people you see regularly, what is talked about (mix of deep and surface-level conversations are best), and choice in who you interact with and when
+* Most surprising factor is solitude - when you're alone and content, that's a great indicator that you're socially healthy
+  * When people had a nourishing interaction early in the day, they were even more likely to be happily alone later
+
+## [7 Signs You Have An Unhealthy Relationship With Your Emotions](https://medium.com/mind-cafe/7-signs-you-have-an-unhealthy-relationship-with-your-emotions-1120f1648e2a)## [Alone Time Is Essential to a Healthy Social Life](https://forge.medium.com/alone-time-is-essential-to-a-healthy-social-life-a88e475db5a0)
+
+* Intellectualizing feelings like saying "I'm just a little wound up" vs. "I'm pretty anxious"
+  * Describing how you feel emotionally in terms of conceptual ideas or metaphors rather than plain emotional words
+  * Used as a defense mechanism to avoid being as vulnerable by describing how one feels using plain emotional language
+* If you want to develop a happier, healthier relationship with your emotions, remind yourself that just because a particular feeling feels bad, that doesn't mean it is bad or that you experiencing it is a bad sign
+* How we habitually think (and talk) determines how we habitually feel (obvious sign that relationship with emotions needs work is if inner narrator is a jerk)
+* Like most addictions, reassurance-seeking is a trade-off of our long-term happiness and health for short-term comfort and ease
+* A lot of us beleive that we need to feel good or motivated or confident in order to do something difficult but motivation and confidence are feelings that result from doing worthwhile things - they're an effect, not a prerequisite
+* The healthier view is to learn through experience that it's perfectly possible to do difficult things while feeling anxious or embarrassed or angry
+
+## [There’s No Such Thing As A “Perfect” Day](https://medium.com/@krisgage/theres-no-such-thing-as-a-perfect-day-966e58b48fcb)
+
+* I appreciate the best days because of their rarity - the way they’re set back like tiny coves, or perhaps shooting up like little mountains, in the topography of my life. 
