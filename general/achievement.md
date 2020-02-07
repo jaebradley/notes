@@ -36,3 +36,11 @@
 * Four hours a day, if they are truly focused, spent on the right things, and supported by good rest, are really all it needs to achieve great things
 * Many consider work (9-5) as the day - but instead treat leisure time as day within the day
 * Detachment, the ability to put work completely out of our mind and attend to other things, is tremendously important for physical and mental recovery
+
+## [8 Meta Habits to Make 2020 Your Berakthrough Year](https://medium.com/mind-cafe/8-meta-habits-to-make-2020-your-breakthrough-year-3dd00429cf3)
+
+* Being successful in live and business is _not_ about getting it all done - it's about getting the right things done. It's about doing less, but better.
+* Start your day with your momst important thing
+* We could be spending our time more wisely - when we obsessively curate our input and match it with our goals, there will be a much better output
+* Thus, when you want to achieve big goals, you need to completely change your self-talk so that it matches what you _really_ want
+  * Even though I am a little tired right now, I am going to the gym. I know I will feel greater after and I will be proud of myself for showing up. Staying consistent with my workouts is really important to me.

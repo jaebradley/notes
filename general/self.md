@@ -95,3 +95,31 @@
 ## [There’s No Such Thing As A “Perfect” Day](https://medium.com/@krisgage/theres-no-such-thing-as-a-perfect-day-966e58b48fcb)
 
 * I appreciate the best days because of their rarity - the way they’re set back like tiny coves, or perhaps shooting up like little mountains, in the topography of my life. 
+
+## [Treat Yourself Like a CEO and You'll Make 10x More Income](https://medium.com/the-post-grad-survival-guide/treat-yourself-like-a-ceo-and-youll-make-10x-more-income-8d715d326fb3)
+
+* You teach people how to treat you - if you let people know your time is free and low-valued, people will treat it as such
+* The only way you become a leading man is to treat yourself like a leading man, and work your ass off
+
+## [5 Fresh Habit for a Calm and Peaceful Mind](https://medium.com/personal-growth/5-fresh-habits-for-a-calm-and-peaceful-mind-47faf38dcc40)
+
+* In it's simplest form, mindfulness just means keeping your attention in the present rather than the past or future
+* Expectations contain the illusion of control, hopes do not
+  * When you expect that something will happen, you're counting on it - you believe with some certainty (but the vast majority of the time, this degree of certainty about the future is unwarranted)
+  * We pretend to understand what's going to happen because it lessens our anxiety about the future
+  * Hope implies that you don't have control or much certainty about the outcome - it's simply an expression of desire without any illusions of control or certainty
+* Schedule worry means you create a consistent time each day to worry on purpose and on paper
+  * Write down every worry, concern, or fear
+  * If there are still worries, just tell yourself you'll get to them tomorrow
+* From a young age, most of us are trained to beleive that in order to be successful, productive members of socieity, we have to be hard on ourselves
+* You can't have a peaceful mind if your mind is always attacking you, and you're always attacking it back
+* Treat yourself like you would treat a good friend
+* Self-compassion diary - jot down things in the day that didn't go so well
+  * Imagine if a friend told it to you and how you'd respond and write that down underneat
+* One of the best ways to cultivate a more peaceful mind is to close the gap between what you want and what you're actually doing
+
+## [Psychologists Explain How To Stop Overthinking Everything](https://medium.com/kaizen-habits/psychologists-explain-how-to-stop-overthinking-everything-e527962a393)
+
+* Ask yourself - what's the probability that what I'm scared of will actually happen
+* Instead of "I'm stuck in my career" => "I want a job where I feel more engaged" then make a plan
+* Reconnect with immediate world and everything around you
