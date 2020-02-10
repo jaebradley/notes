@@ -17,3 +17,27 @@
 
 * We almost think something's not worth having unless we killed ourselves to get it
 * We tend to deal with insecurity in the worst way - if we don't think we're smart or funny or attractice, we try to convince someone else we are. We want them to think it and say it because we can't.
+
+## [What My Short Term Relationships Taught Me About Love and Life](https://psiloveyou.xyz/what-my-short-term-relationships-taught-me-about-love-and-life-e36db2dee088)
+
+* I'm no longer looking for promises of forever, what I want is the promise that you'll try your best and you'll be worth it. Promise me that there will be no regrets.
+* The best thing you can do for your relationship is to improve yourself because the better you are, the better your relationship can be
+
+## [How Do You Know If They're The One](https://medium.com/@krisgage/how-do-you-know-if-theyre-the-one-c094520516b1)
+
+* It's not about finding - it's about making
+* When we view “love” as something that happens “to” us (or something we “fall into”), not only are we setting ourselves up for failure (because we don’t realize that relationships are mostly work, and don’t hinge on feelings not “fading,” because they may), but we also strip ourselves of our own innate agency and power in our lives.
+* But relying on “feelings” to get you through a lifelong, mature and healthy relationship is like relying on “motivation” or “inspiration” to do anything else.
+* Your father and I, we’re not even 90% right for each other. Not even 60, okay? But he’s the love of my life.
+* The thing that should be at the top of your checklist is "emotional stability and self-sufficiency" - and it should be the top thing you cultivate in yourself as well
+
+## [The Most Important Thing In A Relationship](https://medium.com/@krisgage/the-most-important-thing-in-a-relationship-fde6e9087d6f)
+
+* "people who manage their insecurities well" or "the ability to see one's flaws and be accountable for them"
+* “We look for happiness from others, but this is an unreliable source of happiness… And here’s the thing: it’s not their job to fill our emotional needs.”
+* “If you do not love yourself entirely and actively ensure your own needs are met, you will find it difficult to do the same for others.”
+* “If you are bored, fix it. If you are lonely or hurt, comfort yourself. If you are jealous, don’t hope that someone will reassure you … reassure yourself.”
+
+## [Getting Dumped Could Be The Best Thing That Ever Happened To You](https://psiloveyou.xyz/getting-dumped-could-be-the-best-thing-that-ever-happened-to-you-66408b80cc8)
+
+* The real tragedy is the relationship that died months ago, but nobody knows. They just keep trudging through, eating each other up. Zombie relationships do way more damage in the long run. They come to an end eventually, but only after consuming everything you’ve got.

@@ -123,3 +123,38 @@
 * Ask yourself - what's the probability that what I'm scared of will actually happen
 * Instead of "I'm stuck in my career" => "I want a job where I feel more engaged" then make a plan
 * Reconnect with immediate world and everything around you
+
+## [How to Become Permanently Confident](https://medium.com/mind-cafe/how-to-become-permanently-confident-3bb8b8689842)
+
+* you never remain at stasis, either you’re building momentum or further succumbing to inertia.
+* Those daydreams of being your ideal self are enough to shield and protect you from the reality that you’re not. The key to breaking the cycle is to put yourself in situations that crash with and even destroy your ego.
+* Your life is mostly a self-fulfilling prophecy based on your reactions to the experiences you’ve had in your life.
+
+## [If Self-Love is Hard, Just Focus on Liking Yourself](https://blog.onlywomen.com/if-self-love-is-hard-just-focus-on-liking-yourself-1b8fefd26866)
+
+* Accepting that where you are right now is okay is incredibly powerful and an integral part of learning to like yourself. You don't have to love where you are; you just have to be okay with it as a starting point.
+* Accept yourself as a whole person, and accept without criticism. This does mean accepting things as "flaws" or "darkness" - on the contrary, compassion means acceptance without casting judgement. There is no "flaw" or "darkness" - your anxieties, insecurities, doubts, disgust, disappointment, envy - none of it is bad. It just _is_. And self-love means you regard it without judgement.
+
+## [Self-Love is a Religion of the Godless](https://psiloveyou.xyz/self-love-is-the-religion-of-the-godless-f0d744a7fb3)
+
+* There are no mistakes, only accidents
+* Create a ritual, embrace your spirituality, practice mindfulness, get intentional, be gentle to yourself, ask your spiritual guide for help, love your body, develop relationships with healers, know your truths
+* If the love for yourself that you show is sub-optimal or self-destructive, it's not because you don't love yourself enough, or haven't awakened the spirit within you. It's because you probably haven't seen a healthy regard for your well-being or happiness modeled for you, and that probably stems from buried trauma, or a toxic relationship with your primary caregiver. You can only love yourself in the way you've been shown.
+
+## [Self-Love Isn't About Affirmations](https://medium.com/@krisgage/self-love-isnt-about-affirmations-4cd09ae1d60f)
+
+* If you are regularly sabotaging your long-term happiness, you do not love yourself. No matter how often you tell yourself otherwise.
+* Self-love isn't just about what you tell yourself to make yourself feel better - it's about what you do to make yourself be better
+* The more hard work you put into bettering your life, the less often you'll feel the need to treat yourself. To affirm yourself. To remind yourself that you're worthy - because you're already proving these things to yourself through your actions, every single day.
+
+## [You Are Not Broken Nor Do You Need Fixing Just More Self-Love And Acceptance](https://medium.com/the-mission/you-are-not-broken-nor-do-you-need-fixing-just-more-self-love-and-acceptance-b1882ab2bd04)
+
+* Suffering results when you resist what is
+* You turn your pain into suffering when you resist it
+* Surrender and trust that your personal growth will guide you to a wonderful place if you follow the current upstream instead of resisting it
+
+## [How To Develop Self-Love](https://medium.com/@krisgage/how-to-develop-self-love-816d77efb1c)
+
+* Every time you think you want something from someone else, ask if you're giving it to yourself first
+* If you like quality time, then set aside some time to do something that you enjoy and can do (and can learn to do) mindfully and joyfully alone
+* If you like words of affirmation, then ffs use kind words with yourself - and keep doing it until you learn to listen and absorb and beleive them
