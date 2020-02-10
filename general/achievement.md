@@ -44,3 +44,13 @@
 * We could be spending our time more wisely - when we obsessively curate our input and match it with our goals, there will be a much better output
 * Thus, when you want to achieve big goals, you need to completely change your self-talk so that it matches what you _really_ want
   * Even though I am a little tired right now, I am going to the gym. I know I will feel greater after and I will be proud of myself for showing up. Staying consistent with my workouts is really important to me.
+
+## [This Simple Question Will Always Improve Your Self-Discipline](https://medium.com/mind-cafe/this-simple-question-will-always-improve-your-self-discipline-45593e912bfd)
+
+* "Will this make the boat go faster?" - focus everything on pushing main goals and objectives forward
+
+## [The Science of Developing Mental Toughness in your Health and Work](https://medium.com/mind-cafe/the-science-of-developing-mental-toughness-in-your-health-work-and-life-2f445e553833)
+
+* Mental toughness is built through small physical wins
+* Mentally tough people don't have to be more courageous, talented, or intelligent - just more consistent
+  * Mentally tough people develop systems that help them focus on the important stuff regardless of how many obstacles life puts in front of them
