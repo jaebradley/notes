@@ -158,3 +158,63 @@
 * Every time you think you want something from someone else, ask if you're giving it to yourself first
 * If you like quality time, then set aside some time to do something that you enjoy and can do (and can learn to do) mindfully and joyfully alone
 * If you like words of affirmation, then ffs use kind words with yourself - and keep doing it until you learn to listen and absorb and beleive them
+
+## [How To Be Alone: The Difference Between Loneliness and Solitude](https://medium.com/swlh/how-to-be-alone-the-difference-between-loneliness-and-solitude-70745a66bc62)
+
+* Loneliness if being alone and not liking it (a feeling)
+* Solitude is being alone and content (a choice)
+* Western world promotes two contradictions: 
+  * Know thyself
+  * Humans are born to be social
+* When you surround yourself with moments of solitude and stillness you learn that there are other things you are capable of paying attention to than just what makes the most noise on the surface
+* In some ways, solitude is a preview of death - the world can, and will, continue without us
+
+## [How to Soothe Loneliness With Solitude](https://blog.onlywomen.com/how-to-soothe-loneliness-with-solitude-91fd8a7545d6)
+
+* We have to breathe in acknowledgement, and breathe out acceptance
+
+## [Learning From Solitude](https://medium.com/mind-cafe/learning-from-solitude-69f288ca2a32)
+
+* The receptive character, according to Fromm, seeks validation from the outside. They will likely crave attention and love, seek knowledge from outside sources but never develop original ideas, and will have a deep fear of losing connection or approval.
+* If you do feel uncomfortable by yourself, simply being, without distraction, pay attention to the types of thoughts which might arise. Whatever they might be, the most important thing to notice is the lack of control you have over their presence.
+
+## [The Hell of High Expectations](https://medium.com/@thisisgorman/the-hell-of-high-expectations-e54274af6ca0)
+
+* Humans tell themselves three grand lies: memories, thoughts and expectations. Memories are a distortion of the past, thoughts are a distortion of the present, and expectations are a distortion of the future.
+* Satisfaction is sort of the blended area of the Venn diagram between contentment, pride and bliss.
+* [Event] — [Expectations] = Satisfaction
+* People who live in constant fear are paying interest on a debt that never comes due
+
+## [Buddha on Worrying](https://medium.com/the-ascent/buddha-on-worrying-7509829c8bbe)
+
+* If you can solve the problem, then what is the need of worrying? If you cannot solve it, then what is the use of worrying?
+* Since we see everything as solid and permanent, we tend to take life seriously and make a big deal out of problems. Consequently, we become attached to our life’s situations and worry about them. It is because of our ignorance that we worry about things.
+* Certain friendships are toxic, but give it a chance. Or certain food / drink / drugs are not good for you, but you consume them anyways.The fact that we ignore these things, leads to suffering i.e. ignorance leads to suffering.
+* we worry because we need to be able to predict what is lying ahead
+* We don’t want to be wrong or uncertain about anything, so we start peaking and overanalyzing things too much, which causes worrying and distress.
+* And it suddenly occurred to me that the word ‘present’ also means ‘gift’. The gift of the present moment, the now. Essentially the only thing we really possess. Because the past and the future are only concepts existing in our own minds. It is in the present moment where we live, where we are happy, where we create our future. And if we decide to use our precious moment to worry, then that is by our own choice and making.
+* God grant me the serenity to accept the things I cannot change, courage to change the things I can, and the wisdom to know the difference.
+
+## [Advice From a 33-Year-Old Who Wants You To Stop Worrying So Much](https://psiloveyou.xyz/advice-from-a-33-year-old-who-wants-you-to-stop-worrying-so-much-6fe722fb23d1)
+
+* If your health degrades, your life does at triple the rate.
+* If it feels hard, do more until it feels easy.
+
+## [Advice On Anxiety No One Tells You](https://medium.com/personal-growth/advice-on-anxiety-no-one-tells-you-4cf397843200)
+
+* Who: do you spend most of your time with? Are they adding stress or aiding your growth? No one is sacred here. Remove anyone that is not helping you heal or else you may always stay anxious.
+* What: are you working on/do you do between 8–6? What do you spend your time doing? What do you consume through your five senses? What are you waiting for? What is holding you back? What do you believe that is keeping you from healing?
+* When: do you go to bed? When do you wake up? When do you leave work? When are you going to make a move? When are you going to start healing yourself? When were you the happiest?
+* Why: are you in your job? Why do you feel like you need to get the next thing? Why do you need external validation? Why are you reading this article? Why do you do anything that you do?
+* Where: in the world do you live? Where do you sleep? Where do you work? Where are you trying to get to? Where is this path leading you? Where do you want to be?
+
+## [How To Develop World Class Behavior In The Next 14 Days](https://medium.com/the-ascent/how-to-develop-world-class-behaviors-in-the-next-14-days-de67a87c07e7)
+
+* 20-minute writing exercise questions
+  * I feel most unhappy when I...
+  * I dread...
+  * I am good at, but do not particularly enjoy...
+  * I cannot imagine doing...every day for the rest of my life
+  * I don't understand why anybody would...
+  * ...does not appeal to me
+* You must sacrifice something, but you do get to choose what you sacrifice

@@ -41,3 +41,20 @@
 ## [Getting Dumped Could Be The Best Thing That Ever Happened To You](https://psiloveyou.xyz/getting-dumped-could-be-the-best-thing-that-ever-happened-to-you-66408b80cc8)
 
 * The real tragedy is the relationship that died months ago, but nobody knows. They just keep trudging through, eating each other up. Zombie relationships do way more damage in the long run. They come to an end eventually, but only after consuming everything you’ve got.
+
+## [The Simple Mistake Most Unhappily Single People Make](https://psiloveyou.xyz/the-simple-mistake-most-unhappily-single-people-make-3b482cd987d9)
+
+* You've always been good enough - but what you must accept is that no matter how good you are and how hard you try, you may be single for the rest of your life.
+  * When you accept you might be single for the rest of your life, you start taking action on building a life that's brimming with whatever your core values are
+
+## [5 Toxic Behaviors That Doom Relationships](https://psiloveyou.xyz/5-toxic-behaviors-that-doom-relationships-f232667f620a)
+
+* Relationships end because on person stops. They stop doing acts of service. It's a choice, even when nobody wants to admit it.
+* You started telling your dreams to someone else. You started sharing your deepest thoughts and fears. 
+* What's bothering you always hatches
+* You're supposed to help each other become better - not silently judge each other for what you screw up
+
+## [How To Tell If Someone Really Loves You](https://medium.com/@brookemeredith/how-to-tell-if-someone-really-loves-you-106897e67434)
+
+* They are willing to let go, if you both have tried as hard as you can to make things work, and things are no longer working. Letting go can be an act of love, because it releases both parties so they can move on, heal and find someone who is a healthier, better match at that point. Emotionally mature, healthy adults let go when a relationship, friendship, or other connection is no longer working.
+* They are not just around to hang out when it's convenient. They also bend themselves sometimes in order to make it happen to hang with you too.
