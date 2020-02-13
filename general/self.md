@@ -218,3 +218,16 @@
   * I don't understand why anybody would...
   * ...does not appeal to me
 * You must sacrifice something, but you do get to choose what you sacrifice
+
+## [42 Learnings From 42 Years Of Life](https://medium.com/@aplusk/42-learnings-from-42-years-of-life-3fdc617ad42d)
+
+* you can’t buy health and time slowly takes it from you to savor it like it’s the only thing you got
+* Life is who you travel with
+* Getting married isn’t a goal but being married is
+* Maybes are usually procrastinated no’s
+
+## [Why You Want The Things You Want](https://humanparts.medium.com/how-to-understand-why-you-want-the-things-you-want-754a5ac0c6fb)
+
+* Attachment causes us to focus on what we believe we are lacking, reather than being grateful for what we already have
+* This results in us going through life with a feeling of scarcity, rather than abundance, even though we likely have everything we truly need
+* We can like something and desire it, but we have the wisdom to know that it doesn't define us. We understand that we won't die or disappear if we don't get it. Non-attachment gives us the ability to open our hands and walk away from the trap in favor of our freedom

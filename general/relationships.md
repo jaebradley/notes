@@ -58,3 +58,18 @@
 
 * They are willing to let go, if you both have tried as hard as you can to make things work, and things are no longer working. Letting go can be an act of love, because it releases both parties so they can move on, heal and find someone who is a healthier, better match at that point. Emotionally mature, healthy adults let go when a relationship, friendship, or other connection is no longer working.
 * They are not just around to hang out when it's convenient. They also bend themselves sometimes in order to make it happen to hang with you too.
+
+## [The Secret To A Good Breakup](https://psiloveyou.xyz/the-secret-to-a-good-breakup-c583475f5f2c)
+
+* It's easy to go into a relationship thinking that the worst thing that could possibly happen is that you'll break up. But a breakup isn't the worst thing that can happen.
+* Breakups never end with both people feeling great. But she's a badass and her world is bigger than your relationship. She'll recover.
+
+## [Lessons From A Hundred Heartbreaks](https://medium.com/splatterme/lessons-from-a-hundred-heartbreaks-f53f203cda64)
+
+* In concrete reality, you have to actually like the idea of spending the rest of your life alone. No boyfriend or girlfriend. No dates. No bullshit. If that sounds kinda nice, then you’ve achieved something. Maybe you don’t have to love yourself, or like yourself, but you can get along with yourself just fine.
+
+## [How Do I Stop Mistaking Chemistry For True Connection](https://medium.com/hello-love/how-do-i-stop-mistaking-chemistry-for-true-connection-48c6dce30965)
+
+* Compatibility is about similar lifestyle choices and a shared vision for the life you want to create together. 
+* It’s completely different — and equally important, if not more so — than chemistry.
+* But when you’re ready to build a life with someone, make sure you both share a similar vision for that life, and that the timing is right for you both - are you both ready to create that vision?
