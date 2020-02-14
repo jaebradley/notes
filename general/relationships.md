@@ -73,3 +73,10 @@
 * Compatibility is about similar lifestyle choices and a shared vision for the life you want to create together. 
 * It’s completely different — and equally important, if not more so — than chemistry.
 * But when you’re ready to build a life with someone, make sure you both share a similar vision for that life, and that the timing is right for you both - are you both ready to create that vision?
+
+## [Single & Searching - But Not The Way You're Thinking](https://medium.com/the-junction/single-searching-but-not-the-way-youre-thinking-993cf89120d2)
+
+* I guess what I'm really searching for is magic
+* When a soul mate comes along, I won't be waiting, anxious and impatient to begin. I'll be here, calmly enjoying life.
+* I don't want to waste all the time that I'm single wishing I wasn't and let the moments of that time be wasted, too. This isn't a waiting room, and I'm not in need of fixing. I'm not searching to end my single status. I'm not struggling through the loneliness and lamenting my single state.
+
