@@ -247,7 +247,7 @@
 ## [The Benefits Of Unplugging and Choosing To Be Present](https://medium.com/the-mission/the-benefits-of-unplugging-and-choosing-to-be-present-c10fa8ba5d610
 
 * The one common main regret of dying male patients was that they wish they hadn't worked so hard
-* All the men I nursed deeploy regretted spending so much of their lives on the treadmill of a work existence
+* All the men I nursed deeply regretted spending so much of their lives on the treadmill of a work existence
 * You are 99 years old, you are on your deathbed, and you have the chance to come back to right now: what would you do?
 
 ## [How To Be Present For Your Own Life](https://medium.com/@nickwignall/how-to-be-present-for-your-own-life-53ebd61a398f)
