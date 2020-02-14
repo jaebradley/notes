@@ -231,3 +231,28 @@
 * Attachment causes us to focus on what we believe we are lacking, reather than being grateful for what we already have
 * This results in us going through life with a feeling of scarcity, rather than abundance, even though we likely have everything we truly need
 * We can like something and desire it, but we have the wisdom to know that it doesn't define us. We understand that we won't die or disappear if we don't get it. Non-attachment gives us the ability to open our hands and walk away from the trap in favor of our freedom
+
+## [The 5 Biggest Mistakes I Made In My 20s](https://medium.com/the-post-grad-survival-guide/the-5-biggest-mistakes-i-made-in-my-20s-323a2f423680)
+
+* "Follow your passion all the time and at the expense of everything else" - terrible advice. "Follow your passion some of the time until you can make it work" - a lot better
+* "Yesterday, I was clever, so I wanted to change the world. Today, I am wise, so I am changing myself"
+* Don't get lost in abstract ideas, no matter how idealistic they might be
+
+## [Your Future Self Is The Enemy Of Your Best Self (How To Overcome Your Present Bias](https://medium.com/the-mission/your-future-self-is-the-enemy-of-your-best-self-how-to-overcome-your-present-bias-e8dbb4544791)
+
+* You sabotage your life by choosing what's convenient in the short-term over what you're capable of in the grand scheme of things
+* Resistance brain occurs when keep post-poning life's work, too self-critical of work or ideas, you feel work is never good enough to ship, launch, publish, finding excuses not to do something
+* If you can't easily articulate how your present action benefits you in the future (i.e. months and years) then it's probably not an action worth taking
+
+## [The Benefits Of Unplugging and Choosing To Be Present](https://medium.com/the-mission/the-benefits-of-unplugging-and-choosing-to-be-present-c10fa8ba5d610
+
+* The one common main regret of dying male patients was that they wish they hadn't worked so hard
+* All the men I nursed deeploy regretted spending so much of their lives on the treadmill of a work existence
+* You are 99 years old, you are on your deathbed, and you have the chance to come back to right now: what would you do?
+
+## [How To Be Present For Your Own Life](https://medium.com/@nickwignall/how-to-be-present-for-your-own-life-53ebd61a398f)
+
+* The ways in which we need to grow are usually those we are the most supremely defended against and are least willing to admit even exist, let alone take an undefended, mindful peek at
+* Mindfulness reminds me that the moment is what it is and nothing more - what will I do with what I have in this moment?
+* Achievement as a nice side-effect of living a life I love
+* The ego loves to teach and preach and mold and build - in short, it loves to control
