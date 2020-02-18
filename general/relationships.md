@@ -80,3 +80,15 @@
 * When a soul mate comes along, I won't be waiting, anxious and impatient to begin. I'll be here, calmly enjoying life.
 * I don't want to waste all the time that I'm single wishing I wasn't and let the moments of that time be wasted, too. This isn't a waiting room, and I'm not in need of fixing. I'm not searching to end my single status. I'm not struggling through the loneliness and lamenting my single state.
 
+## [There Is Only One Piece Of Relationship Advice You Need To Know](https://medium.com/@AbKo/there-is-only-one-piece-of-relationship-advice-that-you-will-ever-need-to-know-586e374a9eb1)
+
+* If someone is into you, they will find a way to be with you. No exceptions.
+* The hardest thing that human beings ever have to face is that sometimes, the people we most want to be around in the world could give a shit less if we exist. They don’t mind us being around, necessarily, but they wouldn’t care if we weren’t. It’s a feeling that’s almost unbelievable in its cruelty.
+
+## [The Goal In Love](https://psiloveyou.xyz/the-goal-in-love-adb4639eb3f2)
+
+* I stopped going on dates with the idea of not ‘wasting time’ and started going on them with the intention of learning more about myself. Because love is the mirror, that teaches us who we really are and what we truly want.
+
+## [There Is No Right Person Wrong Time](https://medium.com/@krisgage/there-is-no-right-person-wrong-time-494e8778d0ed)
+
+* The right people are timeless. The right people make you want to throw away the plans you originally had for one and follow them into the hazy, unknown future without a glance backwards. The right people don’t make you hmm and haw about whether or not you want to be with them; you just know… That no matter what you thought you wanted before, this is better. Everything is better since they came along.

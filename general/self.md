@@ -256,3 +256,57 @@
 * Mindfulness reminds me that the moment is what it is and nothing more - what will I do with what I have in this moment?
 * Achievement as a nice side-effect of living a life I love
 * The ego loves to teach and preach and mold and build - in short, it loves to control
+
+## [How To Free Your Mind From Toxic Behaviors](https://medium.com/personal-growth/how-to-free-your-mind-from-toxic-behaviors-7dd9c9cbdb9d)
+
+* Parable of two wolves battling inside our mind. One is negative, angry, envious, resentful, critical, and doubtful. The other is full of joy, appreciation, love, compassion, and clarity.
+  * It's not just a matter of feeding one the good wolf and ignoring the bad one as we can never get rid of the toxic wolf
+* You have to meet the person you'd rather not be
+* List superpowers and list kryptonite (mindset, beliefs, behaviors that take energy away, or make you feel embarrassed, or are things you suck at)
+  * How you use them (positively or negatively) turns them into either a weakness or a strength
+* Don't see life as a battle - life is full of tensions or contradictions that can coexist and stop seeing everything through the lens of good or bad
+
+## [Curiosity Is The Secret To A Happy Life](https://elemental.medium.com/curiosity-is-the-secret-to-a-happy-life-3dc5d940d602)
+
+* Different categories or dimensions of curiosity
+  * Joyous exploration (dictionary definition of curiosity)
+  * Curious people are not deterred when confronted with uncertainties that newness breeds (even if those new experiences cause stress and anxiety)
+  * Thrill-seeking (willingness to take some type of risks in pursuit of new experiences)
+  * Social curiousity (taking an interest in other people's views and opinions)
+* Novelty acts like curiosity fertilizer
+  * The more you interact with new experiences or information, the more you realize you don't know, which makes further exploration more attractice. At the same time, engaging with something new tends to drain it of its power to cause anxity. The highest anxiety you feel is always during the anticipation of something new - stick it out and you see that the anxiety is manageable and can even be enjoyable
+
+## [How To Figure Out What Matters Most](https://psiloveyou.xyz/how-to-figure-out-what-matters-d7d0077beb9e)
+
+* Let's say you want to bake a cake - would you get sidetracked thinking shit like "my favorite food is potato chips". No, because _none of these things have any implication when baking the damn cake_.
+* The reason seeking more specifics from others is that no amount will silence the lingering question in the back of your mind: _what if_
+* Relax choke hold on "specifics" and "certainty"
+* Succumbing to self-doubt means you become your own worst enemy and potentially cause more harm to yourself than anyone else
+
+## [13 Rumi Quotes That Will Change The Way You Think](https://medium.com/mind-cafe/13-rumi-quotes-that-will-change-the-way-you-think-1dcf81959310)
+
+* Excuses are fabricated illusions we create to rationalize our behaviors when we're too afraid to go after what we really want
+* The garden of the wolrd has no limits, except in your mind (lush garden of growth vs. abyss of demise)
+
+## [The Incredible Lightness of Giving Up On People](https://medium.com/acid-sugar/the-incredible-lightness-of-giving-up-on-people-f0c7ff87742d)
+
+* I'm here: if you need me / when you're ready / when you feel like it
+  * They will come to you when they feel like it (if they ever feel like it)
+* You're giving up on thinking there must be something wrong with you and on obsessing over what that might be
+* You're giving up on the beleive that once they start to miss you, they'll realize the true depths of their loss
+* I've learned to embrace the lightness that comes with lowering my expectations, with understanding that my best intentions won't always be reciprocated - that they don't _have_ to be reciprocated
+* I've learned to accept I'm not entitled to anyone's time, love or attention, simply because I've offered mine
+
+
+## [This Is The Secret To Living A Life Without Regret](https://medium.com/mind-cafe/this-is-the-secret-to-living-a-life-without-regret-48b7dacdb4dd)
+
+* What you're too afraid to do today, twenty years from now, you'll most probably wish you had done
+  * "Wish I Had" vs. "Glad I Did"
+
+## [You Will Not Grow Up Until You Tolerate Discomfort](https://humanparts.medium.com/you-will-not-grow-until-you-learn-to-tolerate-discomfort-54607fb63a2a)
+
+* When we imagine leaning into discomfort (quiting a job on the spot, or booking a cross-continential flight), these are actually the pursuit of some form of comfort (like endulging in a form of escapism)
+* Confronting and adapting to discomfort is much more subtle
+  * It means working out when you have a good excuse not to
+  * It means biting your tongue and picking your battles, even if you don't feel like it
+* Until we allow ourselves to see discomfort as the agent of change it is, we live in fear
