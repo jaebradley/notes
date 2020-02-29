@@ -310,3 +310,9 @@
   * It means working out when you have a good excuse not to
   * It means biting your tongue and picking your battles, even if you don't feel like it
 * Until we allow ourselves to see discomfort as the agent of change it is, we live in fear
+
+## [7 Uncomfortable Rules of Life Everyone Knows But Only A Few Follow](https://medium.com/personal-growth/7-uncomfortable-rules-of-life-everyone-knows-but-only-a-few-follow-a25dd8696b1e)
+
+* The all-important truth about happiness is this: your happiness depends much more on your attitude than it does on objectives or external circumstances
+  * Instead of looking to get happy from a person or a job, or an external factor, view relationships and/or work as outlets for happiness, and focus on how you can give more happiness.
+* The greatest mistake many people make is standing still for too long
