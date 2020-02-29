@@ -316,3 +316,23 @@
 * The all-important truth about happiness is this: your happiness depends much more on your attitude than it does on objectives or external circumstances
   * Instead of looking to get happy from a person or a job, or an external factor, view relationships and/or work as outlets for happiness, and focus on how you can give more happiness.
 * The greatest mistake many people make is standing still for too long
+
+## [This Strategy Makes Procrastination Impossible](https://medium.com/darius-foroux/this-strategy-makes-procrastination-impossible-783f667c32b3)
+
+* A new habit should not feel like a challenge - the first two minutes should be easy
+* Can scale down nearly any habit or activity into a two-minute version as a "gateway habit"
+
+## [How To Be A Leader That Inspires People To Change](https://medium.com/darius-foroux/how-to-be-a-leader-that-inspires-people-to-change-f9ea6ea06daf)
+
+* There's only one leadership strategy - you can only lead by example; there's no other effective way to inspire people
+* "The most fundamental and important truth at the heart of Extreme Ownership: there are no bad teams, only bad leaders"
+
+## [3 Methods of Gratititude That Can Immediately Transform Your Life](https://medium.com/better-marketing/3-methods-of-gratitude-that-can-immediately-transform-your-life-c84754d1c25c)
+
+* The Gap and the Gain - most people live in "The Gap" (they only see what's missing)
+  * Giving somebody something and it's not what they liked - they don't notice / appreciate that somebody thought of them
+  * The Gain is measuring yourself against where you were before
+  * Need to remember The Gain and _not_ necessarily only The Gaps
+  * If you focus on your circumstances, you'll find plenty to complain about - but if you focus on your capability, then your only option is to get moving
+  * Consumption is a side-effect of focussing on circumstances (what's wrong or difficult about them)
+  * Creation is a side-effect of focussing on capability (focus is on future circumstances)
