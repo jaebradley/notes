@@ -1,6 +1,6 @@
 # Item 15: Prefer Class Instance Variables To Class Variables
 
-* Class variables (`@@`) are attached to a class and visible to all instances of that class making it immediately visible to all instances of that class
+* Class variables (`@@`) are attached to a class and are immediately visible to all instances of that class
 * Class variables in a superclass are shared between it and all of its subclasses
   * Any instance of one of those classes can access the shared class variables and modify them
 * Usecase example in the book is building a `Singleton` class where there's a single `instance` class method that relies on a `@@single` class variable
