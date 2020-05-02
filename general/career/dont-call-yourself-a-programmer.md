@@ -9,12 +9,12 @@
   * You want to be attached to profit centers, because it will bring you higher wages / respect / opportunities
     * If you can't work in a profit center at a company, work elsewhere or engineer your transfer to a profit center after joining the company
 * Don't call yourself a programmer - describe yourself by what you have accomplished for previous employers around increasing revenues or reducing costs (for example "wrote the backend billing code that 97% of Google's revenue passes through")
-* At a job interview, remember that you both are within the confines of a transaction - you are not their friend, you're an input for an industrial process which he is trying to buy for the company at the lowest price
+* At a job interview, remember that you both are within the confines of a transaction - you are not their friend, you're an input for an industrial process which they are trying to buy for the company at the lowest price
 * Most jobs are never available publicly, just like most worthwhile candidates are not available publicly
   * Word of mouth => introductions => meetings => job offer => then resume / HR / formal offer dance begins
   * This is disproportionally true of jobs you actually want
 * Don't want to be first employee of startup - be last co-founder
-* The question is not "hos much money do engineers make" but "what kind of offers do engineers routinely work for?"
+* The question is not "how much money do engineers make" but "what kind of offers do engineers routinely work for?"
   * Salary is only one of the many levers that people use to motivate other people
 * Be comfortable counteroffering around axes you care about other than money - if they can't go higher on salary, then talk about vacation instead
 * Working at a startup, you tend to meet people doing startups
