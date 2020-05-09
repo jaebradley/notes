@@ -1,7 +1,7 @@
 # [Leetcode Pattern 1: Part 1](https://medium.com/leetcode-patterns/leetcode-pattern-1-bfs-dfs-25-of-the-problems-part-1-519450a84353)
 
 * Post-order: left, right, root
-* In-order: right, root, left
+* In-order: left, root, right
 * Pre-order: root, right, left
 * DFS is basically, push to stack, pop top, retrieve unvisited neighbors from top, push them to stack - continue, while stack is not empty
 * Number of connected components in an undirected graph
