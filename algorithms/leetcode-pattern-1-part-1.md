@@ -2,7 +2,7 @@
 
 * Post-order: left, right, root
 * In-order: left, root, right
-* Pre-order: root, right, left
+* Pre-order: root, left, right
 * DFS is basically, push to stack, pop top, retrieve unvisited neighbors from top, push them to stack - continue, while stack is not empty
 * Number of connected components in an undirected graph
   * Create adjacency list of edge from each node to it's neighbor
