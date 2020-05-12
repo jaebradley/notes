@@ -336,3 +336,17 @@
   * If you focus on your circumstances, you'll find plenty to complain about - but if you focus on your capability, then your only option is to get moving
   * Consumption is a side-effect of focussing on circumstances (what's wrong or difficult about them)
   * Creation is a side-effect of focussing on capability (focus is on future circumstances)
+
+  ## [31 Important Things You Should Say No To For A Happier Life](https://forge.medium.com/31-important-things-you-should-say-no-to-for-a-happier-life-a34a1e947579)
+
+* How to say no to perfection
+  * Create a habit of releasing / publishing your work every day, whether you do it publicly or not
+  * Set a timer, and don't let yourself touch what you're working on after the time runs out
+  * Make your deadlines tighter
+* How to say no to excuses
+  * Ask why three times, and you'll land on the real reason
+* Don't have to finish reading everything you started
+* Specify blocks of time in week to reply to messages (email)
+* Say yes to givers and be a giver yourself
+  * Recognize takers (they always ask or demand things)
+* If someone doesn't have time for you, don't find time for them

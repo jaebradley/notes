@@ -54,3 +54,12 @@
 * Mental toughness is built through small physical wins
 * Mentally tough people don't have to be more courageous, talented, or intelligent - just more consistent
   * Mentally tough people develop systems that help them focus on the important stuff regardless of how many obstacles life puts in front of them
+
+## [Four Habits of Discipline My SEAL Dad Taught Me](https://medium.com/mind-cafe/four-habits-of-discipline-my-seal-dad-taught-me-7ed9b13987df)
+
+* Tuesday morning of Hell Week (and not end of Hell Week) is the worst because that's when you feel sorry for yourself - people that start thinking this are the ones that quit
+* The people that made it through Hell Week focused on each individual evoluation - didn't worry about Thursday or Friday
+* The reason SEALs focus on making bed and why penalty of not making bed exactly to spec is that attention to detail is incredibly important - detail requires extra work, but benefits outweight cost of mediocrity
+* Each day is a battle in and of itself - focus on staying in the moment and don't let the burden of a huge task intimidate you - break it up into smaller bits and take it down
+* Treat attention to detail like a religion - hold yourself to a standard
+* Master the art of doing things you don't feel like doing
