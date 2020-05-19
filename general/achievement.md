@@ -63,3 +63,14 @@
 * Each day is a battle in and of itself - focus on staying in the moment and don't let the burden of a huge task intimidate you - break it up into smaller bits and take it down
 * Treat attention to detail like a religion - hold yourself to a standard
 * Master the art of doing things you don't feel like doing
+
+## [How To Get More Work Done In A Week Than Most People Do In A Month](https://medium.com/personal-growth/how-to-get-more-work-done-in-a-week-than-most-people-do-in-a-month-ca0328a0cdd2)
+
+* The urgent tasks are not important and the important ones are never urgent
+  * Urgent tasks are distractions
+  * Important work are tasks we have planned that move goals
+* When people say "I'm so busy", it really means "I'm a poor planner" or "I don't know how to prioritize or delegate"
+* `1-3-5` method
+  * One very important task
+  * Three tasks of medium importance
+  * Five little things
