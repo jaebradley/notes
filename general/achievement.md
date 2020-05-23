@@ -74,3 +74,14 @@
   * One very important task
   * Three tasks of medium importance
   * Five little things
+
+## [Compounding Knoweldge](https://fs.blog/2019/02/compounding-knowledge/)
+
+* Buffett filled mental filing cabinet with information that had a long half-life
+  * Buffett focused on knowledge and companies that changed very slowly
+  * Because information he learned was changing slowly, he could compound knowledge over time
+* Expiring information is lacking detail and nuance / easily digestible
+* When we consume information that doesn't expire or expires slowly we spend time thinking about it more and thus are more likely to match patterns
+* Will you care about what you're reading in a month? In a year? In five years?
+* Are you focused enough on the same thing to build cumulative knowledge or are you too spread out?
+* What do you spend time on that's likely to change in the next few years? What's not likely to change?
