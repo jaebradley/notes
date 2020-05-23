@@ -1,4 +1,4 @@
-# [What every programmer absolutely, positively needs to know about encodings and character sets to work with text](http://kunststube.net/encoding/)
+# [What every programmer absolutely, positively needs to know about encodings and character sets to work with text](https://kunststube.net/encoding/)
 
 * To convert a sequence of bits into letters, an encoding scheme needs to exist
 * `01100010` => `b` in the `ASCII` encoding scheme
