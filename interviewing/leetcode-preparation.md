@@ -1,4 +1,4 @@
-# [Leetcode Questions]
+# Leetcode Questions
 
 ## Summary
 
