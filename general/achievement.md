@@ -85,3 +85,14 @@
 * Will you care about what you're reading in a month? In a year? In five years?
 * Are you focused enough on the same thing to build cumulative knowledge or are you too spread out?
 * What do you spend time on that's likely to change in the next few years? What's not likely to change?
+
+## [Time Blocking: How To Get The Most Out Of Your Schedule](https://medium.com/swlh/time-blocking-how-to-get-the-most-out-of-your-schedule-5e5aad50e39c)
+
+* We are more effective when we limit the amount of time a task has
+* Use colors to highlight tasks from different categories (work vs. social vs. personal vs. health)
+* First fill in blocks for tasks you won't move or change (family, exercise, morning / evening routine)
+* Schedule blocks for repeatable, easy tasks (batching) - reply to emails / phone calls / meetings and do them all together
+* Make sure to stick to the schedule (when it says stop, stop) or else these exceptions will cause the benefits of scheduling to disappear
+* Create themed days - create days for tasks that are similar and relevant to each other - will help to get in the flow for related tasks and activities
+* Block off plenty of time for general fun and rest - can still be spontaneous about how to use time (doesn't have to ruin the mood)
+* Create a block every week to catch up on anything that you didn't quite get to do
