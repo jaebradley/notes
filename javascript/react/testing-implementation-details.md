@@ -49,7 +49,7 @@ test('Accordion renders AccordionContents with the item contents', () => {
 ## False Negatives
 
 * When refactoring to allow for multiple accordion items to be opened at once, `openIndex` is swapped for an array of `openIndexes` and instead of `index === openIndex`, this is swapped for `openIndexes.includes(index)`
-  * But now, tests are broken - `wrapper.state('openIndex')' should be `wrapper.state('openIndexes')` and it should equal `[0]` not `0`
+  * But now, tests are broken - `wrapper.state('openIndex')` should be `wrapper.state('openIndexes')` and it should equal `[0]` not `0`
   * This is a false negative because there was a test failure even though the application code was not broken
 
 ## False Positives
