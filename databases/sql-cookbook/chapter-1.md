@@ -24,7 +24,7 @@ FROM (
 WHERE salary < 5000
 ```
 
-* This is because the `WHERE` clause is evaluated before the SELECT and thus `salary` and `commission` do not exist yet, so in the initial query, these aliases are not applied until _after_ the `WHERE` clause has completed processing
+* This is because the `WHERE` clause is evaluated before the `SELECT` and thus `salary` and `commission` do not exist yet, so in the initial query, these aliases are not applied until _after_ the `WHERE` clause has completed processing
 * The `FROM` clause is evaluated before the `WHERE` so by placing the original query inside the `FROM`, the results of the query are generated before the outside `WHERE`, and the outside `WHERE` evaluates the alias names
 
 ## Finding Null Values
