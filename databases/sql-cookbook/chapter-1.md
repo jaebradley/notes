@@ -31,6 +31,7 @@ WHERE salary < 5000
 
 * Use `IS NULL`
 * `NULL` is never equal / not equal to anything, not even itself, therefore you cannot use `=` or `!=` for testing whether a column is `NULL`
+  * This is because `NULL` is considered the textual representation of an _unknown_ value - so if you had two unknown values, you can't conclusively state anything about their equality (see [this SO](https://stackoverflow.com/questions/1843451/why-does-null-null-evaluate-to-false-in-sql-server))
 
 ## Transforming Nulls into Real Values
 
