@@ -14,7 +14,7 @@
   * `#Results` is the `hash` or `fragment`
 * For the `path`, `query` or `fragment`, pretty much anything is allowed / little reason to reject a value
 * Ports are integers in range of 1 to 65536
-  * JavaScript accepts a port of zero (known as the "wildcard port") where system should use a suitable prot number
+  * JavaScript accepts a port of zero (known as the "wildcard port") where system should use a suitable port number
 * A fully-qualified domain name / hostname is made up of at least two "labels" that are separated by dots
   * `www.example.com` is made up of the "labels" `www`, `example` and `com`
   * Each "label" must consiste of `a-z`, `0-9` or `-` and first character must be alphabetic (case does not matter)
@@ -28,7 +28,7 @@
   * `120.144.171.205` is
     * `0x78.0x90.0xab.0xcd` in quad-dotted hex notation
     * But can also be expressed as `0x7890abcd`
-    * `120.144.43981` in quad-dotted decimal notation` or `2022747085`
+    * `120.144.43981` in quad-dotted decimal notation or `2022747085`
 * If there are 4 groups, then it's `8` bits in each group
 * If there are 3 groups, then it's `8` bits in the first two groups and `16` bits in the last group
 * If there are 2 groups, the first group has `8` bits and the last group has `24` bits
