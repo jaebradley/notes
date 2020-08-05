@@ -337,7 +337,7 @@
   * Consumption is a side-effect of focussing on circumstances (what's wrong or difficult about them)
   * Creation is a side-effect of focussing on capability (focus is on future circumstances)
 
-  ## [31 Important Things You Should Say No To For A Happier Life](https://forge.medium.com/31-important-things-you-should-say-no-to-for-a-happier-life-a34a1e947579)
+## [31 Important Things You Should Say No To For A Happier Life](https://forge.medium.com/31-important-things-you-should-say-no-to-for-a-happier-life-a34a1e947579)
 
 * How to say no to perfection
   * Create a habit of releasing / publishing your work every day, whether you do it publicly or not
@@ -350,3 +350,14 @@
 * Say yes to givers and be a giver yourself
   * Recognize takers (they always ask or demand things)
 * If someone doesn't have time for you, don't find time for them
+
+## [The Best Way To Improve Yourself](https://medium.com/darius-foroux/the-best-way-to-improve-yourself-2805cb342588)
+
+* When do I improve my mind? And _how_ do I improve my mind?
+* What's your best hour of the day
+* I understand the argument _for_ morning routines - the idea is that a good morning ritual will _make_ your day better
+  * But often, not the case - sometimes wake up with less energy, or there's an emergency, or kids
+  * And can meditate all you want, but still be tired / still have to deal with kids
+* Munger Technique is to give yourself the best hour of the day (which might be the morning one day but after dinner the next day)
+* So if you can't learn in the morning, don't get frustrated - it's just not your best hour
+  * You want to feel good, energetic, and rested
