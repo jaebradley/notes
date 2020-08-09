@@ -33,7 +33,7 @@ return status === 'rejected' ? (
 ```
 
 * Unfortunately, this means that need to maintain runtime errors and fetching / async errors
-* `react-error-boundary` exposes and hook to incorporate async errors into it's error state that it maintains
+* `react-error-boundary` exposes a hook to incorporate async errors into the error state that it maintains
 
 ```jsx
 const handleError = useErrorHandler();
