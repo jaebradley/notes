@@ -1,6 +1,6 @@
 # [Asynchronous vs. Deferred JavaScript](https://bitsofco.de/async-vs-defer/)
 
-* JavaScript is considered a parser blocking resource" - this means that the parsing of the HTML document itself is blocked by JavaScript
+* JavaScript is considered a parser blocking resource - this means that the parsing of the HTML document itself is blocked by JavaScript
   * When the parser reaches a `<script>` tag whether it's internal or external, the parser stopes to fetch it (if it's an external resource) and execute it
 * If there are several JavaScript files on a page, this will interfere with the time to first paint even if the document is not actually dependent on those files
 * The `async` attribute is used to indicate to the browser that the script file _can_ be executed asynchronously meaning that the downloading of the JavaScript can occur while the HTML is parsing
