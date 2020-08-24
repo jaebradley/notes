@@ -367,3 +367,8 @@
 * > don’t underestimate the importance of building the habit of also asking yourself what you need to keep out of your environment to better focus.
 * > don’t underestimate the importance of building the habit of also asking yourself what makes you miserable and working like hell to avoid these things.
 
+## [4 Things Mentally Tough People Don't Do](https://medium.com/@nickwignall/4-things-mentally-tough-people-dont-do-70cd728c743c)
+
+* > One very strong theme in almost everyone’s childhood is that they were taught that you need to be hard on yourself in order to be successful. That if you’re gentle or easy on yourself, you’ll end up as some kind of a degenerate slacker.
+* > the best way to be mentally tough is to be gentle with yourself when things are tough.
+* People who build their identity solely on results become emotionally fragile since you can't control results
