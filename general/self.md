@@ -361,3 +361,9 @@
 * Munger Technique is to give yourself the best hour of the day (which might be the morning one day but after dinner the next day)
 * So if you can't learn in the morning, don't get frustrated - it's just not your best hour
   * You want to feel good, energetic, and rested
+
+## [If You Have The Self-Discipline To DO It, Honing These 4 Habits Is Totally Worth It](https://medium.com/the-ascent/if-you-have-the-discipline-to-do-it-honing-these-4-habits-are-totally-worth-it-cf190c7085ff)
+
+* > don’t underestimate the importance of building the habit of also asking yourself what you need to keep out of your environment to better focus.
+* > don’t underestimate the importance of building the habit of also asking yourself what makes you miserable and working like hell to avoid these things.
+
