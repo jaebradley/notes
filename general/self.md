@@ -372,3 +372,10 @@
 * > One very strong theme in almost everyone’s childhood is that they were taught that you need to be hard on yourself in order to be successful. That if you’re gentle or easy on yourself, you’ll end up as some kind of a degenerate slacker.
 * > the best way to be mentally tough is to be gentle with yourself when things are tough.
 * People who build their identity solely on results become emotionally fragile since you can't control results
+
+## [8 Really Small Things That Tell You A Lot About Someone](https://forge.medium.com/10-really-small-things-that-tell-you-a-lot-about-someones-personality-36083e3c6c5e)
+
+* Anchor confident body language to something you commonly see during the day, like a doorway
+  * Each time you walk through the doorway, you’ll know to check your body language. Are you standing up straight or are you slouching your shoulders? Are you walking with a bit of pep in your step or are you dragging your feet?
+* How they respond in slightly uncomfortable situations - situations like these can be a clue to how a person moves through their life — and how they’d handle the bigger things, where the social friction is greater. Are they willing to be a bit uncomfortable, or will they stay quiet because it feels safer?
+* When you listen to people talk about the things on their plate, you can get a sense of whether they view life through a lens of victimhood or of agency
