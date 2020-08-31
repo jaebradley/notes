@@ -96,3 +96,9 @@
 * Create themed days - create days for tasks that are similar and relevant to each other - will help to get in the flow for related tasks and activities
 * Block off plenty of time for general fun and rest - can still be spontaneous about how to use time (doesn't have to ruin the mood)
 * Create a block every week to catch up on anything that you didn't quite get to do
+
+## [Why People Get Excited About New Ideas, Only To Get Bored And Give Up](https://medium.com/age-of-awareness/why-people-get-excited-about-new-ideas-only-to-get-bored-and-give-up-4feb81564856)
+
+* The idea that a massive reward can be obtained with minimal work/cost
+* Other people deem this thing "important" and so the idea of doing something important makes you feel special
+* If you love practicing, you'll practice often - and get good as a result
