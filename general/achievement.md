@@ -102,3 +102,9 @@
 * The idea that a massive reward can be obtained with minimal work/cost
 * Other people deem this thing "important" and so the idea of doing something important makes you feel special
 * If you love practicing, you'll practice often - and get good as a result
+
+## [33 Things I Stole From People Smarter Than Me](https://forge.medium.com/33-things-i-stole-from-people-smarter-than-me-on-the-way-to-33-c38e368e5cb)
+
+* When someone tells you something is wrong, they’re almost always right. When someone tells you how to fix it, they’re almost always wrong.
+* The best and most polite excuse is to just say you have a rule. People respect rules and they accept that it's not you rejecting the offer, request, demand, or opportunity, but the rule allows you no choice
+* “Imagine life as a game in which you are juggling some five balls in the air. You name them — work, family, health, friends, and spirit… and you’re keeping all of these in the air. You will soon understand that work is a rubber ball. If you drop it, it will bounce back. But the other four balls — family, health, friends, and spirit — are made of glass. If you drop one of these, they will be irrevocably scuffed, marked, nicked, damaged, or even shattered. They will never be the same.”
