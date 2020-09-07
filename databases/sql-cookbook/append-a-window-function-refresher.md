@@ -1,6 +1,6 @@
-# [Appendix A: Window Function Refresher]
+# Appendix A: Window Function Refresher
 
-* When you use `GROUP BY` in a query, each row in a result set is ag roup and represents one or more rows with the same values in one or more columns that you specify
+* When you use `GROUP BY` in a query, each row in a result set is a group and represents one or more rows with the same values in one or more columns that you specify
 * For each member of the result set, the aggregate `COUNT` function must return a value greater than `0`
 * Groups must have at least one member / row - they cannot be empty and thus can also not be created from an empty table
 * Groups must also be distinct
@@ -73,7 +73,7 @@ ORDER BY 2
 ```
 
 * Can combine partitioning by different columns in the same `SELECT`
-* `COUNT(*) OVER(PARTITION BY deptno)` + `COUNT(*) OVER(PARTITION BY job)` woudl return a result set where employees in the same department have the same value for the department count while employees who have the same job position have the same value for the job count
+* `COUNT(*) OVER(PARTITION BY deptno)` + `COUNT(*) OVER(PARTITION BY job)` would return a result set where employees in the same department have the same value for the department count while employees who have the same job position have the same value for the job count
 * Similar to `GROUP BY`, `PARTITION BY` lumps all `NULL`s into one group or partition, so when using aggregate functions, need to be aware that aggregate functions ignore `NULL` values and if you need to count `NULL` values, use `COUNT(*)` which will count rows
 
 ### Incorporating Order
