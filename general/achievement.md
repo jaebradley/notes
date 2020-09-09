@@ -113,3 +113,7 @@
 
 * Whenever you make a key decision or key action in your life, _write down your expected results_
 * After nine to 12 months, compare your expectations with actual results
+
+## [The 20/20/20 Rule Of Productive Mornings](https://medium.com/four-minute-books/the-20-20-20-rule-of-productive-mornings-703cc5e319f3)
+
+* The `20/20/20` rule divides your first hour of the day into three equal blocks of exercise, reflection, and learning
