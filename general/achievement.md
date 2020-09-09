@@ -108,3 +108,8 @@
 * When someone tells you something is wrong, they’re almost always right. When someone tells you how to fix it, they’re almost always wrong.
 * The best and most polite excuse is to just say you have a rule. People respect rules and they accept that it's not you rejecting the offer, request, demand, or opportunity, but the rule allows you no choice
 * “Imagine life as a game in which you are juggling some five balls in the air. You name them — work, family, health, friends, and spirit… and you’re keeping all of these in the air. You will soon understand that work is a rubber ball. If you drop it, it will bounce back. But the other four balls — family, health, friends, and spirit — are made of glass. If you drop one of these, they will be irrevocably scuffed, marked, nicked, damaged, or even shattered. They will never be the same.”
+
+## [3 Questions That Will Change Your Career](https://medium.com/darius-foroux/3-questions-that-will-change-your-career-11dd514e5ba)
+
+* Whenever you make a key decision or key action in your life, _write down your expected results_
+* After nine to 12 months, compare your expectations with actual results
