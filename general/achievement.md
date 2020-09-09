@@ -117,3 +117,11 @@
 ## [The 20/20/20 Rule Of Productive Mornings](https://medium.com/four-minute-books/the-20-20-20-rule-of-productive-mornings-703cc5e319f3)
 
 * The `20/20/20` rule divides your first hour of the day into three equal blocks of exercise, reflection, and learning
+
+## [10 Bad Habits Of Unsuccessful People](https://forge.medium.com/10-habits-of-unsuccessful-people-you-dont-want-to-copy-d401ac677c91)
+
+* Broadcasting your plans can be counterproductive rather than motivating
+  * People will often applaud you simply for stating your intention, he said, and somewhat counterintuitively, that applause can sap your will to actually follow through on the plans you've just outlined
+  * When you tell someone your goal and they acknowledge it, a "social reality" is created where the mind is tricked into feeling that it's already done
+  * This satisfaction means that you're less motivated to do the actual hard work necessary to succeed
+* Only delay things when you'll do a better job with that extra time - do it now, or do it better later
