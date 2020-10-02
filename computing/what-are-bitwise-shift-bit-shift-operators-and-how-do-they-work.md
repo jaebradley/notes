@@ -8,5 +8,5 @@
   * Shifting `11100000 00000000 000000000 000000000` by one to the left would lead to `11000000 00000000 000000000` as the bits do not "wrap"
 * Logical right shift (`>>>`) will move bits to the right
   * Differs from arithmetic right shift (`>>`) in that arithmetic right shift pads with the most significant bit meaning that arithmetic right shift preserves the sign of the value
-  * Shifting `100000000 00000000 00000000 01100000 by logical right shift (`>>> 4`) would lead to `00001000 00000000 00000000 00000110`
+  * Shifting `100000000 00000000 00000000 01100000` by logical right shift (`>>> 4`) would lead to `00001000 00000000 00000000 00000110`
   * Shifting the same value using arithmetic right shift (`>> 4`) would lead to `11111000 00000000 00000000 00000110` - note how the leading `1` is still preserved (i.e. the sign bit)
