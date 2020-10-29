@@ -2,7 +2,7 @@
 
 * Not using `equals`
   * `==` compares memory addresses and not their content (like in the case of two `String`s)
-  * Pretty much nver use `==`
+  * Pretty much never use `==`
 * String concatentate using `StringBuilder` and not `+`
   * `String`s are immutable so using the `+` operator for string concatenation basically creates three objects - the original `String`, the `String` to append, and the result `String`
   * Using `StringBuilder` removes the intermediary object
