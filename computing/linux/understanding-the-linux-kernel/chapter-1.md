@@ -113,3 +113,35 @@
 
 * If the time to update a protected data structure is short, a semaphore could be inefficient since checking a semaphore involves inserting a process in the semaphore list and then suspending it
 * When a process finds the spin lock is closed by another process, it "spins" around repeatedly, executing a tight instruction loop until the lock becomes open
+
+### Process Management
+
+* Unix distinguishes between the process and the program it eecutes
+* The `fork` and `_exit` system calls are used to create and terminate processes
+* The `exec` system call is executed to invoke loading a new program
+  * The process resumes execution with a brand new address space containing the loaded program
+* The process that invokes `fork` is the parent process while the `fork`ed process is the child process
+  * Each process has a pointer to it's parent and children
+
+#### Zombie Processes
+
+* The zombie process state occurs when a process is terminated until the parent process executes a `wait4` system call on it
+* If a parent process terminates without issuing a `wait4` call to it's children processes, the `init` system process (created during system initialization) will periodically monitor these "orphaned" zombie processes to remove them
+  * When a process terminates, the kernel changes the appropriate process descriptor pointers of all the existing children of the terminated process to make them become children of `init`
+  * The `init` process monitors execution of all its children and routinely issues `wait4` calls
+
+### Memory Management
+
+#### Virtual Memory
+
+* Virtual memory acts as a logical layer between the application memory requests and the hardware memory management unit
+* The virtual address space is a set of memory references that a process can use is different from the actual physical memory addresses
+* When a process uses a virtual memory address, the kernel and memory management unit cooperate to find the actual physical memory address of the requested value in memory
+
+#### RAM
+
+* A few MB are dedicated to storing the kernel image (kernel code and kernel static data structures)
+* Remaining RAM is handled by the virtual memory system and is used
+  * to satisfy kernel requests for buffers, descriptors, and other kernel data structures
+  * to satisfy process requests for generic memory areas and for memory mapping files
+  * enable better performance from disks and other buffered devices by caching values
