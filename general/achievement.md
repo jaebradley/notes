@@ -96,3 +96,7 @@
 * Create themed days - create days for tasks that are similar and relevant to each other - will help to get in the flow for related tasks and activities
 * Block off plenty of time for general fun and rest - can still be spontaneous about how to use time (doesn't have to ruin the mood)
 * Create a block every week to catch up on anything that you didn't quite get to do
+
+## [AOC’s Attractiveness Drives Us All Mad](https://tressiemcphd.medium.com/aocs-attractiveness-drives-us-all-mad-8c16a8654f9)
+
+* I believe that we ascribe "smart" and "intelligent" post hoc to power. I believe that powerful people, particularly white men, believe that their power is justified by their genetic endownments. I believe that they operate from the assumption that whatever wins, is also smart.
