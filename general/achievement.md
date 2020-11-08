@@ -96,3 +96,11 @@
 * Create themed days - create days for tasks that are similar and relevant to each other - will help to get in the flow for related tasks and activities
 * Block off plenty of time for general fun and rest - can still be spontaneous about how to use time (doesn't have to ruin the mood)
 * Create a block every week to catch up on anything that you didn't quite get to do
+
+## [These Micro-Habits Gave Me 1 Hour Per Day Back](https://medium.com/the-ascent/these-micro-habits-gave-me-1-hour-per-day-back-beb7fb30029)
+
+* Implement auto-pilot decisions for stuff that wastes your time (that doesn't matter to you)
+  * Wake up / go to bed time
+* If a purchase is under $100 then partner has auto-approval to buy it without telling me
+* Waste time in the shower - the shower is where you can do real thinking
+* Make appointments with yourself
