@@ -361,3 +361,17 @@
 * Munger Technique is to give yourself the best hour of the day (which might be the morning one day but after dinner the next day)
 * So if you can't learn in the morning, don't get frustrated - it's just not your best hour
   * You want to feel good, energetic, and rested
+
+## [6 Effective Minimalist Habits That Changed My Life](https://medium.com/live-your-life-on-purpose/6-effective-minimalist-habits-that-changed-my-life-687b950b94e0)
+
+* Define priorities in terms of consumption and then develop buying habits that adhere to those priorities
+  * Make a list of all the products you buy regularly. Categorize them and determine the priorities for each category. Then buy new things according to those values
+* Many people limit minimalism to consumer behavior - buy less / get rid of useless stuff
+  * Miimalism is a catalog of values - devote most of the energy, thought, money (resources) to values and minimize resources that do not adhere to same values
+  * Don't rely on cues like pursuing a career because it has a good reputation
+
+## []()
+
+* On a scale of 1-10 how happy are you with your life today?
+  * If value is less than 10 - add one and ask yourself "what would be different to achieve new score?"
+  * This will make you search for __small, achievable__ changes - adding more than one may lead to unachievable goals
