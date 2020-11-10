@@ -100,3 +100,11 @@
 ## [AOC’s Attractiveness Drives Us All Mad](https://tressiemcphd.medium.com/aocs-attractiveness-drives-us-all-mad-8c16a8654f9)
 
 * I believe that we ascribe "smart" and "intelligent" post hoc to power. I believe that powerful people, particularly white men, believe that their power is justified by their genetic endownments. I believe that they operate from the assumption that whatever wins, is also smart.
+
+## [These Micro-Habits Gave Me 1 Hour Per Day Back](https://medium.com/the-ascent/these-micro-habits-gave-me-1-hour-per-day-back-beb7fb30029)
+
+* Implement auto-pilot decisions for stuff that wastes your time (that doesn't matter to you)
+  * Wake up / go to bed time
+* If a purchase is under $100 then partner has auto-approval to buy it without telling me
+* Waste time in the shower - the shower is where you can do real thinking
+* Make appointments with yourself

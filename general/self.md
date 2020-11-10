@@ -392,3 +392,29 @@
 
 * Subtracting stuff only matters if you add meaning
 * Rather than providing a path to happiness, it creates the space you need to deal with life's toughest challenges. Physical separation for mental reflection
+
+## [6 Effective Minimalist Habits That Changed My Life](https://medium.com/live-your-life-on-purpose/6-effective-minimalist-habits-that-changed-my-life-687b950b94e0)
+
+* Define priorities in terms of consumption and then develop buying habits that adhere to those priorities
+  * Make a list of all the products you buy regularly. Categorize them and determine the priorities for each category. Then buy new things according to those values
+* Many people limit minimalism to consumer behavior - buy less / get rid of useless stuff
+  * Miimalism is a catalog of values - devote most of the energy, thought, money (resources) to values and minimize resources that do not adhere to same values
+  * Don't rely on cues like pursuing a career because it has a good reputation
+
+## [To Become Happier, Aks Yourself These Two Questions Every Night](https://forge.medium.com/to-become-happier-ask-yourself-these-two-questions-every-night-ec4fb5e648ee)
+
+* On a scale of 1-10 how happy are you with your life today?
+  * If value is less than 10 - add one and ask yourself "what would be different to achieve new score?"
+  * This will make you search for __small, achievable__ changes - adding more than one may lead to unachievable goals
+
+## [38 Lessons That Took Me 38 Years To Learn](https://jswilder16.medium.com/38-lessons-that-took-me-38-years-to-learn-13ad58cdd05)
+
+* Action isn't just the effect of motivation, it's the cause of it
+* If you hold yourself accountable to the highest standards, no one else will ever be able to do so
+* Temporary fixes quickly become permanent. Don't live with deficiencies.
+* The more time people spend trying to improve themselves, the less time that they have available for criticizing others - inverse is also true
+* No one ever has a time management problem - they have a priority management problem
+  * Train yourself to never say that you don't have time - say that it's not a priority _and make sure you're happy with that prioritization_
+* Hiring people for a lack of weaknessess leads to teams of average performers
+  * You need people who do a few things exceptionally, not a lot of people who do everything just ok
+* Preventing mistakes isn't the same as achieving excellence - a corpse can sit at a desk and not make mistakes
