@@ -125,3 +125,11 @@
   * When you tell someone your goal and they acknowledge it, a "social reality" is created where the mind is tricked into feeling that it's already done
   * This satisfaction means that you're less motivated to do the actual hard work necessary to succeed
 * Only delay things when you'll do a better job with that extra time - do it now, or do it better later
+
+## [These Micro-Habits Gave Me 1 Hour Per Day Back](https://medium.com/the-ascent/these-micro-habits-gave-me-1-hour-per-day-back-beb7fb30029)
+
+* Implement auto-pilot decisions for stuff that wastes your time (that doesn't matter to you)
+  * Wake up / go to bed time
+* If a purchase is under $100 then partner has auto-approval to buy it without telling me
+* Waste time in the shower - the shower is where you can do real thinking
+* Make appointments with yourself
