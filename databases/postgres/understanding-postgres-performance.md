@@ -1,4 +1,4 @@
-# [Understanding Postgres Performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/_
+# [Understanding Postgres Performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/)
 
 ## Cache + Hit Rate
 
