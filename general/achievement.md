@@ -97,6 +97,35 @@
 * Block off plenty of time for general fun and rest - can still be spontaneous about how to use time (doesn't have to ruin the mood)
 * Create a block every week to catch up on anything that you didn't quite get to do
 
+## [Why People Get Excited About New Ideas, Only To Get Bored And Give Up](https://medium.com/age-of-awareness/why-people-get-excited-about-new-ideas-only-to-get-bored-and-give-up-4feb81564856)
+
+* The idea that a massive reward can be obtained with minimal work/cost
+* Other people deem this thing "important" and so the idea of doing something important makes you feel special
+* If you love practicing, you'll practice often - and get good as a result
+
+## [33 Things I Stole From People Smarter Than Me](https://forge.medium.com/33-things-i-stole-from-people-smarter-than-me-on-the-way-to-33-c38e368e5cb)
+
+* When someone tells you something is wrong, they’re almost always right. When someone tells you how to fix it, they’re almost always wrong.
+* The best and most polite excuse is to just say you have a rule. People respect rules and they accept that it's not you rejecting the offer, request, demand, or opportunity, but the rule allows you no choice
+* “Imagine life as a game in which you are juggling some five balls in the air. You name them — work, family, health, friends, and spirit… and you’re keeping all of these in the air. You will soon understand that work is a rubber ball. If you drop it, it will bounce back. But the other four balls — family, health, friends, and spirit — are made of glass. If you drop one of these, they will be irrevocably scuffed, marked, nicked, damaged, or even shattered. They will never be the same.”
+
+## [3 Questions That Will Change Your Career](https://medium.com/darius-foroux/3-questions-that-will-change-your-career-11dd514e5ba)
+
+* Whenever you make a key decision or key action in your life, _write down your expected results_
+* After nine to 12 months, compare your expectations with actual results
+
+## [The 20/20/20 Rule Of Productive Mornings](https://medium.com/four-minute-books/the-20-20-20-rule-of-productive-mornings-703cc5e319f3)
+
+* The `20/20/20` rule divides your first hour of the day into three equal blocks of exercise, reflection, and learning
+
+## [10 Bad Habits Of Unsuccessful People](https://forge.medium.com/10-habits-of-unsuccessful-people-you-dont-want-to-copy-d401ac677c91)
+
+* Broadcasting your plans can be counterproductive rather than motivating
+  * People will often applaud you simply for stating your intention, he said, and somewhat counterintuitively, that applause can sap your will to actually follow through on the plans you've just outlined
+  * When you tell someone your goal and they acknowledge it, a "social reality" is created where the mind is tricked into feeling that it's already done
+  * This satisfaction means that you're less motivated to do the actual hard work necessary to succeed
+* Only delay things when you'll do a better job with that extra time - do it now, or do it better later
+
 ## [These Micro-Habits Gave Me 1 Hour Per Day Back](https://medium.com/the-ascent/these-micro-habits-gave-me-1-hour-per-day-back-beb7fb30029)
 
 * Implement auto-pilot decisions for stuff that wastes your time (that doesn't matter to you)
