@@ -133,3 +133,10 @@
 * If a purchase is under $100 then partner has auto-approval to buy it without telling me
 * Waste time in the shower - the shower is where you can do real thinking
 * Make appointments with yourself
+
+## [The Cold Mountain Effect Explains Why Incredibly Talented People Struggle To Achieve Their Goals](https://medium.com/curious/the-cold-mountain-effect-explains-why-incredibly-talented-people-struggle-to-achieve-their-goals-2935b2af79cc)
+
+* Somehow can turn any project into an epic journey. It's not that they get tired of working but that they don't want to see the end
+* A lot of people fear "the thud" - that is, a success that doesn't live up to your expectations (i.e. something that did "pretty well")
+* Don't try to write Cold Mountain every time (Charles Frazier, the author, basically would never had completed the book if he didn't have a friend that sneaked a copy of it to a publisher)
+

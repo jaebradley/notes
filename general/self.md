@@ -404,3 +404,33 @@
 * Hiring people for a lack of weaknessess leads to teams of average performers
   * You need people who do a few things exceptionally, not a lot of people who do everything just ok
 * Preventing mistakes isn't the same as achieving excellence - a corpse can sit at a desk and not make mistakes
+
+## [7 Overlooked Signs You're Living An Extraordinary Life](https://medium.com/curious/7-overlooked-signs-youre-living-an-extraordinary-life-9d4a24a77be0)
+
+* A character commitment is a pledge you make to yourself to do something every day, forever, that defines your character and individuality
+* Curiosity is the gap between what you know and what you want to know
+
+## [8 Life Lessons I've Learned At 40-Something That I Wish I'd Known At 20-Something](https://medium.com/the-post-grad-survival-guide/8-life-lessons-ive-learned-at-40-something-that-i-wish-i-d-known-at-20-something-d7d1b0617eff)
+
+* Don't waste your 20s rushing to become your parents
+* Get so used to taking care of yourself that doing otherwise feels unbearably weird
+
+## [The Thing To Say Every Time You're Angry](https://forge.medium.com/the-thing-to-say-every-time-youre-angry-b9c2b545e0a4)
+
+* "Let me process that. I'll get back to you."
+* Three questions
+  * Will I care about this in a year?
+    * Very few things turn out to matter in the long run
+    * Think about the reasons why the interaction won't matter - maybe you're in a good place
+  * Affirm the relationship - see if you can find anything legitimate in the original exchange
+  * Seek a resolution - when you get back to the person as promised, and try to focus on moving forward
+    * In many cases, there is no need to do anything - just acknowledge that you will agree to disagree
+
+## [20 Realistic Micro-Habits To Live Better Every Day](https://medium.com/the-ascent/20-realistic-micro-habits-to-live-better-every-day-df1731a2cd41)
+
+* Lie on your back and hang your head and shoulders off the bed for up to two minutes
+* Do extra squats whenever you go to the bathroom
+* Incorporate simple balancing with simple activities (like brushing teeth and balancing on one leg)
+* Make sure your butt goes to the back of anywhere you sit
+* Drink water before you eat - hunger and thirst can be confused for one and the same and many people are chronically dehydrated
+* Every time you go shopping, buy a fruit or a vegetable you haven't tried before
