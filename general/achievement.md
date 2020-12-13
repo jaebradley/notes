@@ -161,3 +161,8 @@
 
 * Keep a "later list" next to you - this is where you jot down any semi-useful thoughts that pop into your head
   * Deal with these later when you'll handle less important / concentration-necessary tasks like handling email, etc.
+
+## [The Question That Makes a Habit Stick](https://forge.medium.com/the-question-that-makes-a-habit-stick-2a0253a83974)
+
+* > In the past, as I thought about my schedule, I would ask myself “Am I going to run today?” Once I knew I was running every day, I asked a different question: “When am I going to run today?”
+  * There is always a reason _not_ to run, but "when am I going running" is a question of logistics
