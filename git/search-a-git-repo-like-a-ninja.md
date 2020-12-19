@@ -2,7 +2,7 @@
 
 * Allow Perl regular expression - need to install `git` with the `--with-pcre` flag and then `git config --global grep.extendRegexp true`
 * Always include line numbers: `git config --global grep.lineNumber true`
-* Group output like `ack`: `git config --global alias.g "grep --break --heading --line-number"
+* Group output like `ack`: `git config --global alias.g "grep --break --heading --line-number"`
   * With this alias, can do something like `git g`
 * Search in another branch like `git grep -e <some regex> some_other_branch -- '*.js'`
   * Searches for regex in another branch across JavaScript file
