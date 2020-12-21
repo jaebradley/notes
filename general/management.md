@@ -11,3 +11,8 @@
 * We are requiring today's leaders to be the best player on the team, the coach, the general manager, and CEO
   * Instead of attracting people that want to lead and inspire, end up attrac\\ting people motivated by money / power / status
 * Authority does not equal performance and being promoted is not always the best way to unlock creativity and innovation
+
+## [Focus on Productivity, Not Efficiency](https://medium.com/swlh/focus-on-productivity-not-efficiency-4ed4fe9a454f)
+
+* Without top-line growth, continuing to wring out greater profits through efficiency has become the managerial equivalent of attempting to squeeze blood from a stone
+* While efficiency is about doing more with less, productivity is about doing more with the same

@@ -166,3 +166,16 @@
 
 * > In the past, as I thought about my schedule, I would ask myself “Am I going to run today?” Once I knew I was running every day, I asked a different question: “When am I going to run today?”
   * There is always a reason _not_ to run, but "when am I going running" is a question of logistics
+
+  ## [Warren Buffett's 5/25 Rule Will Help You Focus On The Things That Matter](https://medium.com/personal-growth/warren-buffetts-5-25-rule-will-help-you-focus-on-the-things-that-matter-2c383e09d13c)
+
+* List 25 things that you want to accomplish in the foreseeable future - nothing off the table
+  * Rank in order of importance and circle top 5
+* "Everything you didn't circle just became your Avoid-At-All-Cost list. No matter what, these things get no attention from you until you've succeeded with your top 5."
+
+## [Forget About Setting Goals. Focus On This Instead](https://medium.com/the-mission/forget-about-setting-goals-focus-on-this-instead-c63b9ddeab1f)
+
+* If you completely ignored your goals and focused only on your system, would you still get results?
+* Goals are strangely at odds with long-term progress - when all your hard work is focused on a particular goal, what is left to push you forward after you achieve it
+* Systems-based thinking is never about hitting a particular number, it's about sticking to the process and not missing owrkouts
+* Goals are good for planning your progress and systems are good for actually making progress
