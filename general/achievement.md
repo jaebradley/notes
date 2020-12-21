@@ -133,3 +133,49 @@
 * If a purchase is under $100 then partner has auto-approval to buy it without telling me
 * Waste time in the shower - the shower is where you can do real thinking
 * Make appointments with yourself
+
+## [The Cold Mountain Effect Explains Why Incredibly Talented People Struggle To Achieve Their Goals](https://medium.com/curious/the-cold-mountain-effect-explains-why-incredibly-talented-people-struggle-to-achieve-their-goals-2935b2af79cc)
+
+* Somehow can turn any project into an epic journey. It's not that they get tired of working but that they don't want to see the end
+* A lot of people fear "the thud" - that is, a success that doesn't live up to your expectations (i.e. something that did "pretty well")
+* Don't try to write Cold Mountain every time (Charles Frazier, the author, basically would never had completed the book if he didn't have a friend that sneaked a copy of it to a publisher)
+
+## [6 Habits Of Highly-Focused People](https://medium.com/personal-growth/6-habits-of-highly-focused-people-523f86317f2d)
+
+* Procrastinate productively - cultivate a set of activities you can procrastinate on that will lead you to be productive in the long run
+  * For example, reading can be a form of productive procrastination (it can be a form of research
+* Early in life, most people learn that the proper way to motivate yourself is to "get tough" with yourself
+  * Leads to being dependent on a single strategy of motivation
+  * Staying focused on tasks without external accountability makes fear-based motivation ineffective
+  * If you get distracted and momentarily lose focus, gently remind yourself to get back to work and refocus attention
+  * If there is an urge to start procrastinating, remind yourself that there's nothing wrong with wanting to procrastinate
+  * If you forget to work on a goal or a task one day, acknowledge that everybody makes mistakes and make a note to yourself to come up with a better reminder system for your work
+
+## [The Secret Of Successful People: They Use Fear As A Compass](https://medium.com/live-your-life-on-purpose/the-secret-of-successful-people-they-use-fear-as-a-compass-c9612a42a612)
+
+* "Protection from stress serves only to erode my capacity to handle it. Stress exposure is the stimulus for all growth and growth actually occurs during episodes of recovery. Avoiding stress, I have learned, will never provide the capacity that life demands of me" - Jim Loehr
+* Fear and stress illuminate the path that will teach us the most
+* "Like self-doubt, fear is an indicator. Fear tells us what we have to do. Remember our rule of thumb: the more scared we are of a work or calling, the more sure we can be that we have to do it." - Steven Pressfield
+
+## [3 Ways To Go From Burnout State To Flow State](https://forge.medium.com/3-ways-to-go-from-burnout-state-to-flow-state-e444bc318101)
+
+* Keep a "later list" next to you - this is where you jot down any semi-useful thoughts that pop into your head
+  * Deal with these later when you'll handle less important / concentration-necessary tasks like handling email, etc.
+
+## [The Question That Makes a Habit Stick](https://forge.medium.com/the-question-that-makes-a-habit-stick-2a0253a83974)
+
+* > In the past, as I thought about my schedule, I would ask myself “Am I going to run today?” Once I knew I was running every day, I asked a different question: “When am I going to run today?”
+  * There is always a reason _not_ to run, but "when am I going running" is a question of logistics
+
+  ## [Warren Buffett's 5/25 Rule Will Help You Focus On The Things That Matter](https://medium.com/personal-growth/warren-buffetts-5-25-rule-will-help-you-focus-on-the-things-that-matter-2c383e09d13c)
+
+* List 25 things that you want to accomplish in the foreseeable future - nothing off the table
+  * Rank in order of importance and circle top 5
+* "Everything you didn't circle just became your Avoid-At-All-Cost list. No matter what, these things get no attention from you until you've succeeded with your top 5."
+
+## [Forget About Setting Goals. Focus On This Instead](https://medium.com/the-mission/forget-about-setting-goals-focus-on-this-instead-c63b9ddeab1f)
+
+* If you completely ignored your goals and focused only on your system, would you still get results?
+* Goals are strangely at odds with long-term progress - when all your hard work is focused on a particular goal, what is left to push you forward after you achieve it
+* Systems-based thinking is never about hitting a particular number, it's about sticking to the process and not missing owrkouts
+* Goals are good for planning your progress and systems are good for actually making progress
