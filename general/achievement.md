@@ -101,6 +101,35 @@
 
 * I believe that we ascribe "smart" and "intelligent" post hoc to power. I believe that powerful people, particularly white men, believe that their power is justified by their genetic endownments. I believe that they operate from the assumption that whatever wins, is also smart.
 
+## [Why People Get Excited About New Ideas, Only To Get Bored And Give Up](https://medium.com/age-of-awareness/why-people-get-excited-about-new-ideas-only-to-get-bored-and-give-up-4feb81564856)
+
+* The idea that a massive reward can be obtained with minimal work/cost
+* Other people deem this thing "important" and so the idea of doing something important makes you feel special
+* If you love practicing, you'll practice often - and get good as a result
+
+## [33 Things I Stole From People Smarter Than Me](https://forge.medium.com/33-things-i-stole-from-people-smarter-than-me-on-the-way-to-33-c38e368e5cb)
+
+* When someone tells you something is wrong, they’re almost always right. When someone tells you how to fix it, they’re almost always wrong.
+* The best and most polite excuse is to just say you have a rule. People respect rules and they accept that it's not you rejecting the offer, request, demand, or opportunity, but the rule allows you no choice
+* “Imagine life as a game in which you are juggling some five balls in the air. You name them — work, family, health, friends, and spirit… and you’re keeping all of these in the air. You will soon understand that work is a rubber ball. If you drop it, it will bounce back. But the other four balls — family, health, friends, and spirit — are made of glass. If you drop one of these, they will be irrevocably scuffed, marked, nicked, damaged, or even shattered. They will never be the same.”
+
+## [3 Questions That Will Change Your Career](https://medium.com/darius-foroux/3-questions-that-will-change-your-career-11dd514e5ba)
+
+* Whenever you make a key decision or key action in your life, _write down your expected results_
+* After nine to 12 months, compare your expectations with actual results
+
+## [The 20/20/20 Rule Of Productive Mornings](https://medium.com/four-minute-books/the-20-20-20-rule-of-productive-mornings-703cc5e319f3)
+
+* The `20/20/20` rule divides your first hour of the day into three equal blocks of exercise, reflection, and learning
+
+## [10 Bad Habits Of Unsuccessful People](https://forge.medium.com/10-habits-of-unsuccessful-people-you-dont-want-to-copy-d401ac677c91)
+
+* Broadcasting your plans can be counterproductive rather than motivating
+  * People will often applaud you simply for stating your intention, he said, and somewhat counterintuitively, that applause can sap your will to actually follow through on the plans you've just outlined
+  * When you tell someone your goal and they acknowledge it, a "social reality" is created where the mind is tricked into feeling that it's already done
+  * This satisfaction means that you're less motivated to do the actual hard work necessary to succeed
+* Only delay things when you'll do a better job with that extra time - do it now, or do it better later
+
 ## [These Micro-Habits Gave Me 1 Hour Per Day Back](https://medium.com/the-ascent/these-micro-habits-gave-me-1-hour-per-day-back-beb7fb30029)
 
 * Implement auto-pilot decisions for stuff that wastes your time (that doesn't matter to you)
@@ -108,3 +137,49 @@
 * If a purchase is under $100 then partner has auto-approval to buy it without telling me
 * Waste time in the shower - the shower is where you can do real thinking
 * Make appointments with yourself
+
+## [The Cold Mountain Effect Explains Why Incredibly Talented People Struggle To Achieve Their Goals](https://medium.com/curious/the-cold-mountain-effect-explains-why-incredibly-talented-people-struggle-to-achieve-their-goals-2935b2af79cc)
+
+* Somehow can turn any project into an epic journey. It's not that they get tired of working but that they don't want to see the end
+* A lot of people fear "the thud" - that is, a success that doesn't live up to your expectations (i.e. something that did "pretty well")
+* Don't try to write Cold Mountain every time (Charles Frazier, the author, basically would never had completed the book if he didn't have a friend that sneaked a copy of it to a publisher)
+
+## [6 Habits Of Highly-Focused People](https://medium.com/personal-growth/6-habits-of-highly-focused-people-523f86317f2d)
+
+* Procrastinate productively - cultivate a set of activities you can procrastinate on that will lead you to be productive in the long run
+  * For example, reading can be a form of productive procrastination (it can be a form of research
+* Early in life, most people learn that the proper way to motivate yourself is to "get tough" with yourself
+  * Leads to being dependent on a single strategy of motivation
+  * Staying focused on tasks without external accountability makes fear-based motivation ineffective
+  * If you get distracted and momentarily lose focus, gently remind yourself to get back to work and refocus attention
+  * If there is an urge to start procrastinating, remind yourself that there's nothing wrong with wanting to procrastinate
+  * If you forget to work on a goal or a task one day, acknowledge that everybody makes mistakes and make a note to yourself to come up with a better reminder system for your work
+
+## [The Secret Of Successful People: They Use Fear As A Compass](https://medium.com/live-your-life-on-purpose/the-secret-of-successful-people-they-use-fear-as-a-compass-c9612a42a612)
+
+* "Protection from stress serves only to erode my capacity to handle it. Stress exposure is the stimulus for all growth and growth actually occurs during episodes of recovery. Avoiding stress, I have learned, will never provide the capacity that life demands of me" - Jim Loehr
+* Fear and stress illuminate the path that will teach us the most
+* "Like self-doubt, fear is an indicator. Fear tells us what we have to do. Remember our rule of thumb: the more scared we are of a work or calling, the more sure we can be that we have to do it." - Steven Pressfield
+
+## [3 Ways To Go From Burnout State To Flow State](https://forge.medium.com/3-ways-to-go-from-burnout-state-to-flow-state-e444bc318101)
+
+* Keep a "later list" next to you - this is where you jot down any semi-useful thoughts that pop into your head
+  * Deal with these later when you'll handle less important / concentration-necessary tasks like handling email, etc.
+
+## [The Question That Makes a Habit Stick](https://forge.medium.com/the-question-that-makes-a-habit-stick-2a0253a83974)
+
+* > In the past, as I thought about my schedule, I would ask myself “Am I going to run today?” Once I knew I was running every day, I asked a different question: “When am I going to run today?”
+  * There is always a reason _not_ to run, but "when am I going running" is a question of logistics
+
+  ## [Warren Buffett's 5/25 Rule Will Help You Focus On The Things That Matter](https://medium.com/personal-growth/warren-buffetts-5-25-rule-will-help-you-focus-on-the-things-that-matter-2c383e09d13c)
+
+* List 25 things that you want to accomplish in the foreseeable future - nothing off the table
+  * Rank in order of importance and circle top 5
+* "Everything you didn't circle just became your Avoid-At-All-Cost list. No matter what, these things get no attention from you until you've succeeded with your top 5."
+
+## [Forget About Setting Goals. Focus On This Instead](https://medium.com/the-mission/forget-about-setting-goals-focus-on-this-instead-c63b9ddeab1f)
+
+* If you completely ignored your goals and focused only on your system, would you still get results?
+* Goals are strangely at odds with long-term progress - when all your hard work is focused on a particular goal, what is left to push you forward after you achieve it
+* Systems-based thinking is never about hitting a particular number, it's about sticking to the process and not missing owrkouts
+* Goals are good for planning your progress and systems are good for actually making progress
