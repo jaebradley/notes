@@ -362,6 +362,37 @@
 * So if you can't learn in the morning, don't get frustrated - it's just not your best hour
   * You want to feel good, energetic, and rested
 
+## [4 Things Self-Disciplined People Don't Do](https://medium.com/personal-growth/4-things-self-disciplined-people-dont-do-4590f42de4a7)
+
+* Willpower should be a last resort - willpower is like the emergency brake; it's nice to have, but you would be in serious trouble if you relied on it as the primary way to slow your car down
+* Instead of needing the willpower to resist temptation, it's better to avoid them (by changing your location (i.e. going to the library to study))
+  * How would I achieve my goals if I had 0 willpower?
+* Actions as they relate to accomplishing goals is a two-way street / cycle
+  * Doing hard things makes you feel good and makes you more motivated to do future hard things
+* Emotions are behavioral heuristics - pay attention to them but do not follow them blindly
+* Self-disciplined people are able to make consistent progress toward their goals precisely because they don't spend much time thinking about them
+* Focus on actions / things that if done consistently over time, will likely lead to some desired goal or outcome
+
+## [5 Simple Things I Removed From My Life To Become Happier](https://medium.com/mind-cafe/5-simple-things-i-removed-from-my-life-to-become-happier-799c36a99276)
+
+* Remove the bottom 20% from your life (what are the 20% of things that cause 80% of my unhappiness / happiness?)
+* If I could never tell a single person about my achievements, would I still pursue them?
+
+## [20 Things Most People Learn Too Late In Life](https://medium.com/better-advice/20-things-most-people-learn-too-late-in-life-23674cdbd75c)
+
+* As people get older, they tend to think that they can do less and less - when in reality, they should be able to do more and more, because they have had time to soak up more knowledge
+  * Being great at something is a daily habit
+
+## [How To Activate Extreme Self-Confidence And Destroy Chronic Anxiety And Fear](https://medium.com/the-mission/how-to-activate-extreme-self-confidence-and-destroy-chronic-anxiety-and-fear-d8c678b16010)
+
+* “If you don’t get physically ill seeing your first rough cut, something is wrong.” - Martin Scorcese
+* "How do you get rid of runner's block? You go for a fucking run." - Mark Manson
+
+## [Minimalism Will Not Make You Happier](https://niksblog.medium.com/minimalism-will-not-make-you-happier-627c83c788e8)
+
+* Subtracting stuff only matters if you add meaning
+* Rather than providing a path to happiness, it creates the space you need to deal with life's toughest challenges. Physical separation for mental reflection
+
 ## [If You Have The Self-Discipline To DO It, Honing These 4 Habits Is Totally Worth It](https://medium.com/the-ascent/if-you-have-the-discipline-to-do-it-honing-these-4-habits-are-totally-worth-it-cf190c7085ff)
 
 * > don’t underestimate the importance of building the habit of also asking yourself what you need to keep out of your environment to better focus.
@@ -379,6 +410,7 @@
   * Each time you walk through the doorway, you’ll know to check your body language. Are you standing up straight or are you slouching your shoulders? Are you walking with a bit of pep in your step or are you dragging your feet?
 * How they respond in slightly uncomfortable situations - situations like these can be a clue to how a person moves through their life — and how they’d handle the bigger things, where the social friction is greater. Are they willing to be a bit uncomfortable, or will they stay quiet because it feels safer?
 * When you listen to people talk about the things on their plate, you can get a sense of whether they view life through a lens of victimhood or of agency
+
 ## [6 Effective Minimalist Habits That Changed My Life](https://medium.com/live-your-life-on-purpose/6-effective-minimalist-habits-that-changed-my-life-687b950b94e0)
 
 * Define priorities in terms of consumption and then develop buying habits that adhere to those priorities
