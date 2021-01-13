@@ -434,3 +434,9 @@
 * Make sure your butt goes to the back of anywhere you sit
 * Drink water before you eat - hunger and thirst can be confused for one and the same and many people are chronically dehydrated
 * Every time you go shopping, buy a fruit or a vegetable you haven't tried before
+
+## [The Paradox Of Effort](https://medium.com/mind-cafe/the-paradox-of-effort-2ea94781cfcd)
+
+* While in grad school, he noticed a lot of people became much better students after they had kids
+* With fearsome time constraints, procrastinating is out of the question - absent harder conditions, you may have not pushed yourself as hard
+* One is the one goal that lowers the activation cost of various habits
