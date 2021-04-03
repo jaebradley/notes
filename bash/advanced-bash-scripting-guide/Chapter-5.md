@@ -1,4 +1,4 @@
-# [Chapter 5: Quoting]
+# [Chapter 5: Quoting](https://tldp.org/LDP/abs/html/quoting.html)
 
 ## Quoting Variables
 
