@@ -27,7 +27,7 @@ for a in "$list"
 * `\v` - vertical tab
 * `\b` - backspace
 * Use `-e` with `echo` to print escaped characters
-* `echo -e "\042"
+* `echo -e "\042"`
   * Prints octal ASCII character 42
 * `\"` gives the quote its literal meaning
   * `echo "\"Hello\"` results in "Hello"
