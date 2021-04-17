@@ -1,6 +1,6 @@
 # [Java JIT Compiler](https://medium.com/runtimeerror/java-jit-compiler-c538e5e06a2)
 
-* A virtual machine is a program that allows running a program (i.e. something that can be transformed into Java byte code) on this virtual machine than directly on the operating system itself
+* A virtual machine is a program that allows running a program (i.e. something that can be transformed into Java byte code) on this virtual machine then directly on the operating system itself
   * Running on operating system directly is called "native code" and running on a virtual machine is called "byte code"
   * The `javac` compiler generates byte code and can be run on the Java virtual machine
 * When running Java code, the interpreter translates the byte code line by line and executes those lines
