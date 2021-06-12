@@ -5,7 +5,8 @@
   * For a small number of source files, simply list the file names on the command line
   * For a large number of source files, list the file names in a file, separated by blanks or line breaks
     * Then use the list file name on the `javac` command line, preceded by an `@` character
-* Source code file names must have `.java` suffixes, class file names must have `.class` suffixes  * A class called `MyClass` would be written in a source file called `MyClass.java` and compiled into a bytecode class file called `MyClass.class`
+* Source code file names must have `.java` suffixes, class file names must have `.class` suffixes  
+* A class called `MyClass` would be written in a source file called `MyClass.java` and compiled into a bytecode class file called `MyClass.class`
 * Inner class definitions produce additional class files - these have names combining the inner and outer class names, like `MyClass$MyInnerClass.class`
 * By default, the compiler puts each class file in the same directory as its source file
 
