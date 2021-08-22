@@ -3,7 +3,7 @@
 * When translating string statements like `printf("Hello world\n")`  into machine code, the compiler must
   * Store each of the characters in a location in memroy where the control unit can access them
   * Generate the machine instructions to write the characters on the screen
-* ASCII uses seven bits to represent each character (use `man ascii) to generate this table
+* ASCII uses seven bits to represent each character (use `man ascii`) to generate this table
 * The codes from `00-1f` define control characters
   * ASCII was developed in the 60s for transmitting data from a sender to a receiver
   * They were used to "control" the dialog between a sender and a receiver
