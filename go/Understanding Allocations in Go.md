@@ -1,11 +1,11 @@
-[Understanding Allocations in Go](https://medium.com/eureka-engineering/understanding-allocations-in-go-stack-heap-memory-9a2631b5035d)
+# [Understanding Allocations in Go](https://medium.com/eureka-engineering/understanding-allocations-in-go-stack-heap-memory-9a2631b5035d)
 
 * In many popular programming environments, the stack usually refers to the call stack of a thread
   * Call stack is a last-in-first-out data structure that stores arguments, local variables, and other data as a thread executes functions
   * Each function call adds a new frame to the stack and each returning function removes from the stack
 * We must be able to safely free memory of the most recent stack frame when it's popped
   * Thus, we can't store anything on the stack that needs to be referenced outside the context of the the stack
-* Since threads are managed by the OS, the amount of memory per thread stack is typically fixed (8MG in many Linux environments)
+* Since threads are managed by the OS, the amount of memory per thread stack is typically fixed (8MB in many Linux environments)
   * Need to be mindful of how much data ends up on the stack, especially with recursive functions
 * Goroutine are very similar to threads, but exist within the Go runtime, so the Go runtime sets the rules of how the Goroutine stacks behave (for example, Goroutine stacks start with 2KB of memory)
   * Before each function call, a check within the function prologue is executed to verify that a stack overflow won't occur
