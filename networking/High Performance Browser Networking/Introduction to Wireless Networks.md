@@ -7,8 +7,8 @@
 
 ## Bandwidth
 
-* Both the sender and receiver must agree up-front on the specific frequency range over which the communication will occur (802.11b and 802.11g standards use 2.4-2.5GHZ band across all wifi devices)
-* Governments define frequency rand and allocation
+* Both the sender and receiver must agree up-front on the specific frequency range over which the communication will occur (802.11b and 802.11g standards use 2.4-2.5GHZ band across all WiFi devices)
+* Governments define frequency and allocation
   * Some wireless technologies may work in one part of the world
 * The overall channel bitrate is directly proportional to the assigned range
   * All else equal, a doubling in available frequency range will double the data rate
