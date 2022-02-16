@@ -1,4 +1,4 @@
-# [Undersatnding HBase and BigTable](https://dzone.com/articles/understanding-hbase-and-bigtab)
+# [Understanding HBase and BigTable](https://dzone.com/articles/understanding-hbase-and-bigtab)
 
 ## multidimensional
 
@@ -29,7 +29,7 @@
 }
 ```
 
-* Each top-level key points to a map with exactly two keys (`A` and `B)
+* Each top-level key points to a map with exactly two keys (`A` and `B`)
 * Think of top-level key/value pair as a "row" (so key `1` mapping to the underlying "object" is a row)
 * `A` and `B` key/value pairs represent "column families"
 * Column families are difficult or impossible to modify later
