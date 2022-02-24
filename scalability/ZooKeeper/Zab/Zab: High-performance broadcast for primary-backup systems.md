@@ -76,4 +76,40 @@
   * All of these steps are done atomically
 * Follower acks the new leader proposal
 * Once leader receives acks from a quorum of followers, it sends commit message to followers
-* Follower receive commit message and deliers all transactions all transactions in the initial history of the leader
+* Follower receive commit message and delivers / commits all transactions in the initial history of the leader
+
+#### Broadcast
+
+* Leader proposes to all folowers in the quorum in increasing order of transaction id
+* Followers accept proposals from the leader and appends them to the follower's history
+* Upon receiving acks from quorom for a given proposal, the leader sends a commit to all followers
+* Follower commits transaction once it receives the commit and has committed all previous transactions
+* Upon receiving a `CEPOCH(e)` message (the last "promise") from a follower, the leader proposes back a new epoch and a new leader
+
+## Zab in Detail
+
+* The primary picks values to broadcast in FIFO order and creates a transaction
+* Upon receiving a request to broadcast a transaction, a leader sends a proposal
+* The followers accept the proposal via an acknowledgement message
+* Followers do not send acknowledgement until they write the proposal to local stable storage
+* When a quorum of processes have accepted the proposal, the leader issues a commit message
+* When a process receives a commit message for a proposal, the process delivers / commits all undelivered proposals with a transaction id less than the transaction id in the commit message
+
+### Establishing a new leader
+
+* Once a process determines that it is a prospective leader it starts a new iteration in the Discovery phase
+* It initially collects the latest epoch of a quorum of followers, proposes a later epoch, and collects the latest epoch and highest transaction id of each of the followers in the quorum
+* Leader completes Discovery phase once it selects the highest from a follower with latest epoch and highest transaction id
+* In Synchronization, the leader proposes itself as the leader of the new epoch and sends a `NEWLEADER` proposal, which contains the initial history of the new epoch
+  * Leader will send each follower any transactions that it is missing
+* Leader is establishes once it receives acks to the `NEWLEADER` proposal from quorum of followers. Leader then commits the new proposal
+
+### Leading
+
+* Leader and followers exchange periodic heartbeats
+* If the leader does not receive heartbeats from a quorum of followers within some timeout interval, the leader renounces leadership of the epoch and transitions to the election state
+
+### Following
+
+* Once a follower accepts a new epoch proposal for some epoch X, it does not send acknowledgement for any other new epoch proposal for the same epoch X
+  * This guarantees that no two processes can become esetablished leaders for the same epoch X
