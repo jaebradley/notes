@@ -20,7 +20,7 @@
 * To mitigate the disk I/O bottleneck, we write transactions in batches so that we can record multiple transactions in a single write to the disk
 * This batching happens at the replicas not at the protocl level, so the implementation is much closer to group commits from databases than message packing
 * When a server recovers, it is going to read it's snapshot and replay all delivered transactions after that snapshot
-During recovery, the atomic broadcast does not need to guarantee at most once delivery since the use of idempotent transactions means that multiple delivery of a transaction is fine as long as on restart, order is preserved
+* During recovery, the atomic broadcast does not need to guarantee at most once delivery since the use of idempotent transactions means that multiple delivery of a transaction is fine as long as on restart, order is preserved
   * If `a` is delivered before `b` and after a failure, `a` is redelivered, then `b` will also be redelivered  after `a`
 
 ## Protocol
@@ -29,12 +29,12 @@ During recovery, the atomic broadcast does not need to guarantee at most once de
 * Any server other than the leader that needs to broadcast a message, first forwards the message to the leader
 * Any quorom of followers are sufficient for a leader and the server to stay active
   * A Zab service made up of three servers (1 leader, 2 followers) will move to broadcast mode
-  * If once of the followers die, there is no interruption in service, since the leader will still have a quorum
+  * If one of the followers die, there is no interruption in service, since the leader will still have a quorum
   * If the follower recovers and the other dies, there will still be no service interruption
 
 ### Broadcast
 
-* 2-phase commit: a leader proposes a request, collects cotes, and finally commits
+* 2-phase commit: a leader proposes a request, collects votes, and finally commits
 * We can commit once a quorum of servers ack the proposal rather than waiting for all servers to respond
 * Broadcast uses FIFO (TCP) channels for all communications, which preserves ordering guarantees
 * Before proposing a message, the leader assigns a monotonically increasing unique id (`zxid`)
