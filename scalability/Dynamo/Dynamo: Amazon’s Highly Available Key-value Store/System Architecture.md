@@ -1,63 +1,6 @@
-# [Dynamo: Amazon’s Highly Available Key-value Store](https://s3.amazonaws.com/systemsandpapers/papers/amazon-dynamo-sosp2007.pdf)
+# System Architecture
 
-## Background
-
-* Stateless services are services which aggregate responses from other services
-* Stateful services are services that generate a response by executing business logic on its state stored in some type of persistent store
-* Many services only store and retrieve data by primary key and do not require the complex querying and management functionality offered by an RDBMS
-
-### System Assumptions and Requirements
-
-* Simple read / write operations to a data item that is uniquelly identified by a key
-* State stored as a binary object
-* No operations span multiple data items - there is no need for relational schema
-* Objects are < 1MB in size
-* Data stores that provide ACID guarantees tend to have poor availability
-* Dynamo targets applications that operate with weaker consistency but higher availability
-* Dynamo does not provide any isolation guarantees
-
-### SLAs
-
-* At Amazon, we have found that metrics expressed in average, median, and expected variance are not good enough if the goal is to build a system where all customers have a good experience rather than just the majority
-  * If extensive personalization techniques are used, then customers with longer histories require more processing which impacts performance at the high-end of the distributed
-  * An SLA in terms of mean / median response times will not address the performance of this important customer segment
-
-### Design Considerations
-
-* Data replication algorithms traditionally perform synchronous replica coordination in order to provide a strongly consistent data access interface
-* To achieve this level of consistency, these algorithms are forced to tradeoff the availability of the data under certain failure scenarios
-* An example of this is that rather than dealing with the uncertainty of the correctness of an answer, the data is made unavailable until it is absolutely certain that it is correct
-* Optimistic replication techniques allow changes to propagate to replicas in the background, and concurrent, disconnected work is tolerated
-* Conflicting changes must be detected and resolved (so not only when to resolve these changes, but "who" resolves the changes)
-* Dynamo is an eventually consistent data store meaning that all updates reach all replicas eventually
-* When to perform conflict updates (for example, during reads or writes)
-  * Many traditional data stores execute conflict resolution during writes and keep the read complexity simple
-    * In such systems, writes may be rejected if the data store cannot reach all / majority of replicas
-  * Dynamo has a goal of being an always writeable data store (i.e. highly available for writes)
-    * For a number of Amazon services, rejecting customer updates could result in a poor customer experience
-    * For example, the shopping cart service must allow customers to add and remove items from their shopping carts even amidst network and server failures
-    * Thus, conflict resolution must be a responsibility of reads in order to ensure that writes are never rejected
-* Who performs conflict resolution (for example, last write wins)
-  * Either the data store or the application can do conflict resolution
-  * Data store must have simple policies (again, "last write wins")
-  * Applications are aware of the data schema and can decide on a conflict resolution method that is best suited for its client's experience
-    * For instance, the shopping cart application can choose to merge conflicting versions and return a single unified shopping cart
-    * Default policy can still be "last write wins"
-* Dynamo favors decentralized peer-to-peer techniques over centralized control due to outages occurring in the past for centralized systems
-
-## Related Work
-
-### Discussion
-
-* Applications that use Dynamo do not require support for hierarchical namespaces or complex relational schema
-* Dynamo is built for latency sensitive applications that require 99.9%+ of read and write operations to occur within a few hundred milliseconds
-  * Avoid routing requests through multiple nodes
-  * Multi-hop routing increases variability in response times
-  * Dynamo nodes maintain enough routing information locally to route a request to the appropriate node directly
-
-## System Architecture
-
-### System Interface
+## System Interface
 
 * `get(key)` operation locates object replicas associated with the key in the storage system and returns a single object or a list of objects with conflicting versions along with a context
 * `put(key, context, object)` determines where the replicas of the `object` should be placed based on the assocaited `key` and writes the `replicas` to disk
@@ -65,7 +8,7 @@
   * Context information is stored alongside the object
 * MD5 hashes the key to generate a 128-bit identifier that is used to determine the nodes responsible for serving the key
 
-### Partitioning Algorithm
+## Partitioning Algorithm
 
 * Requires mechanism to dynamically partition data over a set of nodes (i.e. storage hosts)
 * The output range for consistent hashing is treated as a fixed circular space / ring where the largest hash value wraps around to the smallest hash value
@@ -90,7 +33,7 @@
 * Preference list for a key is constructed by skipping positions to ensure list contains distinct physical nodes
   * Preference list is the list of nodes that is responsible for storing a particular key
 
-### Data Versioning
+## Data Versioning
 
 * A `put` call may return to its caller before the update has been applied at all replicas
   * A subsequent `get` operation may return an object that does not have the latest updates
@@ -124,3 +67,47 @@
 * Dynamo stores a timestamp indicating the last time the node updated the data item - this timestamp is stored along each entry in the vector clock
 * When number of pairs in the vector clock reaches some threshold, the oldest pair is removed from the clock
 * This truncation scheme can lead to reconciliation problems as the descendant relationships cannot be derived accurately, but has not surface in practice
+
+## Execution of get() and put() operations
+
+* Any storage node is eligible to receive client get and put operations for any key
+* Any node handling read / write is known as the coordinator
+  * Typically, first among top N nodes in preference list
+* Read / write operations involve first N healthy nodes in the preference list (skipping any that are down or inaccessible)
+* Consistency protocol that depends on two values - the minimum number of nodes that must participate in a successful read operation and the minimum number of nodes that must participate in a successful write operation
+  * Setting the Read number and the Write number such that Read + Write > N, yields a quorom-like system
+  * Latency of get / put is disctated by slowest of R/W replicas
+* When coordinator receives `put` request, it generates vector clock for new version and writes new version locally
+  * Coordinator sends new version along with new vector clock to the N highest-ranked reachable nodes
+  * If at least W-1 nodes respond then the write is considered successful
+* For a get, the coordinator requests all existing versions of the data for that key from the N highest-ranked reachable nodes in the preference list
+  * Waits for R responses before returning the result to the client
+  * If coordinator gets multiple versions of the data it returns all versions that are causally unrelated
+  * The divergent versions are reconciled and the reconciled version superseding the current versions is written back
+
+## Handling Failures: Hinted Handoff
+
+* Dynamo uses "sloppy quorum" where all read / write operations are performed on first N healthy nodes from preference list which will not always be first N nodes encountered when walking the consistent hashing ring
+* Let's say a node A is down / unreachable during a write
+  * Replica that lived on A will now be sent to node D
+  * The replica sent to D will have a metadata hint suggesting which node was intended recipient of the replica (A)
+  * Nodes that receive hinted replicas will keep them in a separate local database that is scanned periodically
+  * Once A recovers, D will attempt to deliver the replica to A
+  * Once the transfer succeeds, D may delete the object from its local store without decreasing the total number of replicas in the sytem
+* Highly available storage systems must be capable of handling failures of entire data centers
+* Each object is replicated across multiple data centers
+  * The preference list for a given key is constructed such that storage nodes are spread across multiple data centers, connected via high speed network links
+
+## Handling permanent failures: Replica synchronization
+
+* Merkle trees are hash trees where the leaves are hashes of the values of individual keys
+* Parent nodes are hashes of their respective children
+* Each branch of the tree can be checked independently without requiring nodes to download the entire tree
+* If the has values of the root of two trees are equal, then the values of the leaf nodes in the tree are equal and the nodes require no synchronization
+* If node hashes are different, nodes can identify which hash values are different for children and continue this process until it reaches the leaves of the tree
+  * Once at the leaves, can identify which leaf nodes are out of sync
+* Merkle trees minimize the amount of data that needs to be transferred to synchronize
+* Each node maintains a separate Merkle tree for each key range i.e. the set of keys covered by a virtual node
+* Nodes can then compare whether keys within a key range are up-to-date
+* Many key ranges change when a node joins / leaves system which means that these trees need to be recalculated
+
