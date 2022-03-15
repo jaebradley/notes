@@ -52,3 +52,82 @@
 * Reduces size of metadata stored on master, allowing metadata to be kept in memory
 * A small file consists of a small number of chunks (maybe even 1)
   * The chunkservers storing these chunks may become hot spots if many clients are accessing the same file
+
+## Metadata
+
+* Master stores three types of metadata: file and chunk namespaces, mapping from files to chunks, and locations of each chunk's replicas
+* The namespaces and file-to-chunk mappings are persisted by logging mutations to an operation log stored on the master's local disk and replicated on remote machines
+* Master asks each chunkserver about its chunks at master startup and whenever a chunkserver joins the cluster
+
+
+### In-Memory Data Structures
+
+* Master periodically scans entire in-memory state
+  * Period scanning is used to implement chunk garbage collection, re-replication in the presence of chunkserver failures, and chunk migration to balance load and disk space usage across chunkservers
+* Number of chunks and capacity of the whole system is limited by how much memory the master has
+* Less than 64B of metadata for each 64 MB chunk
+* Most chunks are full (except last chunk)
+* File namespace data typically requires less than 64B per file because file names are stored compactly using prefix compression
+
+### Chunk Locations
+
+* A chunkserver has the final word over what chunks it does (or does not) have on its disks
+* No point in trying to maintain a consistent view of the information on the master because errors on the chunkserver may cause chunks to vanish spontaneously (like a disk may go bad and be disabled)
+* So master does not keep persistent record of which chunkservers have a replica of a given chunk
+* It polls chunkserver at startup and then periodically thereafter
+
+### Operation Log
+
+* Operation log contains historical record of critical metadata changes
+* Only persistent record of metadata and is the logical time line that defines the order of concurrent operations
+* Must store operation log reliably and not make changes visible until metadata changes are made persistent
+* Replicate it on multiple remote machines and respond to a client operation only after flushing the corresponding log record to disk locally and remotely
+* Log batching occurs to reduce impact of flushing and replication on overall system throughput
+* Master recovers file system state by replaying the operation log
+* Master checkpoints its state whenever the log grows beyond a certain state
+  * It recovers by loading the latest checkpoint from the local disk and replaying only the limited number of log records after that
+* New checkpoints can be created without delaying incoming mutations
+* Master switches to a new log file and creates the new checkpoint in a separate thread
+* New checkpoint contains all mutations before the switch
+* Once the new checkpoint is completed, it is written to disk locally and remotely
+* Recovery only needs the latest complete checkpoint and subsequent log files
+
+## Consistency Model
+
+### Guarantees by GFS
+
+* File namespace mutations like file creation are atomic and are handled exclusively by the master
+* A file region is consistent if all clients will always see the same data, regarldess of which replicas they read from
+* A file region is defined if after a data mutation the file region is consistent and clients will see what the mutation writes in its entirety
+  * When a mutation succeeds without interference from concurrent writers, the affected file region is defined
+* Concurrent successful mutations leave the region undefined but consistent
+  * All clients see the same data, but it may not reflect what any one mutation has written
+  * Typically consists of mingled fragments from multiple mutations
+* A failed mutation makes the region inconsistent - different clients may see different data at different times
+* Data mutations are writes or record appends
+* Writes cause data to be written at an application-specified file offset
+* A record append causes data to be appended atomically at least once (even in the presence of concurrent mutations) but at an offset of GFS's choosing
+* The offset is returned to the client and marks the beginning of a defined region that contains the record
+* GFS may insert padding or record duplicates in between that occupy regions considered to be inconsistent
+* After a sequence of successful mutations, the mutated file region is guaranteed to be defined and contains the data written by the last mutation
+  * GFS applies all mutations to a chunk in the same order on all its replicas
+  * Uses chunk version numbers to detect any replica that has become stale because it has missed mutations while its chunkserver was down
+  * Stale replicas are never involved in a mutation or given to clients asking the master for chunk locations and are garbage collected at the earliest opportunity
+* Since clients cache chunk locations, they may read from a stale replica before that information is refreshed
+  * This window is limited by the cache entry's timeout and the next open of the file, which purges from the cache all chunk information for that file
+  * As most of our files are append-only, a stale replica usually returns a premature end of chunk, rather than outdated data
+  * When a reader retries and contacts the master, it will immediately get current chunk locations
+
+### Implications for Applications
+
+* All Google's applications mutate files by appending rather than overwriting
+* In one typical use, a writer generates a file from beginning to end
+  * Periodically checkpoints how much has been successfully written
+  * Checkpoints may also include application-level checksums
+  * Readers verify and process only the file region up to the last checkpoint, which is known to be in the defined state
+  * Checkpointing allows writers to restart incremenetally and keeps readers from processing successfully written file data that is still incomplete from the application's perspective
+* Other typical use case involves many writers concurrently appending to a file for merged results
+  * Record append's append-at-least-once semantics preserves each writer's output
+  * Readers deal with the occassional padding and duplicates by
+    * Using the checksum that is attached to each record, readers can identify and discard extra padding and record fragments using the checksums
+    * If readers cannot tolerate occassional duplicates (i.e. downstream operations are not idempotent), it can filter them out using unique identifiers in the records
