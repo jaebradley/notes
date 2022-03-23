@@ -1,7 +1,7 @@
 # Item 39: Make defensive copies when needed
 
-* Example is a `Period` class that takes a `Date` `start` private member and an `end` `Date` private member and returns both member variables via getters
-* The `Period` class is not immutable as the `Date` class is not immutable (can call `setYear` on the `Date` instance returned by `getStart` / `getEnd` and modify the internal `Date` value
+* Example is a `Period` class that takes a `Date` `start` private member and an `end` `Date` private member via a constructor and returns both member variables via getters
+* The `Period` class is not immutable as the `Date` class is not immutable (can call `setYear` on the `Date` instance returned by `getStart` / `getEnd` and modify the internal `Date` value)
 * Instead, getters should return defensive copies of each mutable parameter to the constructor
   * `this.start = new Date(start.getTime())`
 * Note that defensive copies are made _before_ checking the validity of parameters, and the validity check is performed on the copies rather than on the originals
