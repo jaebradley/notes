@@ -30,7 +30,7 @@ public class ThreadLocal {
 * Instead, replace the string with an unforgeable key
 
 ```java
-public static class Key( {
+public static class Key{
 }
 
 // Generate a unique, unforgeable key
