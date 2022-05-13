@@ -124,3 +124,35 @@ function createFeatureAwareFactoryBasedOn(featureDecisions){
   };
 }
 ```
+
+## Toggle Configuration
+
+### Toggle Configuration File
+
+* Can now re-configure a feature flag by simply changing that file rather than re-building application code itself
+* Will need to perform a re-deploy in order to re-configure a flag
+
+### Distributed Toggle Configuration
+
+* Special-purpose hierarchical key-value stores for managing application configuration (Zookeeper, etcd)
+* Form a distributed cluster which provides a shared source of environmental configuration for all nodes attached to the cluster
+* Configuration can be modified dynamically whenever required and all nodes in the cluster are automatically informed of the change
+
+### Overriding configuration
+
+* Any environment-specific overriding runs counter to the CD ideal of having the same exact bits and configuration flow all the way through the delivery pipeline
+
+#### Per-request overrides
+
+* Allow toggle's state to be overridden on a per-request basis via a special cookie, query param, HTTP header
+* If a service is load-balanced, can be confident that the override will be applied no matter which service instance you are hitting
+* Curious / malicious end-users may modify feature toggle states themselves
+
+## Where to place your toggle
+
+### Toggles at the edge
+
+* For per-request context toggles, it makes sense to place Toggle Points in the edge services of your system (the publicly exposed web apps that present functionality to end users)
+  * Where user's individual requests enter application domain and where Toggle Router has the most context
+  * Also makes sense when controlling access to user-facing features that are not ready to launch yet
+
