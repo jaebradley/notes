@@ -25,3 +25,33 @@
   * Given a existing Merkle Tree, the audit path is defined recursively as
     * `Path(m, input list) = Path(m, list[0th element to k - 1th element]) + MTH(list[kth to nth element])` for `m < k` (left-side of tree)
     * `Path(m, input list) = Path(m - k, list[kth element to nth element]) + MTH(list[0th to k-1th element])` for `m >= k` (right-side of tree)
+
+## Example of Audit Paths
+
+```bash
+The binary Merkle Tree with 7 leaves:
+
+               hash
+              /    \
+             /      \
+            /        \
+           /          \
+          /            \
+         k              l
+        / \            / \
+       /   \          /   \
+      /     \        /     \
+     g       h      i      j
+    / \     / \    / \     |
+    a b     c d    e f     d6
+    | |     | |    | |
+   d0 d1   d2 d3  d4 d5
+
+   The audit path for d0 is [b, h, l].
+
+   The audit path for d3 is [c, g, l].
+
+   The audit path for d4 is [f, j, k].
+
+   The audit path for d6 is [i, k].
+```
