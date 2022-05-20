@@ -40,3 +40,6 @@
 * If a tablet gets a spike in traffic, Bigtable splits the tablet in two, then moves one of the new tablets to another node
 * Distribute writes as evenly as possible across nodes
 * Use row keys that do not follow a predictable order
+* It's useful to group related rows so they are adjacent to one another, which makes it much more efficient to read several rows at the same time
+ * Example of storing weather data where row key is location + timestamp (`Boston,MA#1234`) thus row keys from one location would be grouped together
+  * If locations collected data at the same rate, writes would still be spread evenly across tablets
