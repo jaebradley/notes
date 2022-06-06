@@ -1,0 +1,79 @@
+# 7.1 Task Cancellation
+
+* Java does not provide any mechanism for safely forcing a thread to stop what it is doing
+  * It provides interruption, a cooperative mechanism that lets one thread ask another to stop what it is doing
+  * Rarely want a task, thread, or service to stop immediately, since it could leave shared data structures in an inconsistent state
+* One potential cooperative mechanism for stopping a thread is by setting a cancellation requested flag that the task checks periodically
+
+```java
+# PrimeGenerator
+private volatile boolean canclled;
+
+public void run() {
+  BigInteger p = BigInteger.ONE;
+  while (!cancelled) {
+    p = p.nextProbablePrime();
+    synchronized (this) {
+      primes.add(p);
+    }
+  }
+}
+
+
+public void cancel() {
+  cancelled = true;
+}
+```
+
+* Generator won't necessarily stop after exactly one second, since there may be some delay between the time that cancellation is requested and the time that the `run` loop next checks for cancellation
+  * `cancel` is called from the `finally` block to ensure that the prime generator is cancelled even if the call to `sleep` is interrupted
+
+```java
+PrimeGenerator generator = new PrimeGenerator();
+new Thread(generator).start();
+try {
+  SECONDS.sleep(1);
+} finally {
+  generator.cancel();
+}
+return generator.get();
+```
+
+* Tasks that want to be cancelled, must have a cancellation policy that specifies how other code can request cancellation, when the task checks whether cancellation has been requested, and what actions the task takes in response to a cancellation request
+* `PrimeGenerator` has a simple cancellation policy: client code requests cancellation by calling `cancel`, `PrimeGenerator` checks for cancellation once per prime found, and exits when it detects cancellation has been requested
+
+## 7.1.1 Interruption
+
+* If a blocking method is called in `PrimeGenerator`, the same approach may never check the cancellation flag and never terminate
+* Imagine a scenario where primes are generated and put on a `BlockingQueue`
+  * If the producer gets ahead of the consumer, the queue fills up and `put`ting any more items on the queue will block
+  * If a consumer tries to cancel the producer while it is blocked (i.e. calls the `cancel` method), the `cancelled` boolean will be `true`, but since the producer is blocked inside the loop, it will never check the `cancelled` flag
+
+```java
+private final BlockingQueue<BigInteger> queue;
+private volatile booelean cancelled = false;
+
+public void run() {
+  try {
+    BigInteger p = BigInteger.ONE;
+    while (!cancelled) {
+      // This could block and prevent the Task from being cancelled
+      queue.put(p = p.nextProbablePrime());
+    } catch (InterruptedException consumed) { }
+}
+```
+
+
+* Blocking library methods suport interruption, which is a cooperative mechanism for a thread to signal to another thread that it should, at its convenience, and if it feels like it, stop what it is doing and do something else
+* Each thread has a boolean `interrupted` status
+  * Interrupting a thread sets its interrupted status to `true`
+  * The `Thread` class has methods for interrupting a thread (the `interrupt` method), `isInterrupted` returns the itnerrupted status of the target thread, the `interrupted` method clears the interrupted status of the current thread and returns its previous value - the only way to clear the interrupted status
+* Blocking methods like `Thread.sleep` and `Object.wait` try to detect when a thread has been interrupted and return early
+  * They respond to interruption by clearing the interrupted status and throwing `InterruptedException` indicating that the blocking operation completed early due to interruption
+* If a thread is interrupted when it is not blocked, its interrupted status is set, and it is up to the activity being cancelled to poll the interrupted status to detect interruption
+* Interruption does not actually interrupt a running thread, but requests that the thread interrupt itself at the next convenient opportunity
+* If you call `interrupted` and it returns `true`, unless you're planning on swallowing the interruption, you should do someting with it - either throw `InterruptedException` or restore the interrupted status by calling `interrupt` again
+* Interruption is usually the most sensible way to implement cancellation
+* The previous prime producer blocking example can be fixed by using interruption instead of a boolean flag to request cancellation
+  * There are two points where interruption may be detected - the blocking `put` and the polling before entering the block with the `put`
+  * The `while (!cancelled)` is now `while (!Thread.currentThread().isInterrupted())`
