@@ -1,5 +1,10 @@
 # Achieve deterministic builds
 
+## [Volatile inputs can disappear](https://reproducible-builds.org/docs/volatile-inputs/)
+
+* Inputs from the network are volatile and it's best to make a build system not rely on remote data
+* If you have to rely on remote data, ensure integrity using cryptographic checksums and keep backups
+
 ## [Stable order for inputs](https://reproducible-builds.org/docs/stable-inputs/)
 
 * When processing inputs, make sure the order of processing the inputs is stable 
