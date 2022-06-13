@@ -93,3 +93,34 @@ public void run() {
 * Whether a task interprets interruption as cancellation or takes some other action on interruption, it should take care to preserve the executing thread's interruption status
   * Ensure that the interruption status is restored via `Thread.currentThread().interrupt()`
 * Because each thread has its own interruption policy, you should not interrupt a thrad unless you know what interruption means to that thread
+
+## 7.1.3 Responding to interruption
+
+* When calling an interruptible blocking method (`Thread.sleep`), there are two practical strategies for handling `InterruptedException`
+  * Propagate the exception (there may be some task-specific cleanup), making your method an interruptible blocking method too
+  * Restore the interruption status so that code higher up on the call stack can deal with it
+* If task is a `Runnable` and cannot propagate `InterruptedException`, standard way of preserving interruption request is calling `interrupt` again
+* Most code does not know what thread it will run in and so should preserve the interrupted status
+* Activities that do not support cancellation but still call interruptible blocking methods will have to call them in a loop, retrying when interruption is detected
+  * Save interruption status locally, and restore it just before returning
+  * Setting the interrupted status too early could result in an infinite loop because most interruptible blocking methods check the interrupted status on entry and throw `InterruptedException` immediately if it is set
+
+```java
+// Noncancelable task that restores interruption before exit
+boolean interrupted = false;
+try {
+  while (true) {
+    try {
+      // blocking method
+      return queue.take();
+    } catch (InterruptedException) {
+      interrupted = true;
+      // fall through and retry
+    }
+  }
+} finally {
+  if (interrupted) {
+    Thread.currentThread().interrupt();
+  }
+}
+```
