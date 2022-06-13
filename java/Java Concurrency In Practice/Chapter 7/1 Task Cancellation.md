@@ -124,3 +124,59 @@ try {
   }
 }
 ```
+
+## 7.1.4 Example: timed run
+
+* Consider starting a `PrimeGenerator` and then interrupts it after a second
+  * While `PrimeGenerator` may make longer than a second to stop, it will eventually noteice the interrupt and stop
+  * Want to know if the task threw an exception - if `PrimeGenerator` throws an unchecked exception before the timeout expires, it will probably go unnoticed, since the `PrimeGenerator` runs in a separate thread that does not explicitly handle exceptions
+* Example attempts to run an arbitrary `Runnable` for some amount of time
+  * It runs the task in the current (calling) thread, and schedules a cancellation task to interrupt the thread after the specified time interval
+  * Any unchecked exceptions thrown by the task will be caught by the caller of this method
+
+```java
+public static void timedRun(Runnable r, long timeout, TimeUnit unit) {
+  final Thread taskThread = Thread.currentThread();
+  cancelExec.schedule(new Runnable() {
+    public void run() { taskThread.interrupt(); }
+  }, timeout, unit);
+  r.run();
+}
+```
+
+* Since `timedRun` can be called from an arbitrary thread, it cannot know the calling thread's interruption policy
+* If the task completes before the timeout, the cancellation task that interrupts the thread in which `timedRun` is called could go off after `timedRun` has returned to its caller
+* If the underlying task is not responsive to interruption, `timedRun` will not return until the task finishes, which may be long after the desired timeout (if it finishes at all)
+
+```java
+public static void timedRun(final Runnable r, long timeout, TimeUnit unit) throws InterruptedException {
+  class RethrowableTask implements Runnable {
+    private volatile Throwable t;
+    public void run() {
+      try { r.run(); }
+      catch (Throwable t) { this.t = t; }
+    }
+    void rethrow() {
+      if (t != null) {
+        throw launderThrowable(t);
+      }
+    }
+  }
+
+  RethrowableTask task = new RethrowableTask();
+  final Thread taskThread = new Thread(task);
+  taskThread.start();
+  cancelExec.schedule(new Runnable() {
+    public void run() { taskThread.interrupt(); }
+  }, timeout, unit);
+  taskThread.join(unit.toMillis(timeout));
+  task.rethrow();
+}
+```
+
+* The thread created to run thte task has its own execution policy
+* Even if the task doesn't respond to interrupts, the timed run metod will return to its caller
+* After starting the task thread, the task thread does a timed `join`
+* After `join` returns, the task thread checks if an exception was thrown when executing the task, an dif so, rethrows it in the thread calling `timedRun`
+* The saved `Throwable` is shared between the two threads, and is declared `volatile` to safely publish it from the task thread to the `timedRun` thread
+* Because it uses `join`, we don't know if control was returned because the thread exited normally or because the `join` timed out
