@@ -77,3 +77,19 @@ public void run() {
 * The previous prime producer blocking example can be fixed by using interruption instead of a boolean flag to request cancellation
   * There are two points where interruption may be detected - the blocking `put` and the polling before entering the block with the `put`
   * The `while (!cancelled)` is now `while (!Thread.currentThread().isInterrupted())`
+
+## 7.1.2 Interruption policies
+
+* Interruption policy determines how a thread interprets an interruption request - what it does, when one is detected
+* Most sensible interruption policy is thread-level or service-level cancellation
+  * Exit as quickly as practical, cleaning up if necessary, potentially letting some owning entity know that the thread is exiting
+* A single interrupt request may have more than one desired recipient
+  * Interrupting a worker thread in a thread pool can mean both "cancel the current task" and "shut down the worker thread"
+* Tasks do not execute in threads they own - they borrow threads owned by a service such as a thread pool
+* Code that doesn't own the thread (for a thread pool, anything outside the thread pool implementation), should be careful to preserve the interrupted status so that the owning code can eventually act on it, even if the "guest" code acts on the interruption as well
+* Most blocking library methods throw `InterruptedException` in response to an interrupt since they will never execute in a thread they own
+  * The most reasonable cancellation policy for task or library code is to get out of the way as quickly as possible and communicate the interruption back to the caller so that code higher up on the call stack can take further action
+* A task doesn't need to drop everything when it detects an interruption - it can finish the task it is performing and then throw `InterruptedException`
+* Whether a task interprets interruption as cancellation or takes some other action on interruption, it should take care to preserve the executing thread's interruption status
+  * Ensure that the interruption status is restored via `Thread.currentThread().interrupt()`
+* Because each thread has its own interruption policy, you should not interrupt a thrad unless you know what interruption means to that thread
