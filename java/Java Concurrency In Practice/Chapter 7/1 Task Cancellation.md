@@ -180,3 +180,34 @@ public static void timedRun(final Runnable r, long timeout, TimeUnit unit) throw
 * After `join` returns, the task thread checks if an exception was thrown when executing the task, an dif so, rethrows it in the thread calling `timedRun`
 * The saved `Throwable` is shared between the two threads, and is declared `volatile` to safely publish it from the task thread to the `timedRun` thread
 * Because it uses `join`, we don't know if control was returned because the thread exited normally or because the `join` timed out
+
+## 7.1.5 Cancellation via `Future`
+
+* `ExecutorService.submit` returns a `Future` describing the submitted task
+* `Future` has a `cancel` method that takes a boolean argument, returning a `boolean` indicating if the cancellation attempt was successful
+  * Only indicates if able to deliver the interruption
+  * When the value is `true` and the task is currently running in some thread, then that thread is interrupted
+  * `Future.cancel(false)` means "don't run this task if it hasn't started yet", and should be used for tasks that are not designed to handle interruption
+* The task execution threads created by the standard `Executor` implmentations implement an interruption policy that lets tasks be cancelled using interruption, so it is safe to use the `cancel` method when they are running in a standard `Executor`
+  * Do not interrupt a thread pool directly when attempting to cancel a task, because you won't know what task is running when the interrupt request is delivered
+  * Treat interruption as a cancellation request so that they can be cancelled through their `Future`s
+* To implement the `timedRun` behavior using `Future`, submit a task to an `ExecutorService`, and get a `Future` representing the task
+  * Retrieve the result of the task using the timed `Future.get`
+  * If the computation throws an exception, it will be rethrown from the method
+  * If a `TimeoutException` is thrown, it is ignored as the `finally` will cancel the task by calling `Future.cancel(true)`
+
+```java
+Future<?> task = taskExec.submit(runnable);
+try {
+  task.get(timeout, unit);
+} catch (TimeoutException e) {
+  // task will be cancelled in finally
+} catch (ExecutionException e) {
+  // exception thrown in task; rethrow
+  throw launderThrowable(e.getCause());
+} finally {
+  // Harmless if task already completed
+  // Will interrupt the underlying thread if running
+  task.cancel(true);
+}
+```
