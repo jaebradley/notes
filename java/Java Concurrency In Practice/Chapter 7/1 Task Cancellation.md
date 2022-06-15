@@ -211,3 +211,10 @@ try {
   task.cancel(true);
 }
 ```
+
+## 7.1.6 Dealing with non-interuptible blocking
+
+* If a thread is blocked performing synchronous socket I/O or waiting to acquire an intrinsic lock, interruption has no effect other than setting the thread's interruption status
+* Can stop these threads by "interrupting" them by closing the socket they are reading off of, but requires more information about why they are blocked in the first place
+* `read` and `write` methods in `InputStream` and `OutputStream` are not responsive to interruption, but closing the underlying socket makes any threads blocked in `read` or `write` throw a `SocketException`
+
