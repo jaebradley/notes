@@ -14,7 +14,7 @@
   * Multi-producer, single consumer design - any method calling the `log` method is the producer and the background logger thread is the consumer
   * If the logger thread falls behind, the `BlockingQueue` eventually blocks the producers until the logger thread catches up
 * Simply implementing the logger thread to exit on interruption may discard log messages
-* Threads blocked in the `log` method because the `BlockingQueue` is full will never become unblocked
+ * This is problematic for threads blocked in the `log` method because when the `BlockingQueue` is full these threads will never become unblocked
 * Cancelling producer-consumer activity requires cancelling the producers AND the consumers
 * Set a "shutdown requested" flag to prevent further metssages from being submitted
 * Wait for consumers to drain the queue and unblock any producers in `log`
@@ -39,7 +39,7 @@ public class LoggingService {
   @GuardedBy("this") private int reservations;
 
   public void stop() {
-    synchronized (this) >
+    synchronized (this) {
       isShutdown = true;
     }
     loggerThread.interrupt();
