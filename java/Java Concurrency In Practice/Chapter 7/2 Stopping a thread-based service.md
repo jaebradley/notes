@@ -155,3 +155,104 @@ public clas IndexerThread extends Thread {
   * Approach can be extended to multiple consumers by having each producer place a pill for every consumer on the queue
   * Can get large for large numbers of producers and consumers
 * Poison pills only work for unbounded queues
+
+## 7.2.5 Limitations of `shutdownNow`
+
+* When an `ExecutorService` is shut down abruptly with `shutdownNow`, it attempts to cancel the tasks currently in progress and returns a list of tasks that were submitted but never started so that they can be logged or saved for later processing
+* There is no way of knowing the state of the tasks in progress at shutdown time unless the tasks themselves perform some soft of checkpointing
+  * To know which tasks have not completed, you need to know not only which tasks didn't start, but also which tasks were in progress when the executor was shut down
+* Through `execute` method instrumentation, can remember which tasks were cancelled after shutdown, and can identify which tasks started but did not complete normally
+
+```java
+public class TrackingExecutor extends AbstractExecutorService {
+  private final ExecutorService exec;
+  private final Set<Runnable> tasksCancelledAtShutdown = Collections.synchronizedSet(new HashSet<Runnable>());
+
+  public List<Runnable> getCancelledTasks() {
+    if (!exec.isTerminated()) {
+      throw new IllegalStateException();
+    }
+
+    return new ArrayList<Runnable>(tasksCancelledAtShutdown);
+  }
+
+  public void execute(final Runnable runnable) {
+    exec.execute(new Runnable() {
+      public void run() {
+        try {
+          runnable.run();
+        } finally {
+          if (isShutdown() && Thread.currentThread().isInterrupted()) {
+            tasksCancelledAtShutdown.add(runnable);
+          }
+        }
+      }
+    });
+  }
+}
+```
+
+* Example of a `WebCrawler` that applies a `TrackingExecutor`
+  * Web crawing is unbounded, so if a crawler is shut down, want to save its state so it can be restarted later
+  * When the crawler is shut down, the tasks that did not start and those that were cancelled are scanned and their URLs are recorded, so that those URLs can be added to the queue when the crawler restarts
+* Unavoidable race condition that yields tasks that are identified as cancelled but actually completed
+  * This occurs when the thread pool is shut down between when the last instruction of the task executes and when the pool records the task as complete
+  * If tasks are idempotent (if performing them twice has the same effect as performing them once)
+
+```java
+public absract class WebCrawler {
+  private volatile TrackingExecutor exec;
+  @GuardedBy("this")
+  private final Set<URL>urlsToCrawl = new HashSet<URL>();
+
+  public synchronized void start() {
+    exec = new TrackingExecutor(Executors.newCachedThreadPool());
+    for (URL url : urlsToCrawl) {
+      submitCrawlTask(urL);
+    }
+    urlsToCrawl.clear();
+  }
+
+  public synchronized void stop() throws InterruptedException {
+    try {
+      saveUncrawled(exec.shutdownNow());
+      // "Blocks until all tasks have completed execution after a shutdown request, or the timeout occurs, or the current thread is interrupted, whichever happens first."
+      // https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html
+      if (exec.awaitTermination(TIMEOUT, UNIT)) {
+        saveUncrawled(exec.getCancelledTasks());
+      }
+    } finally {
+      exec = null;
+    }
+  }
+
+  private void saveUncrawled(List<Runnable> uncrawled) {
+    for (Runnable task: uncrawled) {
+      urlsToCrawl.add((CrawlTask) task).getPage());
+    }
+  }
+
+  private void submitCrawlTask(URL u) {
+    exec.execute(new CrawlTask(u));
+  }
+
+
+  private class CrawlTask implements Runnable {
+    private final URL url;
+
+    public void run() {
+      for (URL link : processPage(url)) {
+        if (Thread.currentThread().isInterrupted()) {
+          return;
+        }
+
+        submitCrawlTask(link);
+      }
+    }
+
+    public URL getPage() {
+      return url;
+    }
+  }
+}
+```
