@@ -5,13 +5,13 @@
 * When a process creates a subprocess, that subprocess may be able to obtain its resources directly from the operating system, or it may be constrained to a subset of the resources of the parent process
 * The parent may have to partition its resources among its children or it may be able to share some resources among several of its children
   * Restricting a child process to a subset of the parent's resources prevents any process from overloading the system by creating too many subprocesses
-* When a process creates a new process
+* 2 possibilities when a process creates a new process
   * The parent continues to execute concurrently with its children
   * The parent waits until some or all of its children have terminated
-* The address space of the new process
+* 2 possibilities for the address space of the new process
   * The child process is a duplicate of the parent process - same program and same data
   * Child process has a new program loaded into it
-* In Unix, the `fork` system call crates a new process
+* In Unix, the `fork` system call creates a new process
   * The new process consists of a copy of the address space of the original process
   * Both parent and child processes continue execution after the `fork`
   * The `exec` system call is used after a `fork` to replace the process' memory space with a new program
