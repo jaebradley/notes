@@ -24,3 +24,22 @@ try {
 * Once a connection request is received, the server communicates with the client by using the `printer` object to write the date to the client
 * Once the server has written the date, the server closes the socket to the client and resumes listening for more client requests
 * Sockets allow only an unstructured stream of bytes to be exchanged between the communicating threads
+
+## 3.6.2 Remote Procedure Calls
+
+* Each RPC message is addressed to an RPC daemon listening to a port on the remote system, and each contains an identifier of the function to execute and the parameters to pass to that function
+  * The function is then executed as requested, and any output is sent back to the requester in a separate message
+* If a remote process needs a service, it addresses a message to the proper port
+  * If a system wished to allow other systems to be able to list its current users, it would have a daemon supporting such an RPC attached to a port
+  * Any remote system could obtain the needed information by sending an RPC message to the pre-determined port on the server
+* There can be data representation differences between client and server - for example, the representation of 32-bit integers, which may be represented as big-endian (storing most significant bytes first) or little-endian (storing least significant byteds first)
+  * External data representation is used to "marshall" the data passed in an RPC message in a machine-independent format (which will then be converted into a machine-dependent format)
+* For "at most once" message execution, the server must keep a history of all the timestamps of messages it has processed / history to ensure repeated messages are detected
+  * Incoming messages that already have a timestamp associated with the same message are ignored
+  * Client can send same message multiple times and be assured they will get one response back, at most
+* For "exactly once", need to remove risk that server will never receive request
+  * Server must implement "at most once", but also send ACK messages to the client that the message was received and executed
+  * Client resends RPC call periodically until it receives the ACK for the call
+* Port binding can be done statically at compile time, where the ports are well-known / pre-determined
+* Dynamic port binding is done via a "matchmaker" daemon on a fixed RPC port on the server side, that the client can introspect
+  * Client sends name of the remote procedure call, and the rendezvous daemon sends back the port associated with that RPC
