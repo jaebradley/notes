@@ -56,3 +56,10 @@ try {
   * Typically, a parent process creates a pipe and uses it to communicate with a child process it creates via `fork`
   * Child processes inherit open files from its parent
   * Since a pipe is a special type of file, the child inherits the pipe from the parent process
+
+### 3.6.3.2 Named Pipes
+
+* Named pipes can be directional, and several processes can use it for communication
+* Named pipes continue to exist after communicating processes have finished (unlike ordinary pipes, where the ordinary pipe does not exist after the processes have finished communicating)
+* Named pipes are referred to as FIFOs in UNIX systems and appear as typical files in the file system
+
