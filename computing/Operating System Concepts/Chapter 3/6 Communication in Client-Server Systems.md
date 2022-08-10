@@ -48,7 +48,7 @@ try {
 
 ### 3.6.3.1 Ordinary Pipes
 
-* Allows two processes too communicate in producer / consumer fashion
+* Allows two processes to communicate in producer / consumer fashion
   * The producer writes to one end of the pipe and the consumer reads from the other end (unidirectional)
   * The `pipe` method in Unix takes an array of file descriptors where the first file descriptor in the array is the rear-end of the pipe (consumer reading end) and the second file descriptor in the array is the write-end (producer-writing end)
   * Unix treats pipes as special types of files, thus pipes can be accessed using `read` and `write` system calls
