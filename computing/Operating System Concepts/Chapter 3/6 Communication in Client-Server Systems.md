@@ -43,3 +43,16 @@ try {
 * Port binding can be done statically at compile time, where the ports are well-known / pre-determined
 * Dynamic port binding is done via a "matchmaker" daemon on a fixed RPC port on the server side, that the client can introspect
   * Client sends name of the remote procedure call, and the rendezvous daemon sends back the port associated with that RPC
+
+## 3.6.3 Pipes
+
+### 3.6.3.1 Ordinary Pipes
+
+* Allows two processes too communicate in producer / consumer fashion
+  * The producer writes to one end of the pipe and the consumer reads from the other end (unidirectional)
+  * The `pipe` method in Unix takes an array of file descriptors where the first file descriptor in the array is the rear-end of the pipe (consumer reading end) and the second file descriptor in the array is the write-end (producer-writing end)
+  * Unix treats pipes as special types of files, thus pipes can be accessed using `read` and `write` system calls
+* Pipes cannot be accessed from outside the process that creates it
+  * Typically, a parent process creates a pipe and uses it to communicate with a child process it creates via `fork`
+  * Child processes inherit open files from its parent
+  * Since a pipe is a special type of file, the child inherits the pipe from the parent process
