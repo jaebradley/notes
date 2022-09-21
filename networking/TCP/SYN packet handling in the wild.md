@@ -28,3 +28,17 @@
   * For many clients far away from the server, it makes sense to increase the backlog value
 * Too large of a SYN Queue size may use too much memory
   * During a SYN Flood attack, it makes no sense to waste resources on storing attack packets
+
+## Slow application
+
+* When the Accept Queue gets full (size of `backlog` + 1)
+ * Inbound SYN packets to the SYN Queue are dropped
+ * Inbound ACK packets to the SYN Queue are dropped
+ * The TcpExtListenOverflows counter is incremented
+ * The TcpExtListenDrops counter is incremented
+* Dropping inbound packets is a push-back mechanism - the other party will attempt to resend the SYN / ACK packets at some point, at which point the slow application has recovered (hopefully)
+
+## SYN Flood
+
+* SYN Cookies are a construct that allows the SYN+ACK to be generated statelessly without actually saving the inbound SYN and wasting system memory
+* When the other party is real, it will respond with a valid ACK packet that includes the reflected sequence number
