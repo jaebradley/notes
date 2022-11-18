@@ -1,4 +1,4 @@
-# [Efficient data transfer through zero copy](https://developer.ibm.com/articles/j-zerocopy/?utm_source=pocket_saves)
+# [Efficient data transfer through zero copy](https://developer.ibm.com/articles/j-zerocopy/)
 
 * Reading data off disk and writing the data to a response socket (like when serving static content) is inefficient
   * Kernel reads data off disk and pushes it across the kernel-user boundary to be written out to the socket
