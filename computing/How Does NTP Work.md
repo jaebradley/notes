@@ -32,3 +32,17 @@
  * There are clock filters which select the best time offset from the previous eight time samples received by the client from a given NTP server
  * Additional selection and clustering algorithms narrow the dataset by pruning the outliers
  * An algorithm combines the pruned result set, applying a weighted average of the timestamps
+
+## The Clock Synchronization Algorithm
+
+### Offset and Delay Calculations
+
+* The offset calculation is the absolute time difference between the client and NTP server's clocks time it takes for packets to transmit between the client and the server
+* `Network Delay = (Client's timestamp when packet is received from NTP server - Client's timestamp when request was sent to NTP server) - (NTP server's timestamp of the response packet transmission - NTP server's timestamp when receiving request from Client)`
+
+### Clock Selection Algorithm
+
+* Single most important factor is choosing a peer
+* Key design assumption is that accurate clocks are relatively numerous and are narrowly distributed close to UTC, while erroneous clocks are relatively rare and are widely distributed
+* Peer selection constructs candidate peers by stratum
+ * Peers at the lowest stratum and lowest delay are favored throughout this selection process with the assumption that they can provide the most accurate time
