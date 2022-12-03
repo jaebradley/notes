@@ -20,3 +20,21 @@ signal(synch);
 wait(synch);
 S2;
 ```
+
+## 6.5.2 Implementation
+
+```
+wait(S) {
+  while S <= 0;
+    // no-op
+   S--;
+}
+```
+
+* In this semaphore definition, ther eis a lot of busy waiting which wastes CPU cycles that could be used productively
+ * While one process is in its critical section, all the other proceses that share the semaphore are blocked from entering their critical section / looping continuously
+ * These spinlocks do not require a context switch (which can be expensive), so are useful when the locks are expected to be held for a short time
+* Can modify semaphore definition such that a semaphore doesn't continue to spin / wait busily, but can instead block itself
+ * Block operation places a process into a waiting queue associated with the semaphore, and the state of the process is switched to the waiting state
+ * When a semaphore's value is > 0, the first process is pulled from the waiting queue and is moved from a waiting state to a ready state
+ * Block and resume operations are provided by the operating system as basic system calls
