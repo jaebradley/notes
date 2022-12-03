@@ -38,3 +38,34 @@ wait(S) {
  * Block operation places a process into a waiting queue associated with the semaphore, and the state of the process is switched to the waiting state
  * When a semaphore's value is > 0, the first process is pulled from the waiting queue and is moved from a waiting state to a ready state
  * Block and resume operations are provided by the operating system as basic system calls
+ 
+```
+typedef struct {
+  int value;
+  // can be a list of Process Control Blocks
+  struct process *list;
+} semaphore
+
+wait(semaphore *S) {
+  S->value--;
+  if (S->value < 0) {
+    add process to S->list;
+    block(); // system call
+  }
+}
+
+signal(semaphore *S) {
+  S->value++;
+  if (S->value <= 0) {
+    remove next process from S->list;
+    wakeup(next process);
+  }
+}
+```
+
+* `wait` and `signal` must be atomic
+ * In a single-processor environment (i.e. 1 CPU), can solve this by inhibiting interrupts during the time `wait()` and `signal()` operations execute
+  * This works because once interrupts are inhibited, instructions from different processes cannot be interleaved
+ * Multiprocessor systems must use spinlocks to ensure that `wait` and `signal` are atomic (disabling interrupts on all processors is difficult and can diminish performance)
+  * Busy waiting now moved from application program entry sections to critical sections of `wait` and `signal` operations
+  * These sections should be short, and rarely occupied
