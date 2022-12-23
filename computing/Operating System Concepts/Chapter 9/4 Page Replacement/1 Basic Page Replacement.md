@@ -10,5 +10,21 @@
 * Operating system tries to find a free frame but no free frames exist - all memory is being used
 * Operating system swaps out a process, freeing all the process's frames
 
+## Implementation
+
+* Find the location of the desired page on disk
+* Find a free frame - if one doesn't exist, use the page-replacement algorithm to select a victim frame
+ * If no free frames, there are two page transfers for transferring the existing page to disk, and transferring the desired page from disk to main memory
+ * This effectively doubles the page-fault service time / effective access time
+* Write the "victim" frame to disk, change the page and frame tables
+* Read the desired page into the newly freed frame, change the page and frame tables
+* Restart the user process
+
+### Modify bit
+
+* Each page / frame has a modify bit associated with it
+* When the page is written to, the modify bit is set to indicate that the page has been modified
+* When a page is about to be replaced, if the modify bit is set, we know the page has been modified since it was read from disk, so we must write the page to disk
+ * If the modify bit is not set, then we know the page
 
   
