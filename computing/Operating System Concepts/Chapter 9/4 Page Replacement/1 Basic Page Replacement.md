@@ -25,6 +25,12 @@
 * Each page / frame has a modify bit associated with it
 * When the page is written to, the modify bit is set to indicate that the page has been modified
 * When a page is about to be replaced, if the modify bit is set, we know the page has been modified since it was read from disk, so we must write the page to disk
- * If the modify bit is not set, then we know the page
+ * If the modify bit is not set, then we know the page has not been modified since it was read from disk, thus no need to write the page to disk
+ * Since these unmodified pages can be discarded without writing to disk, can reduce the I/O time to service a page fault by half (since the target page still needs to be read from disk)
 
+## Implications
+
+* Without demand paging, all the pages of a process must reside in physical memory
+* With demand paging, the size of the logical address space is no longer constrained by physical memory
+* If we have a user process that requires 20 pages, can use 10 physical memory frames using demand paging, and use the replacement algorithm to find a free frame
   
