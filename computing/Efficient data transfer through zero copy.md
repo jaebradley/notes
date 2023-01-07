@@ -5,7 +5,6 @@
   * Each time the data traverses the user-kernel boundary, it must be copied, using CPU cycles and memory bandwidth
 * Zero copy is used to eliminate these extraneous copies letting the kernel copy data directly from the disk file to the socket
 
-
 ## Data transer: The traditional approach
 
 ```java
@@ -21,12 +20,12 @@ Socket.send(socket, buffer, length);
   * data is copied from the kernel address space buffer to the user address space buffer
   * the `Socket.send` call copies the data in the user address space buffer into a kernel address space buffer
     * Different kernel address space buffer associated with the destination socket
-  * Final copy occurs when the kernel address space buffer data is passed to the pRotocol engine
+  * Final copy occurs when the kernel address space buffer data is passed to the protocol engine
 
 ## Data transfer: The zero-copy approach
 
 * No need to read data into user-space only to immediately write the data to the socket buffer
-* Instead, the data coule be transferred directly from the read buffer to the socket buffer
+* Instead, the data could be transferred directly from the read buffer to the socket buffer
 * `transferTo` method (which calls the `sendfile` system call in UNIX) transfers data from one file descriptor to another
 * So now two context switches (enter kernel space and return to user space during the transfer)
 * Three copies 
