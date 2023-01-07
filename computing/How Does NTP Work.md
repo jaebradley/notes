@@ -26,7 +26,7 @@
  * If the time correction is small, the correction is applied gradually (slewing) in order to avoid clock jumps
  * If the local clock is off by a large amount, the adjustment may be applied all at once
  
- ### NTP's Clock Discipline Algorithm
+### NTP's Clock Discipline Algorithm
  
  * NTP client is connected to X number of NTP servers
  * There are clock filters which select the best time offset from the previous eight time samples received by the client from a given NTP server
