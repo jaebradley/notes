@@ -1,4 +1,4 @@
-# Why does 0.1 + 0.2 = 0.30000000000000004?
+# [Why does 0.1 + 0.2 = 0.30000000000000004?](https://jvns.ca/blog/2023/02/08/why-does-0-1-plus-0-2-equal-0-30000000000000004/)
 
 * How floating point addition (roughly) works
   * Add numbers together with additional precision
