@@ -20,3 +20,18 @@
 * Outgoing mail server acts as a client when relaying messages to each recipient's incoming mail server
   * If server cannot deliver a message, it sends a bounce message to the user that submitted the message
 * Outgoing mail server should not change contents of the message, but adds information about the submitter in a header
+
+### Necessity of outgoing mail servers
+
+* Technically possible to send emails directly to incoming mail server recipients
+* Outgoing mail server typically has a fast and permanent Internet connection unlike mail clients
+* Retry strategy
+ * An incoming mail server can reject a message
+ * An incoming mail server may be unreachable due to maintenance / malfunctioning
+ * Standards demand that messages that cannot be delivered immediately have to be queued and retry delivery after a delay of at least 30 minutes, for several days
+* Sending a single message to many recipients
+ * Mail client only has to submit the message once to an outgoing mail server
+ * Outgoing mail server then delivers a copy of the email to each recipient
+* Address reputation
+ * Incoming mail servers learn the sources of legitimate messages over time
+ * Messages from sources with a bad reputation are often dropped on arrival
