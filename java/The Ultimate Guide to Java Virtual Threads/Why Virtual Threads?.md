@@ -5,4 +5,3 @@
   * Large amount of memory in the stack to store the thread context, native, and Java call stacks
   * Whenever the scheduler preempts a thread from execution, memory must be moved around
 * The straightforward way to write concurrent programs is to create a new thread for every concurrent task
-* 
