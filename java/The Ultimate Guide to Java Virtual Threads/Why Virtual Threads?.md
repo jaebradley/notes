@@ -1,4 +1,4 @@
-# [Why Virtual Threads](https://blog.rockthejvm.com/ultimate-guide-to-java-virtual-threads/)
+# [Why Virtual Threads?](https://blog.rockthejvm.com/ultimate-guide-to-java-virtual-threads/)
 
 * `java.lang.Thread` is an abstraction of an OS thread
 * OS threads are expensive to create
