@@ -23,3 +23,13 @@
   * Envelope belongs to the SMTP
   * Envelope can change during the delivery of a message - the message should stay the same
   * Emails are delivered based on the addresses in the envelope and not the addresses in the header section of the message
+
+## [Diverging envelope example](https://explained-from-first-principles.com/email/#diverging-envelope-example)
+
+<img width="814" alt="image" src="https://user-images.githubusercontent.com/8136030/226629120-a0c5faf0-cc35-49f7-81e3-1b5d44c7ee54.png">
+
+<img width="817" alt="image" src="https://user-images.githubusercontent.com/8136030/226629183-4399918f-ef90-470f-a661-db4716094fe4.png">
+
+<img width="835" alt="image" src="https://user-images.githubusercontent.com/8136030/226629270-b9bf3e6c-01db-4635-8882-9ee188a6fd3d.png">
+
+<img width="836" alt="image" src="https://user-images.githubusercontent.com/8136030/226629356-ff4f330c-87b2-4f03-be6b-0064158bfee0.png">
