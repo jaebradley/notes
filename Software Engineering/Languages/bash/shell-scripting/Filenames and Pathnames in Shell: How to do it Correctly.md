@@ -15,6 +15,11 @@
 * If `find` does not match, `cat` may wait for input from standard input
   * Fixed by appending `/dev/null` pathname
 
+### `( find . -type f | while IFS="" read -r file; do cat "$file"; done) \ > ../collection`
+
+* This program assumes one pathname per line
+* But pathnames can include newlines
+
 ## Prefix all globs so they cannot exapnd to begin with "-"
 
 * Do not begin with a globbing character (like `*`)
