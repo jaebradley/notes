@@ -24,3 +24,11 @@
 * Put off starting an ambitious project because the time isn't quite right
 * Can camoflage itself as work since you're working on something else
 * Am I working on what I most want to work on?
+
+## Growth
+
+* Compounding work grows exponentially
+* Learning is a form of compounding work (the more you learn, the easier it is to learn more)
+* Exponential growth curve feels flat at beginning
+* People push through initial, unrewarding phase of learning something new
+ * Know from experience that learning new things always takes an initial push
