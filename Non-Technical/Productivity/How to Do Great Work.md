@@ -32,3 +32,12 @@
 * Exponential growth curve feels flat at beginning
 * People push through initial, unrewarding phase of learning something new
  * Know from experience that learning new things always takes an initial push
+
+## Aiming High
+
+* Until you know what is the best and _what makes it so_, you don't know what you're aiming for
+* If you don't try to be the best, you won't even be good
+ * Ambition to be the best is a qualitatively different thing from ambition to be good
+ * "Being good" is too vague of a standard
+* Shooting for "being the best" simplifies things as the target is easier to measure against than "merely trying to be good"
+* Target making things that people will care about in one hundred years - something that still seems good in a hundred years is more likely to be genuinely good
