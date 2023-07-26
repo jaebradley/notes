@@ -41,3 +41,12 @@
  * "Being good" is too vague of a standard
 * Shooting for "being the best" simplifies things as the target is easier to measure against than "merely trying to be good"
 * Target making things that people will care about in one hundred years - something that still seems good in a hundred years is more likely to be genuinely good
+
+## Intellectual Honesty
+
+* Being earnest means avoiding affectation and similar vices
+* The core of being earnest is being intellectually honest
+* One way to avoid intellectual dishonesty is to maintain a slight positive pressure in the opposite direction
+* Be aggressively willing to admit you're mistaken
+* One reason nerds have an advantage in doing great work - they expend little effort on seeming anything
+ * Formality / affectation / looking a certain way has a cost associated with it
