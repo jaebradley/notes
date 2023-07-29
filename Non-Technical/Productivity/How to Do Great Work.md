@@ -50,3 +50,33 @@
 * Be aggressively willing to admit you're mistaken
 * One reason nerds have an advantage in doing great work - they expend little effort on seeming anything
  * Formality / affectation / looking a certain way has a cost associated with it
+
+## Consistency and Elegance
+
+* When facing a decision, ask which choice is more consistent
+* Have to be willing to throw things away and redo them
+* Laborious solutions will often have more prestige in the short-term
+ * Cost a lot of effort and they're hard to understand, which can impress people (temporarily)
+
+## Originality
+
+* Original ideas come from trying to build or undersatnd something slightly too difficult
+* Talking or writing about interest is a good way to generate new ideas
+* Distribute attention across topics unequally (power law)
+ * Professionally curious about a few topics and idly curious about many more
+
+## Rule Breaking
+
+* One way to discover broken models is to be stricter than other people
+* To find new ideas you have to seize on signs of breakage
+ * Broken models leave a trail of clues where they bash against reality
+* Paradoxically, have to be willing to break rules
+* New ideas seem much more conservative once they succeed
+* A good new idea has to seem bad to most people, or someone would have already exported it
+* Other way to break rules is to not care about them or not know they exist
+ * Novices and outsiders' ignorance of a field's assumptions often help them make new discoveries
+
+## Idea Identification
+
+* Ask what would be a good idea for someone else to explore
+* What principles are people in your field too attached to? What becomes possible if you discard it?
