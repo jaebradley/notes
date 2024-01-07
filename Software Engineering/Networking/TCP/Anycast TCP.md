@@ -37,7 +37,7 @@
 * Before a connection climbs out of the home range, the other anycast nodes must be notified of the specific TCP connection ID so that any packets they receive can be rerouted to the node which owns the connection
  * TCP connection ID is the combination of the source and destination IP addresses and the source and destination TCP ports
 * When transmission of a TCP packet brings the sequence number across the high water mark, user-space program notifies other anycast nodes that the current node owns the TCP connection with the given connection ID
- * The current node will remain the connection until the connetion closes, no matter the sequence number
+ * The current node will remain the connection until the connection closes, no matter the sequence number
 
 ### Connection close
 
