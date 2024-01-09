@@ -21,3 +21,19 @@
 * Memory must be allocated for the program's stack (for local variables, function parameters, return addresses)
 * Memory is allocated for the program's heap
  * Heap is used for dynamically allocating data
+
+## 4.4 Process States
+
+* In the blocked state, a process has performed some kind of operation that makes it not ready to run until some other event takes place
+* For example, a process initiates an I/O request to disk
+ * It becomes blocked waiting for the I/O request to resolve
+ * Some other process can use the CPU
+
+## 4.5 Data Structures
+
+* OS keeps a process list for all processes that are in a ready state
+* Keeps track of running process
+* OS must track blocked procsses
+* OS must wake the correct process when an I/O event completes
+* Register context holds register information for a stopped process
+ * When a context switch occurs, these registers need to be restored
