@@ -3,8 +3,8 @@
 ## Employer Mental Model of Negotiation
 
 * See employees like employers see them - cost of an employee is not just salary, but taxes, benefits package, healthcare, "perks", job ads, etc.
-  * "Fully-loaded cost" of employee is generally between 150-200% of salary
-  * So companies are not sensitive to small differences in employee wage so $5,000 difference to HR => "Even after we kick in the extra taxes, that is only about 3% of their fully-loaded cost for this year, or seven-hundredths of one percent of that team's hiring budget"
+ * "Fully-loaded cost" of employee is generally between 150-200% of salary
+  * So companies are not sensitive to small differences in employee wage so $5,000 difference to HR = "Even after we kick in the extra taxes, that is only about 3% of their fully-loaded cost for this year, or seven-hundredths of one percent of that team's hiring budget"
 * Recruiters are not spending the recruiter's money - they're spending their budget
 
 ## Ideal Job Search Strategy
@@ -26,12 +26,13 @@
   * Any discussion of compensation prior to hearing `Yes-If` is premature
 * Try and have salary negotiation over email vs. in real time
  * Email gives arbitrary time to prepare responses, less likely to be at a disadvantage when talking with an experienced negotiator
+* `Interesting` is a wonderful word - it is positive and non-commital at the same time. If they tell you a number, tell them it is an interesting number, not a wonderful number
 
 ## Never give a number first
 
- * When people with hiring authority think of winners, they think of people like them who live and breathe this business thing
-  * They negotiate things on principle - that is a major portion of the value they bring to the company
-  * Poorly negotiating will cause them to retroactively question competencies they'd previously credited you with
+* When people with hiring authority think of winners, they think of people like them who live and breathe this business thing
+ * They negotiate things on principle - that is a major portion of the value they bring to the company
+ * Poorly negotiating will cause them to retroactively question competencies they'd previously credited you with
 
 ### "I really need a number to move the process forward"
 
@@ -60,10 +61,18 @@
 * Who do they value within the company? Roles? Titles? Groups?
 * What does the career path look like for successful people within the company?
 * What are their compensation levers? And how do they operate them?
- * Some firms are more excepting of option grants vs. salary increases
+* Some firms are more excepting of option grants vs. salary increases
 * What are the projects this company thinks are really key to its future and how would a motivated person go about getting on them?
-* Somebody wanted to negotiate more money from a Google job offer - came back with reply that Google food benefit was worth a significant amount of money
-* If they say "We can't see our way to $X"
+
+
+### Google Negotiation Example
+
+* Engineer wanted to negotiate more money from a Google job offer
+* Google replied that their food benefit was worth a significant amount of money, with an explicit calculation of the benefit
+* The explicit calculation implies "newly found value" in the negotiation
+* To apply this to job negotiation - if they say "We can't see our way to $X"
  * "At my last company, I increased sales by %y - what would a 1% increase in sales be worth? Millions right? Considereing that this is conceivably worth millions to you, we'd be silly not to do business together"
-* `Interesting` is a wonderful word - it is positive and non-commital at the same time. If they tell you a number, tell them it is an interesting number, not a wonderful number
+
+### Negotiate on other "benefits"
+
 * Other compensation benefits (if salary negotiation is really off the table) are vacation days, work hours, project assignments, travel opportunities, professional development opportunities
