@@ -8,12 +8,12 @@
 
 * Routers select the paths for data packets that cross networks
 * Routers are necessary for an Internet connection
-* Switches are only used for interconnecting devices with the same network
+* Switches are only used for interconnecting devices within the same network
 
 ## Layer 2 vs. Layer 3 Switch
 
 * Layer 2 switches forward data based on the destination device's MAC address
-* Layer 3 switches forward data based on the destination IP address
+* Layer 3 switches forward data based on the destination's IP address
 * Some switches can operate at both Layer 2 and Layer 3
 * Most switches are Layer 2 switches
   * Layer 2 switches connect to devices using Ethernet cables
