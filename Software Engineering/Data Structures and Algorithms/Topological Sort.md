@@ -5,13 +5,13 @@
   * Node `2` and node `3` point to node `4`
   * Node `2` points to node `5`
 * The topological ordering for this graph would be `[1, 2, 3, 4, 5]`
-  * Since node `2` and node `3`, node `4` appear before node `5`
+  * Since node `2` and node `3` both point to node `4`, it appears before node `5`
 * Cyclic graphs don't have valid topological orderings
   * It doesn't make sense for a node to be _before_ **and** _after_ some other node
 
 ## Algorithm
 
-* The first node in the topological ordering can't have any incoming directed edges (i.e. an indegree of zero)
+* The first node in the topological ordering can't have any incoming directed edges (i.e. it has an indegree of zero)
 * When a node is added to the topological ordering, can take "remove" the node (and its outgoing edges) from the graph
 * "Removing" the node's outgoing edges is meaningful as it helps determine the next set of nodes that will have an indegree of zero
 
@@ -25,6 +25,7 @@
 * Obviously, don't modify the graph in-place by actually removing nodes
   * Use hash map to track each node's indegree
   * When a node is added to the topological ordering (aka "removed"), decrement the indegree of the node's neighbors
+
 ### Time and Space Complexity
 
 * Determining the indegree for each node take `O(number of edges)` since each directed edge needs to be inspected once
