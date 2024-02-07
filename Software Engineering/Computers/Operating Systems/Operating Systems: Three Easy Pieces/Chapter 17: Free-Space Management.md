@@ -1,7 +1,7 @@
 # Chapter 17: Free-Space Management
 
 * External fragmentation is when the space of available memory is allocated into little pieces of different sizes
-* Future requests for memory may fail because there is no single contiguous sapce to satisfy the memory request even though the total amount of free space exceeds the size of the request
+* Future requests for memory may fail because there is no single contiguous spave to satisfy the memory request even though the total amount of free space exceeds the size of the request
 
 ## 17.1 Assumptions
 
