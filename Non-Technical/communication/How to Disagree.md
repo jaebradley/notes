@@ -36,6 +36,6 @@
 ## Refuting the Central Point
 
 * Deliberate dishonesty is when someone picks out minor points of an argument and refutes them
-* Correcting someon's grammar / harping on minor mistakes are usually done for the purpose of discrediting one's opponent
+* Correcting someone's grammar / harping on minor mistakes are usually done for the purpose of discrediting one's opponent
 * An effective refutation looks like
   * "Author's main point is X. As he says... But this is wrong for the following reasons..."
