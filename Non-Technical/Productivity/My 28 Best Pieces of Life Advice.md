@@ -2,13 +2,12 @@
 
 * Lower the bar
   * Procrastination can happen because standards are set too high
-  * When you fin dyourself unable to start, that's your cue to lower the bar
+  * When you find yourself unable to start, that's your cue to lower the bar
   * Embrace the thought that "this thing is going to suck"
-* Embrace mediocrity
-  * Embrace mediocrity in some parts of our life
+* Embrace mediocrity in some parts of our life
 * Quantity + Consistency = Quality AND Creativity
 * Choose to be satisfied
-  * Author ends to finish the day feeling like he hasn't done enough
+  * Author often ends finishing the day feeling like he hasn't done enough
   * Ignores reality that usually _something_ gets done that day
 * Will this energize me or drain me?
 * Have a consistent sleeping schedule (wake up at the same time every day, go to bed at the same time every day)
