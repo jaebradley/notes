@@ -3,7 +3,7 @@
 * If a large language model is trained on a sentence of the form "A is B" it will not automatically generalize the reverse information "B is A"
   * "If X was the ninth Chancellor of Germany" it will not be automatically able to answer the question "Who was the ninth Chancellor of Germany?"
 * GPT-4 is able to answer questions that are in the same order as the training data ~80% of the time, compared to ~35% of the time for reversed questions 
-  * "Who is Tom Cruises's mother?" vs. "Who is Mary Lee Pferiffer's son?"
+  * "Who is Tom Cruises's mother?" vs. "Who is Mary Lee Pfeiffer's son?"
 
 ## Meta-learning
 
