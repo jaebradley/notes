@@ -14,3 +14,6 @@
 * Companies distribute jobs to friends and insiders but don't want to admit that publicly
   * So they create a public job application process, causing outsiders to waste time and effort applying through a channel that has a 0% chance at landing them a job
 
+## Side-effects
+
+* Certain narratives cause to outsiders who believe that you can succeed by doing [X/Y/Z], because famous VC/startup influencers kept saying so, and they believed it
