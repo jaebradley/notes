@@ -18,7 +18,7 @@
   * 200 KB (stack + heap)
   * 500 KB binary
   * 2500 KB shared libraries
-* Resident Memory Size - 
+* Resident Memory Size - 1500 KB
   * 100 KB (stack + heap)
   * 400 KB binary
   * 1000 KB of shared libraries
