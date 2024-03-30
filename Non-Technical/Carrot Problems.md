@@ -2,7 +2,7 @@
 
 ## Background Story
 
-* British invested radara that allowed it to shoot down pilots at night
+* British invested radar that allowed it to shoot down pilots at night
 * They didn't want the Germans to know about the technology, so they invented a propaganda campaign that claimed their pilots had developed exceptional eyesight by eating a lot of carrots
 * Carrot problem - any time someone achieves success in a way that they don't want to publicly admit, they have to come up with an excuse for their abilities
   * Means misleading people into wasting their time
