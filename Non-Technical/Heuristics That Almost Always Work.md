@@ -1,6 +1,6 @@
 # [Heuristics That Almost Always Work](https://astralcodexten.substack.com/p/heuristics-that-almost-always-work)
 
-* First example is a security guard that works in a rural city and develops a seful heuristic: if he hears a noise, he might as well ignore it since it's just the wind
+* First example is a security guard that works in a rural city and develops a useful heuristic: if he hears a noise, he might as well ignore it since it's just the wind
   * The heuristic is right 99/9% of the time, which is pretty good / accurate and saves him a lot of trouble
   * Issue is that he provides no value - he could losslessly be replaced by a rock with the words "THERE ARE NO ROBBERS" on it
 * Another example of a doctor who always says "it's nothing, it'll get better on its own"
