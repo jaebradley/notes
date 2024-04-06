@@ -29,3 +29,16 @@
 * `bool(x)` -> `x.__bool__()`
 * If `__bool__` is not implemented, `x.__len__()` is called
   * If `__len__` returns zero, `bool` returns `False`, otherwise `bool` returns `True`
+
+## Collection API
+
+* There are three essential interfaces that every collection should implement
+  * `Iterable` to support unpacking and other forms of iteration
+  * `Sized` to support the `len` built-in function
+	* `Container` to support the `in` operator
+  * Python does not require concrete classes to inherit from these interfaces - for example, any class that implements `__len__` satisfies the `Sized` interface
+* `Sequence` is `Reversible` as they support arbitrary ordering of their contents
+  *  mappings and sets do not
+	* Since `3.7`, `dict`s are key insertion ordered, but this does not mean you can rearrange the keys in a `dict` arbitrarily
+
+## Why `len` is Not a Method
