@@ -41,4 +41,3 @@
   *  mappings and sets do not
 	* Since `3.7`, `dict`s are key insertion ordered, but this does not mean you can rearrange the keys in a `dict` arbitrarily
 
-## Why `len` is Not a Method
