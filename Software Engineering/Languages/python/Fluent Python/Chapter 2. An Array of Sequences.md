@@ -115,6 +115,7 @@ match message:
 ```python
 case [name, _, _, (latitude, longitude)] if longitude <= 0:
 # note the additional "guard" via the if statement
+# guard is only evaluated on pattern match
 ```
 
 * Explanation of the above sequence pattern
@@ -139,6 +140,36 @@ case [str(name), _, _, (float(latitude), float(longitude))]:
 # 4. two-element sequence is comprised of a float first element (assigned to the variable name "latitude")
 # 5. second element is a float assigned to the variable name "longitude"
 ```
+
+* `*_` matches any number of items, without binding them to a variable
+	* `*extra` would bind items to the variable `extra` as a list with `0+` elements
+* Above `case` statement could be re-written like `case [str(name), *_, (float(latitude), float(longitude))]`
+
+## Slice Objects
+
+* `v[a:b:c]` can be used to specify a stride/step (`c`) resulting in skipped items
+  * A negative stride returns items in reverse
+
+```python
+v = 'bicycle'
+s[::3] 
+# starting from index 0, select the element, then skip 2 elements, and continue until the end of the string
+# bye
+
+s[::-1]
+# starting from index 0, select the element, then skip 0 element, and continue until the end of the string. then reverse the results.
+# elcycib
+```
+
+```python
+# Example of some named slices that might increase readability / intent
+UNIT_PRICE = slide(40,52)
+DESCRIPTION = slice(6, 40)
+
+for item in items:
+	print(item[UNIT_PRICE], item[DESCRIPTION])
+```
+
 
 
 
