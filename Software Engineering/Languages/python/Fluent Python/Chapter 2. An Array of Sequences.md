@@ -84,7 +84,61 @@ for name, _, _, (latitutde, longitude) in data:
 
 * Note how the latitude and longitude values in the last element tuple were unpacked
 
+## Pattern Matching with Sequences
 
+```python
+match message:
+  case ['FIRST', field2, field3]:
+    self.process_first_case()
+	case ['SECOND', field4]:
+		self.process_second_case()
+	case ['THIRD', field5, field6]:
+		self.process_third_case()
+  case ['THIRD', field7, field8, field9]:
+  	self.process_fourth_case()
+	case _:
+		raise InvalidCommand(message)
+```
+
+* `message` is the _subject_ `match/case` and the value that Python will try to match to the patterns in each `case` clause
+* Explanation of first pattern
+	* Match subject with a sequence of three items
+	* First item must be the string `BEEPER`
+	* Second and third item can be anything, and bound to variables `field2` and `field3`
+* Explanation of second pattern
+  * Matches any subject with a sequence of two items
+	* First item must be the string `NECK`
+* Note that the third and fourth case have the same requirement for the value of the first item
+	* They differ in the required number of fields
+* Last `case` statement is the default case statement and will match any subject that did not match a previous pattern
+
+```python
+case [name, _, _, (latitude, longitude)] if longitude <= 0:
+# note the additional "guard" via the if statement
+```
+
+* Explanation of the above sequence pattern
+	* Matching sequence must have four items
+	* Last item must be a two-item sequence
+* Instances of `str`, `bytes`, and `bytearray` are not handled as sequences in the context of `match/case`
+	* `match` subject is treated as an "atomic" value (`987` is treated as a single integer value vs. a sequence of digits)
+* `_` matches any single item in that position, and is never bound to the value of the matched item
+  * Only variable that can appear more than once in a pattern
+
+```python
+# can also set variables in a pattern like
+case [name, _, _, (latitude, longitude) as coord]:
+# the above sets coord as a variable
+
+# can make more specific patterns like
+case [str(name), _, _, (float(latitude), float(longitude))]:
+# this pattern states that it 
+# 1. will match 4 item sequences
+# 2. first item must be a string (and be assigned to the variable "name")
+# 3. fourth item must be a two element sequence
+# 4. two-element sequence is comprised of a float first element (assigned to the variable name "latitude")
+# 5. second element is a float assigned to the variable name "longitude"
+```
 
 
 
