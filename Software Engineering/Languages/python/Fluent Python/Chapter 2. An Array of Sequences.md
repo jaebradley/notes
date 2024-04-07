@@ -33,3 +33,74 @@ for combined in (f'{first_item} and {second_item}' \
 # generator expression produces one item at a time and the cartesian product of the lists is never built into memory
 ```
 
+## Tuples Are Not Just Immutable Lists
+
+* Used as records with no field names
+* `%` formatting operator understands tuples and treats each item as a separate field
+* `for` loop knows how to retrieve items of each tuple separately (unpacking)
+* `_` conventional dummy variable name
+	* In a `match/case` `_` is a wildcard that matches any value
+	* `_` is the result of the previous command in the Python console (as long as the result is non-`None`)
+
+## Tuples as Immutable Lists
+
+* tuple will never change its length
+* Uses less memory than a list of the same length
+  * `tuple` instance is allocated the exact memory space it needs
+  * `list` instances on the other hand, are allocated with room to spare, to amortize the cost of future appends
+	* Tuple items are stored in an array in the tuple struct
+		* `list` holds a pointer to an array of references stored elsewhere
+		* When list grows beyond currently allocated space, Python reallocates the array of references to make room
+		* The extra indirection makes CPU caches less effective
+* References in a tuple cannot be deleted or replaced, but if the reference points ot a mutable object and the object changes, then the value of the tuple will change
+* An object is only hashable if its value can never change
+
+## Unpacking Sequences and Iterables
+
+* Requires that the iterable yields exactly one item per variable in the receiving end, unless you use a `*` to capture excess items
+* Swap values of variables without temporary variables using unpacking
+  * `b, a = a, b`
+
+```python
+a, b, *rest = range(5)
+# a = 0, b = 1, rest = [2, 3, 4]
+
+a, b, *rest = range(3)
+# a = 0, b = 1, rest = [2]
+
+a, b, *rest = range(2)
+# a = 0, b = 1, rest = []
+```
+
+## Nested Unpacking
+
+```python
+# data structure looks something like
+# list(tuple((str, str, float, tuple(float, float)))
+
+for name, _, _, (latitutde, longitude) in data:
+  # process
+```
+
+* Note how the latitude and longitude values in the last element tuple were unpacked
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
