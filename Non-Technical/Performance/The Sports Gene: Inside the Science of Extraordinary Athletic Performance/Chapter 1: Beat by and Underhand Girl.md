@@ -38,3 +38,19 @@
   * Experts unconsciously group information into a smaller number of meaningful chunks based on patterns that they have seen before
   * Amateurs tried to remember the arrangements of twenty individual chess pieces
     * GMs only needed to remember specific "chunks" of piece groupings because these piece groupings were patterns that they had seen before
+
+## "Software not hardware"
+
+* Cricket batters only need to see the ball, and the arm down to the elbow (hand, wrist) to extract significant information
+* Top tennis players could discern from torso movements during an opponent's serve where the ball would be going
+  * Average players needed to wait to see the motion of the racket
+* Albert Pujols was in the 66th percentile for simple reaction time compared to a random sampling of college students
+* As an individual practices a skill, mental processes involved in executing the skill move in the brain 
+  * From frontal lobe (of higher consciousness) to more primitive areas that control skills that you can execute without thinking
+
+
+
+
+
+
+
