@@ -170,6 +170,33 @@ for item in items:
 	print(item[UNIT_PRICE], item[DESCRIPTION])
 ```
 
+## Using `+` and `*` with Sequences
+
+* Usually both operands of `+` must be of the same sequence type
+* Neither of them is modified, but a new sequence of that same type is created as a result of the concatenation
+
+```python
+[[]] * 3
+# initializes a list of lists with three references to the same inner list, which is probably not what you want
+```
+
+## Building Lists of Lists
+
+* Preferred approach is list comprehension
+
+```python
+bad_example = [['_'] * 3] * 3
+# [['_','_','_'],['_','_','_'],['_','_','_']]
+bad_example[1][2] = '0'
+# [['_','_','0'],['_','_','0'],['_','_','0']]
+# all third entries are changed because the the inner lists all reference the same list
+# effectively the same as the following
+
+shared_row = ['_'] * 3
+bad_example = []
+for _ in range(3):
+  bad_example.append(shared_row)
+```
 
 
 
