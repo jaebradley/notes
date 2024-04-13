@@ -244,6 +244,23 @@ t[2] += [50, 60]
   * Saving with `array.tofile` is ~7x faster than writing one float per line in a text file
   * Saves memory too (`80 mb` vs. `181 mb`)
 
+## Memory Views
+
+* Built-in `memoryview` class is a shared-memory sequence type that allows handling of array slices without copying bytes
+* Mutating an element of a shared memory view will modify that element value for all other memory views
+
+## Deques and Other Queues
+
+* If a bounded `deque` is full, it discards an item from the opposite end when a new item is added
+* Removing items from the middle of a `deque` is not fast - optimized for appending and popping from the ends
+* `append` and `popleft` operations are atomic so the `deque` is safe to use as a FIFO queue in multithreaded applications
+
+## queue
+
+* `Queue`, `LifoQueue`, and `PriorityQueue` can be bounded by providing a `maxsize` argument
+* Unlike `dequeue` they will not discard items to make room
+  * When the queue is full, the insertion of a new item will block
+  * Waits until some other thread makes room by taking an item from the queue
 
 
 
