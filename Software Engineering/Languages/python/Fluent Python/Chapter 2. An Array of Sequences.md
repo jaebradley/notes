@@ -224,6 +224,25 @@ t[2] += [50, 60]
 * Agumented assignment is not an atomic operation
   * It _can_ throw an exception after doing part of its job
 
+## `list.sort` Versus the `sorted` Built-in
+
+* `list.sort` returns `None` to remind the caller that the change is in-place and it does not create a new list
+* functions or methods that change an object in-place should return `None` to make it clear to the caller that the receiver was called and no new object was created
+  * Downside of this API convention is that method calls cannot be "cascaded" via a fluent interface (like `str` methods)
+
+## When a List Is Not the Answer
+
+* An `array` saves a lot of memory when you need to handle millions of floating-point values
+
+## Arrays
+
+* If a list only contains numbers, an `array` is more efficient
+* When creating an array, you provide a typecode, a letter to determine the underlying `C` type used to store each item in the array
+* `array.tofile` and`array.fromfile` are very fast
+  * `array.fromfile` can load 10 million double-precision floats from a binary file in `0.1` seconds
+  * This is ~60x faster than reading numbers from a text file, which involves parsing each line with the `float` built-in
+  * Saving with `array.tofile` is ~7x faster than writing one float per line in a text file
+  * Saves memory too (`80 mb` vs. `181 mb`)
 
 
 
