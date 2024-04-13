@@ -10,7 +10,7 @@
   * `float` has a value field and two metadata fields
 	  * `ob_refcnt` - the object's reference count
 	  * `ob_type` - point to the object's type
-      * `ob_fval` - `C double` holding the value of the `float`
+	* `ob_fval` - `C double` holding the value of the `float`
 
 ## Generator Expressions
 
