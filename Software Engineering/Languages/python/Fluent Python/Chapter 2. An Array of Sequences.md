@@ -198,7 +198,31 @@ for _ in range(3):
   bad_example.append(shared_row)
 ```
 
+## Augmented Assignment with Sequences
 
+* `+=` is tied to the "special" method `__iadd__` (in-place addition)
+* If `__iadd__` is not implemented, falls back to `__add__`
+  * This may produce a new object as the logic will have the same effect as `a = a + b`
+  * `a + b` is evaluated first and produces a new object
+  * This object is then bound to `a`
+* Repeated concatenation of immutable sequences is inefficient, because the interpreter has to copy the whole target sequence to create a new one with the new concatenated items
+
+## A += Assignment Puzzler
+
+```python
+t = (1, 2, [30, 40])
+t[2] += [50, 60]
+```
+
+* `t` becomes `(1, 2, [30, 40, 50, 60])`
+* `TypeError` is raised with the message `'tuple' object does not support item assignment`
+* What happens is that `t[2] += [50,60]` is evaluated first
+  * This executes successfully as `t[2]` refers to a mutable object
+* Then`t[2]` is assigned the mutable object
+  * This fails because `t` is immutable
+* Don't put mutable items in tuples
+* Agumented assignment is not an atomic operation
+  * It _can_ throw an exception after doing part of its job
 
 
 
