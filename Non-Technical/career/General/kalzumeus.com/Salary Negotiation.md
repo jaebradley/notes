@@ -61,7 +61,7 @@
 * Who do they value within the company? Roles? Titles? Groups?
 * What does the career path look like for successful people within the company?
 * What are their compensation levers? And how do they operate them?
-* Some firms are more excepting of option grants vs. salary increases
+* Some firms are more accepting of option grants vs. salary increases
 * What are the projects this company thinks are really key to its future and how would a motivated person go about getting on them?
 
 
