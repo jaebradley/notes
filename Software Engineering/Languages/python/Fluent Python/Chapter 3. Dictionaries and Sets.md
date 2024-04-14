@@ -34,3 +34,21 @@
   * Machine architecture
   * Salt added to the hash computation for security reasons
 * Hash code is guaranteed to be constant only within one Python process
+
+### Inserting or Updating Mutable Values
+
+* `setdefault` returns the value for the key, or returns the "default" value
+
+```python
+# these are equivalent
+values.setdefault(key, []).append(new_value)
+
+# at least two, and sometimes three extraneous searches for key
+if key not in values:
+  values[key] = []
+values[key].append(new_value)
+```
+
+## Automatic Handling of Missing Keys
+
+### `defaultdict`: Another Take on Missing Keys
