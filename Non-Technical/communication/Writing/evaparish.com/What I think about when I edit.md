@@ -59,7 +59,7 @@
 
 ## Don't use adverbs
 
-* "He laughed loudly" relys on the reader to somehow intuit the precise volume of laughter
+* "He laughed loudly" relies on the reader to somehow intuit the precise volume of laughter
 * Whereas "He laughed with the kind of booming abandon that made the whole restaurant turn around and look" conveys the level of laughter much more precisely
 * People use adverbs as a hedge - "essentially, this is what I'm saying"
   * Remove the adverb and commit to saying whatever you're saying
