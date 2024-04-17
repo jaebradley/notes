@@ -8,9 +8,9 @@
   * Stores the value of its contents in its own memory space
 * Every Python object in memory has a header with metadata
   * `float` has a value field and two metadata fields
-	  * `ob_refcnt` - the object's reference count
-	  * `ob_type` - point to the object's type
-	* `ob_fval` - `C double` holding the value of the `float`
+  * `ob_refcnt` - the object's reference count
+  * `ob_type` - point to the object's type
+* `ob_fval` - `C double` holding the value of the `float`
 
 ## Generator Expressions
 
