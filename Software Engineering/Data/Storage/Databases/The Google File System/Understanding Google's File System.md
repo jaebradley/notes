@@ -35,7 +35,21 @@
 
 ### Writing from GFS
 
-
-
-
-
+* Client asks leader for a file's last chunk
+  * End of file is necessary because writes are append-only (i.e. no random writes)
+* Leader identifies the file's last chunk handle
+* Leader inspects the primary and lease data associated with the chunk
+* The "primary" data is the chunk server that has been assigned to coordinate writes among chunk servers
+  * Short-lived, and is governed by the expiration of the lease
+  * When the lease expires, the leader can assign a new chunk server to coordinate writes
+* If a chunk that a client requests does not have a primary chunk server assigned to it, the leader elects one
+  * The leader increments the version of the data, allowing the leader to keep track of which data is most recent
+    * If the chunk already has an assigned primary chunk server, this step is skipped
+* Leader informs the client about the primary and secondary chunk servers
+* The client sends the data it wants to write to the primary and secondary chunk servers
+* After all chunk servers have the data, the client tells the primary to write the data
+* The primary chunk server chooses a byte offset in the chunk, sends the byte offset to the secondary chunk servers
+  * Primary and secondary chunk servers then perform the write
+* If all the primary and secondary chunk servers successfully perform the write, the client receives a success message
+* If not all secondary chunk servers successfully perform the write, the client receives a failure message
+  * Client needs to talk to the leader again, and repeat the process from the beginning
