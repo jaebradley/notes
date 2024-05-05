@@ -15,14 +15,14 @@
 ## Volleyball
 
 * Study that showed slides of volleyball plays where ball was in frame and also where ball had just left the frame
-  * Top volleyball players were then shown the slides for a fraction of a second
-	* They needed to decide whether the ball was in or out of the frame
-	* Testing whether players were seeing the court and player body language in a different way from the average person
-	* A fraction of a second glance was all top players needed to determine whether the ball was present
-	* Example is a setter from the Canadian national team who was able to deduce whether or not the volleyball was present in a picture flashed for 16 milliseconds
-	* Elite athletes learned how to perceive the game rather than just the raw ability to react quickly
-	* Able to reproduce results with elite field hockey players
-	* Every elite athlete seemed to miraculously have a photographic memory when it came to their sport
+* Top volleyball players were then shown the slides for a fraction of a second
+* They needed to decide whether the ball was in or out of the frame
+* Testing whether players were seeing the court and player body language in a different way from the average person
+* A fraction of a second glance was all top players needed to determine whether the ball was present
+* Example is a setter from the Canadian national team who was able to deduce whether or not the volleyball was present in a picture flashed for 16 milliseconds
+* Elite athletes learned how to perceive the game rather than just the raw ability to react quickly
+* Able to reproduce results with elite field hockey players
+* Every elite athlete seemed to miraculously have a photographic memory when it came to their sport
 
 ## Chess
 
