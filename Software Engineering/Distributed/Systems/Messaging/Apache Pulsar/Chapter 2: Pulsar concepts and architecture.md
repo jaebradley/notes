@@ -51,3 +51,47 @@
   * If most of these bundles happen to be assigned to the same broker, the broker's resources (CPU, network, memory) could be exhausted
   * Offloading these bundles to another broker will help alleviate the problem
   * Splitting the bundle via load balancing would only shed ~50% of the message traffic
+
+## Data Access Patterns
+
+* Streaming system has three I/O patterns
+  * writes - data is written to system
+  * tailing reads - consumer is reading most recently published messages immediately after they have been published
+  * catch-up reads - consumer reads large number of messages from the beginning of the topic (catch-up)
+* Producer sends message to Pulsar
+  * Immediately written to BookKeeper
+* Once BookKeeper acks that the data was committed, broker sends a copy of the message to its local cache before acking the message publication to the producer
+  * Broker can now serve tailing read consumers directly from memory and avoid disk access latency
+* All non-acked messages are persisted until they can be delivered to and acked by consumers
+
+## Logical Storage Architecture
+
+* A Pulsar topic can be thought of as an infinite stream o messages, stored sequentially in the order they were received
+* Incoming messages are appended to the end of the stream
+* Consumers read messages based on whether they are tailing reads or catch-up reads
+* Kafka separates streams into multiple replicas that are each stored entirely on a broker's local disk
+  * Simple, fast since all writes are sequential, limits the amount the disk head has to move
+  * Downside is that a single broker must have sufficient storage capacity to hold the partition data
+* An Apache Pulsar topic is modeled as a series of segments (vs. a collection of partitions)
+  * Once a segment is full, a new segment is created to hold new messages
+  * Topic can be thought of as an unbounded list of segments, each containing a sugset of messages
+* Managed ledgers in ZooKeeper retain the IDs of the data ledgers containing published messages
+  * Data is published to topic A, and written to `ledger-20`
+  * After the first 50k records, `ledger-20` is closed and another ledger (`ledger-245`) is created
+  * Managed ledger retains the unique sequence of these data ledger IDs
+  * Catch-up reads would start with `ledger-20` then `ledger-245` etc
+
+## Bookkeeper Physical Architecture
+
+* Each unit of a ledger is referred to as an entry
+* Entries contain the actual raw bytes from messages as well as metadata to track and access the entries
+  * Most critical metadata is the ID of the ledger to which the entry belongs
+  * This ID is kept in the local ZooKeeper instance when a consumer attempts to read it in the future
+* Ledgers are append-only
+* Broker creates ledger, appends entries to the ledger and closes the ledger
+* After a ledger has been closed, it can only be opened in read-only mode
+* When entries in a ledger are no longer needed, the _whole_ ledger can be deleted from the system
+* The BookKeeper servers responsible for the storage of ledgers are known as bookies
+* When entries are written to a ledger, the entries are written across a subgroup of bookie nodes known as an ensemble
+* Size of the ensemble is equal to the replication factor for the Pulsar topic, ensuring there are exactly R copies of the entry saved to disk to prevent data loss
+
