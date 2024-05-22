@@ -55,9 +55,9 @@
 ## Data Access Patterns
 
 * Streaming system has three I/O patterns
-  * writes - data is written to system
-  * tailing reads - consumer is reading most recently published messages immediately after they have been published
-  * catch-up reads - consumer reads large number of messages from the beginning of the topic (catch-up)
+  * Writes - data is written to system
+  * Tailing reads - consumer is reading most recently published messages immediately after they have been published
+  * Catch-up reads - consumer reads large number of messages from the beginning of the topic (catch-up)
 * Producer sends message to Pulsar
   * Immediately written to BookKeeper
 * Once BookKeeper acks that the data was committed, broker sends a copy of the message to its local cache before acking the message publication to the producer
