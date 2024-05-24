@@ -38,7 +38,7 @@
 
 ## Load Balancing
 
-* When an existing bundle exceeds some preconfigured thresholds (due to changes in traffic patterns where a broker is serving several topics with heavy traffic) the buundle is split into two new bundles with one of them being offloaded to a new broker
+* When an existing bundle exceeds some preconfigured thresholds (due to changes in traffic patterns where a broker is serving several topics with heavy traffic) the bundle is split into two new bundles with one of them being offloaded to a new broker
 
 ## Load Shedding
 
