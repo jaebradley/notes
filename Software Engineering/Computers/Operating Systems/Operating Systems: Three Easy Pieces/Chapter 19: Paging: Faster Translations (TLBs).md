@@ -35,3 +35,26 @@
 * At some point, an array element will have a VPN of `7` and this will result in a TLB miss, and then a lookup for page `7` will occur
 * Note there's a relationship between the page size and the TLB miss rate for dense array-based accesses
   * If the page size was 2x (32 bytes vs. 16 bytes) the number of TLB misses would be halved
+
+## TLB Valid Bit != Page Table Valid Bit
+
+* In a page table, when a page table entry is marked invalid, it means that the page has not been allocated by the process, and should not be accessed by a correctly-working program
+* The usual response when an invalid page is accessed is to trap to the OS, which will respond by killing the process
+* A TLB valid bit refers to whether ot not a TLB entry has a valid translation within it
+* When context switching, all TLB entries are set to invalid ensuring that the next process does not accidentally use a translation from a previous process
+
+## TLB Contents: What's In There?
+
+* TLB Entry: VPN | PFN | other bits
+* Other bits include a valid bit (whether or not the entry has a valid translation or not)
+  * Protection bit (how a page can be accessed - read and execute vs. read and write)
+
+## TLB Issue: Context Switches
+
+* TLB contains virtual-to-physical translations that are only valid for the running process
+* One approach is simple: flush the TLB on context switches
+* Cost is that each time a process runs, it must incur TLB misses
+* Frequent OS switches between processes may be quite costly
+* Some hardware systems provide an address space identifier (ASID) in the TLB
+  * The ASID is almost like a PID, but with fewer bits
+* When context switching, the OS must set a priviledged register to the ASID of the current process
