@@ -31,4 +31,26 @@
 * Challenging to differentiate between core subdomain and supporting subdomain
   * Ask whether the subdomain could be turned into a side business - if so, then it is a core subdomain
   * If its easier to create your own implementation rather than integrating with an external one than this is a supporting subdomain
+* Business logic resembling CRUD interfaces = supporting subdomain
+* Complex algorithms or business processes = core subdomain
 
+## Identifying Subdomains
+
+* Company's departments and organizational units
+  * Online retail store has warehouses, customer service, picking, shipping, etc
+* Example of customer service department
+  * Help desk system, shift management, scheduling, telephone system, etc
+  * Company developed algorithm for routing incidents to agents
+    * Algorithm analyzes incoming cases and past incident similarities and is nontrivial
+    * This algorithm is a core subdomain as it is a "competitive advantage"
+* In contrast, the help desk and telephony subdomains are generic as they are outsourced
+* Technically, subdomains are sets of interrelated, coherent use cases
+  * Usually the use cases involve the same actor, business entities, and all manipulate closely related sets of data
+* When a subdomain's set of coherent use cases has been identified, can stop looking for finer-grained subdomains
+
+## Gigamaster
+
+* Ticket sales and distribution company
+* Core subdomains are its recommendation engine, privacy / data anonymity, mobile application experience
+* Generic subdomains are encryption, accounting (company is in the sales business), charging customers, authentication and authorization for identifying users
+* Supporting subdomains are integrating with music streaming services, integrating with social networks, logic around incorporating attended concerts
