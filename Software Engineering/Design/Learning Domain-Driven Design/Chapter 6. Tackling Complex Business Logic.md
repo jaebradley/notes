@@ -14,3 +14,12 @@
 ### Implementation
 
 * Domain model is an object model incorporating both behavior and data
+* Domain-driven design has tactical patterns, like aggregates, value objects, domain events, and domain services that are the building blocks of this object model
+
+#### Complexity
+
+* Model should be devoid of any infrastructural or technological concerns (implementing calls to databases, external system components)
+* Model's objects are just _plain old objects_ and should implement business logic without relying on or directly incorporating any infrastructural components or frameworks
+* Domain model's objects should follow the terminology of the bounded context's ubuiqtuitous language
+* Domain model's objects should follow the domain experts' mental models
+
