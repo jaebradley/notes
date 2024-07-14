@@ -69,6 +69,55 @@
 * Value objects are used to describe / compose an entity's properties
 * So the `Person` entity has two value objects - a `PersonID` and a `Name`
 
+### Aggregates
+
+#### Consistency enforcement
+
+* Aggregate pattern defines a clear boundary between the aggregate and anything outside the aggregate
+* Aggregate's logic validates all incoming modifications and ensures that these modifications do not contradict the aggregate's business rules / put the aggregate in an invalid state
+* This consistency is enforced by only allowing the aggregate's internal business logic to modify the aggregate's state
+* Processes / objects external to the aggregate are only allowed to read the aggregate's state
+* Aggregate's state can only be mutated by executing mutating methods that are part of the aggregate's public interface
+  * These mutation methods are often referred to as "commands" (like an `AddMessage` method)
+  * Mutations can also be represented as a parameter object that encapsulates all the input values required to execute a command
+    * So an `AddMessage` parameter object that has all the fields that represent adding a message
+* Aggregate's public interface is responsible for validating all inputs and enforcing all relevant business rules and invariants
+* All business logic related to the aggregate should be implemented in the aggregate
+* This simplifies application layer that orchestrates operations on aggregates
+  * Application layer loads the aggregate's current state
+  * Executes the relevant aggregate action
+  * Persists any modified state
+  * Returns the operation's result to the application's caller
+
+```java
+public ExecutionResult Escalate(TicketId id, EscalationReason reason) {
+  try {
+    // Ticket Entity
+    ticket = _ticketRepository.Load(id);
+    command = new Escalation(reason);
+    // Aggregate command execution
+    ticket.Execute(command);
+    // Save results to DB
+    _ticketRepository.Save(ticket);
+    return ExecutionResult.Success();
+  } catch (ConcurrencyException ex) {
+    return ExecutionResult.Error(ex);
+  }
+}
+```
+
+* DB used for storing aggregates needs to support concurrency management
+* Simplest implementation is to have the aggregate hold a version field that is incremented after each update
+	* Use optimistic concurrency control to ensure that the version value for an aggregate is / was the version that was originally read
+  * i.e. increment the version counter of the aggregate in the database if the current aggregate value equals the aggregate version value that was read prior to attempting to apply changes to the aggregate's state
+
+#### Transaction boundary
+
+* An aggregate's state can only be modified by its own business logic
+* Thus, the aggregate also acts as its own transactional boundary - all state changes need to be committed transactionally in a single atomic operation
+* No system operation can assume a multi-aggregate transaction
+* A change to an aggregate's state can only be committed individually, one aggregate per database transaction
+* The need to commit changes in multiple aggregates signals an invalid transaction boundary and thus, inaccurate aggregate boundaries
 
 
 
