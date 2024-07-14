@@ -119,6 +119,28 @@ public ExecutionResult Escalate(TicketId id, EscalationReason reason) {
 * A change to an aggregate's state can only be committed individually, one aggregate per database transaction
 * The need to commit changes in multiple aggregates signals an invalid transaction boundary and thus, inaccurate aggregate boundaries
 
+#### Hierarchy of entities
+
+* Entities are not used independently - they are used as part of an aggregate (i.e. entities are the building block of an aggregate rather than the overarching domain model)
+* Business scenarios where multiple objects share a transactional boundary
+  * When both objects are simultaneously modifiable or when one business object depends on the state of another business object
+* To support changes to multiple objects that have to be applied in one atomic transaction, the aggregate pattern resembles a hierarchy of entities
+  * This hierarchy of entities share transactional consistency
+* The "aggregate" pattern is named because it "aggregates" business entities and value objects that belong to the same transaction boundary
+
+#### Referencing other aggregates
+
+* Performance and scalability issues may arise if an aggregate grows too large
+* Data consistency can be a convenient guiding principle for designing an aggregate's boundaries
+* Only information that is required by the aggregate's business logic to be strongly consistent should be a part of the aggregate
+* All information that can be eventually consistent should reside outside of the aggregate's boundary
+* `Ticket` aggregate example
+  * References a customer (`UserId`), a list of products (`List<ProductId>`), an assigned agent (`UserId`) and messages (`List<Message>`)
+	* The collection of messages is within the aggregate's boundary
+  * The related customer, related products, and assigned agent do not belong to the aggregate and are referenced by ID
+* Referencing external aggregates by ID further communciates that these object do _not_ belong to the current aggregate's boundary
+  * Ensures that each aggregate has its own transactional boundary
+* To decide whether an entity belongs to an aggregate or not, examine where the aggregate contains business logic that can lead to an invalid system state if it will work on eventually consistent data
 
 
 
