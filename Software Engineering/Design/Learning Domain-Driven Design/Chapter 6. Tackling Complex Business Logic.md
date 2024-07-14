@@ -37,4 +37,41 @@
   * Hard to enforce calling the validation logic before the values are used
 * Instead, using actual value objects (like `PhoneNumber`, `EmailAddress` and `CountryCode` value objects) leads to increased clarity to communicating the intent of the stored values
 * No need to call a field `countryCode` if the field type is `CountryCode` - can simply refer to the field as `country` as the type of the underlying value object makes the intent clear
+  * value objects express the business domain's concepts and make the code speak the "ubiquitous language"
 * No need to validate the values before assigned, as the validation logic resides in the value objects themselves
+* A `Height` object (vs. simply using an `int`-based value) makes the intent of the object / field clear
+  * It also decouples the measurement for a specific measurement unit
+  * Can imagine that the `Height` value object is initializable using both metric and imperial units
+  * And makes it easy to convert from one unit to another
+* `PhoneNumber` value object could encapsulate logic to parse phone number from a string value, validate it, extract different attributes (like the country code)
+  * In other words, the value object encapsulates the business logic that manipulates the underlying data / produces new instances of the value object
+
+#### Implementation
+
+* Value objects are implemented as immutable objects
+  * Changing one of the value object's fields conceptually creates a different value - a different instance of a value object
+
+#### When to use value objects
+
+* Useful rule of thumbs - use value objects for the domain's elements that describe properties of other objects
+  * Specifically, use value objects for properties of entities
+
+### Entities
+
+* An entity is the opposite of a value object
+* It requires an explicit identification field to distinguish between the different instances of the entity
+* Trivial starting example was a "person" with a single field - a name
+  * Flaw is that different "people" can have the same exact name
+  * Thus, an ID field is necessary to properly identify people
+* ID field needs to be unique for each entity instance
+* ID field value should remain immutable throughout the entity's lifecycle
+* Entities are not immutable and are expected to change (unlike value objects)
+* Value objects are used to describe / compose an entity's properties
+* So the `Person` entity has two value objects - a `PersonID` and a `Name`
+
+
+
+
+
+
+
