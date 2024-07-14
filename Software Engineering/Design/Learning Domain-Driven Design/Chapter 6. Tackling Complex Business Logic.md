@@ -23,3 +23,18 @@
 * Domain model's objects should follow the terminology of the bounded context's ubuiqtuitous language
 * Domain model's objects should follow the domain experts' mental models
 
+### Building Blocks
+
+* Example `Color` value object made up of a `red`, `green`, and `blue` parameters
+* Since changing one of the parameters would lead to a new color, and no two different colors can have the same values, and two instances of the same color must have the same values, no explicit identification field is needed to identify the colors
+* Introducing an explicit `ColorId` field would lead to a potential bug, where two identical colors inserted into a database might have the same `red`, `green`, and `blue` values but different `ColorId` (i.e. row ID) values
+
+#### Ubiquitous language
+
+* Example class with `string` field definitions for things like phone numbers, country code, email address, etc
+* This class would have to validate all these input fields
+  * This leads to duplicative validation logic
+  * Hard to enforce calling the validation logic before the values are used
+* Instead, using actual value objects (like `PhoneNumber`, `EmailAddress` and `CountryCode` value objects) leads to increased clarity to communicating the intent of the stored values
+* No need to call a field `countryCode` if the field type is `CountryCode` - can simply refer to the field as `country` as the type of the underlying value object makes the intent clear
+* No need to validate the values before assigned, as the validation logic resides in the value objects themselves
