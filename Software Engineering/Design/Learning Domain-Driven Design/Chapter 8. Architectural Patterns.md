@@ -47,6 +47,25 @@
 
 ## Ports & Adapters
 
+* The presentational and data access layers represent integration with some "external" components
+  * Databases, user interface frameworks, etc - implementation details that do not reflect the system's business logic
+  * These "infrastructural" cocnerns can be distilled into a single "infrastructure" layer
+
+### Dependency Inversion Principle
+
+* High-level modules, which implement business logic, should not depend on low-level modules
+  * The DIP is violated in traditional layered architecture - the business logic layer depends on the infrastructural layer
+  * Entites / Active Records depend on the undelrying database
+* With this principle in mind, the business logic layer does not depend on any of the system's infrastructural components
+* Application layer that acts as a facade over the system's public interface describes all the system operations, orchestrating the system's business logic and execution
+* Infrastructure layer (DB, UI framework) depends on the application layer (various actions) which depend on the business logic layer (entities)
+
+### Integration of Infrastructural Components
+
+* Instead of referencing / calling the infrastructural components directly, the business logic layer defines "ports" that are implemented by the infrastructure layer
+* The infrastructure layer implements "adapters" or concrete implementations of the port interfaces when working with different underlying technologies (a DB vs. a cloud-based object storage solution)
+* Abstract ports are resolved into concrete adapter implementations through dependency injetion / bootstrapping
+
 
 
 
