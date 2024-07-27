@@ -66,8 +66,43 @@
 * The infrastructure layer implements "adapters" or concrete implementations of the port interfaces when working with different underlying technologies (a DB vs. a cloud-based object storage solution)
 * Abstract ports are resolved into concrete adapter implementations through dependency injetion / bootstrapping
 
+## Command-Query Responsibility Segregation
 
+* Multiple persistence layers might be used to implement different data-related requirements
+* Document store for operational database, column store for analytics/reporting, and a search engine for search-based capabilities
 
+### Command execution model
+
+* Single model to execute operations that modify system state (i.e. system commands)
+* Implements business logic, validates rules, enforces invariants
+* Only model representing strongly consistent data - system source of truth
+
+### Read models (projections)
+
+* Precached read-only (i.e. non-modifiable) projections that can be regenerated from scratch
+
+### Projecting Read Models
+
+* Similar to materialized views in relational databases
+* Whenever the source tables are updated, the changes should be reflected in the precached views
+
+#### Synchronous projections
+
+* Projection engine queries OLTP database for added or updated records after last processed checkpoint
+* Projection engine uses the updated data to regenerate/update the system's read models
+* Projection engine stores the checkpoint of the last processed record
+  * Checkpoint value will be used during next iteration for getting records added / modified after the last processed record
+
+#### Asynchronous projections
+
+* Command execution model publishes all committed changes to a message bus
+* System's projection engines can subscribe to the published messages, and use them to update the read-only models
+
+### Model Segregation
+
+* Common misconception is that CQRS-based systems should never return any data
+* Command should return information to the caller about whether the command succeeded or failed (and why it failed)
+* Returned data should originate from the strongly-consistent data model and _not_ from projections
 
 
 
