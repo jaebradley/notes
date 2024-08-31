@@ -19,3 +19,27 @@
 * Some `NoSQL` databases expose committed changes as streams of events
 * Outbox pattern guarantees at least once delivery of messages
   * If the message relay service fails right after publishing a message, but before marking it as published in the database, the same message will be published again in the next iteration
+
+## Saga
+
+* Core aggregate design principle is to limit each transaction to a single instance of an aggregate
+* Cases where a business process spans multiple aggregates
+  * Example: advertising campaign is activated, campaign publisher confirms advertising materials, campaign's state is changed to `Published`
+	* If campaign is rejected by publisher, the campaign's state is changed to `Rejected`
+* Sagas are business processes that span multiple transactions
+* Sagas listen to events emitted by components and issue subsequent commands to other components
+* If one of the execution steps fail, the saga is in charge of issuing relevant compensating actions to ensure the system state remains consistent
+* Only data within an aggregate's boundaries are considered strongly consistent. Everything outside an aggregate's boundaries is eventually consistent
+* Sagas match events to corresponding commands
+
+## Process Manager
+
+* If a saga contains `if-else` statements to choose the correct course of action, it is probably a process manager
+* Example: booking a business trip starts with routing algorithm to choose most cost-effective route
+  * Employee approval requested
+  * If employee prefers a different route, manager approval requested
+  * After flight is booked, one of the preapproved hotels has to be booked
+  * If no hotels are available, the flight tickets are canceled
+* A process manager is really just a decision tree organizer
+  * Process manager simply initializes a process ("book a business trip")
+  * And then walks through different decisions / consequences ("request employee approval", "request manager approval of employee override", etc)
