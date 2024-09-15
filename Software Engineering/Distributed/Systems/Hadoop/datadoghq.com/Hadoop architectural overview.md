@@ -46,6 +46,13 @@
 * While the job / application executes, the client polls the `ApplicationMaster` for the job's status and progress
 * When the job completes, the `ApplicationMaster` deregisters with the `ResourceManager`, returns containers to the resource pool
 
+## Zookeeper
 
+* Automatic `NameNode` failover requires a ZK quorum and a `ZKFailoverController` (`ZKFC`) process running on each `NameNode`
+* The primary `NameNode` and the `Standby` NameNode maintain persistent sessions in ZooKeeper
+* Primary `NameNode` holds a special, ephemeral, "lock" `znode` (file/directory in a regular file system)
+* If the primary `NameNode` does not maintain contact with the ZooKeeper ensemble, the primary `NameNode`'s session is expired, triggering a failover
+* The `ZKFC` periodically attempts to acquire the lock `znode` - if it can acquire a lock, the primary `NameNode` has failed
+  * If a lock is acquired one of the standby `NameNode`s transitions to an active `NameNode`
 
 
