@@ -29,3 +29,23 @@
 * When the Active `NameNode` makes changes, it logs a record of the change to a majority of the `JournalNode`s
 * The Standby node watches the `JournalNode`s for changes to the edit log, and applies them to its own namespace
 * `JournalNode` daemons have low overhead, so the daemons run on the same machines as the existing Hadoop nodes
+
+## Untangling `YARN`
+
+* `Yet Another Resource Manager` is the framework that assigns computational resources for application execution
+* Consists of a `ResourceManager` (one per cluster), `ApplicationMaster` (one per application), `NodeManager` (one per node)
+* An "application" is synonymous with a MapReduce "job"
+
+### Typical Application Execution
+
+* Client program submits MapReduce job to the `ResourceManager`
+* `ResourceManager` negotiates a "container" (a collection of physical resources) for the `ApplicationMaster` and launches the `ApplicationMaster`
+* `ApplicationMaster` boots, registers with the `ResourceManager`, and the original client program now interfaces directly with the `ApplicationMaster`
+* `ApplicationMaster` negotiates resource bundles for the client program
+* `ApplicationMaster` passes the "container" launch specification to the `NodeManager`, which launches a "continaer" for the actual job
+* While the job / application executes, the client polls the `ApplicationMaster` for the job's status and progress
+* When the job completes, the `ApplicationMaster` deregisters with the `ResourceManager`, returns containers to the resource pool
+
+
+
+
