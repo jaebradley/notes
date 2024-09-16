@@ -10,4 +10,6 @@
 * Browser generates a public key as well as a "random id", to support registering several passkeys for the same login
 * The relevant private key is stored on the client side, and cannot be leaked by the service / website
 * When the user authenticates for the same website, the website is asking the user to sign a "challenge"
-  * This "challenge" can be a passkey or a hardware security key
+  * This "challenge" can be "signed" with a passkey or a hardware security key
+* The `clientDataJSON` field in the successful authentication response case is a base-64 encoded that contains information like the challenge value, and an `origin` representing the base URL of the signing service
+  * The `origin` field is read by the browser and is used by the browser to detect any phishing
