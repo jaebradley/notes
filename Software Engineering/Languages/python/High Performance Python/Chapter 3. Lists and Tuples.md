@@ -9,3 +9,7 @@
 
 ## Lists Versus Tuples
 
+* Tuples are cached by the Python runtime, which means that we don't need to talk to the kernel to reserve memory every time we want to use one
+* Both lists and tuples can take mixed types
+
+### Lists as Dynamic Arrays
