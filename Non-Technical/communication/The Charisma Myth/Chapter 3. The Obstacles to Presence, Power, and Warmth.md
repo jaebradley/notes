@@ -29,3 +29,7 @@
 
 * The very act of comparing and evaluating hinders our ability to be fully present
 * Trying to optimize both impairs our presence and creates anxiety due to the pressure of finding the best possible choice
+
+## Self-Criticism
+
+* Self-critical thinking in a public space may impact how people perceive you - they may think your reaction is to them
