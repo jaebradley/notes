@@ -1,6 +1,5 @@
 # [Notes on the FoundationDB Paper](https://blog.the-pans.com/notes-on-the-foundationdb-paper/)
 
-
 ## Control Plane
 
 * Most important service is the Coordinator
