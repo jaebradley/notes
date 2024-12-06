@@ -30,3 +30,21 @@ End DST on month 10 on the last Sunday at 4am local (5.0/4).
 ## Africa/Casablanca and Asia/Gaza follow the moon, but timezones follow the sun
 
 * Morocco and Gaza observe daylight savings based on Ramadan
+* Ramadan is a month in the Islamic calendar
+* The Islamic calendar is a lunar calendar
+* These timezone files hard-codes all the expected transitions (far enough into the future - `2086` - to be exact)
+
+## America/Nuuk transitions to DST at -1 o’clock
+
+* Lisbon's standard time is UTC, Greenland's is three hours behind UTC
+* Greenland's daylight savings occurs on 11PM on the Saturday before
+* America/Nuuk is omitted from `/usr/share/zoneinfo` but available in other copies of tzdb in `/var/db/timezone`
+
+## Conclusion
+
+* Timezones have a set of hard-coded transitions, some of which may be in the past and/or the future
+* Set of rules about how future transitions may happen
+* Any given time in a timezone is an offset from UTC and whether the time is considered DST
+* Can always uniquely identify what UTC time someone is referring to when they tell you their timezone + local time + current time designator
+* Timezone + designator gives an offset
+
