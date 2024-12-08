@@ -33,3 +33,9 @@
 * Using "page-locked" regions of memory, these regions of memory can be copied to the GPU much more quickly
   * Regions can be copied asynchronously
 
+### When to Use GPUs
+
+* Ensure the memory use of the problem will fit within the GPU
+* `numpy` functions generally vectorize very well, so if your algorithm can be written in terms of `numpy` calls, your code will probably vectorize well
+
+
