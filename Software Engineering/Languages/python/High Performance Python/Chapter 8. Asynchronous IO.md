@@ -21,3 +21,32 @@
   * Effetively a list of functions that need to execute, and the function at the top of the list is executed, then next function, etc
   * Works best with asynchronous I/O operations that return immediately
   * When asynchronous operation finishes in the future, an event is fired and program will handle event
+*  Generally, event loops take two forms: callbacks or futures
+
+## How Does async/await Work?
+
+* `await` statement is similar to a `yield` statement
+  * Execution of the current function gets paused while other code is executed
+  * Once the `await` or `yield` resolves with data, the function is resumed
+* Event loop is responsible for scheduling the resumption of the paused function
+
+## `tornado`
+
+* Event loop is continuously executing, ideal for any application that is mostly I/O-bound where most of the application should be asynchronous
+  * Mostly famous for being a performant web server
+* In contrast, `gevent` is an idal solution for mainly CPU-based problems, that sometimes involve heavy I/O
+  * Program that performscomputations on a dataset and then send results back to a database for storage
+
+## Shared CPU-I/O Workload
+
+* Example is a CPU-bound problem that needs to communicate frequently with a database to save results
+  * Toy problem is `bcrypt` hash generation (with parameters for increasing the CPU and memory requirements of the salt generation)
+* For a database used to store simple values, a response time > 10ms should be considered slow
+
+### Batched Results
+
+* Create an `AsyncBatcher` that will queue the result to send to the database in small asynchronous bursts
+* Will pause the program and put it into I/O wait to issue many concurrent requests instead of issuing them one at a time
+* Start an event loop (`asyncio.get_event_loop`) to run a single async function
+* Event loop will run until the asynchronous function is complete
+
