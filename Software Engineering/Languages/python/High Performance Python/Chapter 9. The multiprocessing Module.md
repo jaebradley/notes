@@ -57,3 +57,45 @@
 * The first is a sentinel message that indicates no more work is available
 * The second message is sent by a worker to confirm that it has seen the sentinel message and is tearing itself down
 * In some cases, if the ratio of the communication cost to workload is high (large pickled objects) then a serial solution can be faster than using a multiprocess `Queue`-based solution
+
+## Verifying Primes Using Interprocess Communication
+
+* Problem: given small set of numbers, figure out if each number is prime
+
+### Naive Pool Solution
+
+* Uses ` multiprocessing.Pool` with four forked processes
+* Divide the range of possible factors into four tuples of subranges and sends these to the `Pool`
+  * Take square of big number, divide that into four ranges, to represent the ranges of possible factors
+
+### Less Naive Pool Solution
+
+* Serially check smaller factors, then start a parellelized search if no primes are found
+
+### Using `Manager.Value` as a Flag
+
+* `multiprocessing.Manager()` lets users share higher-level Python objects between processes as managed shared objects
+* In this case, uses a byte flag value of `1` when a factor has been found
+* The flag is synchronized, so don't want to check it too frequently
+  * Checking requires a lock on the shared variable
+  * So check every one thousand iterations before exiting the search
+
+## Using Redis as a Flag
+
+* Provides its own locking mechanisms
+* Each operation is atomic
+* Redis stores everything in RAM and snapshots to disk
+* Redis supports replication to a cluster of instances
+* Unix domain sockets can achieve around 50% more throughput than the TCP/IP loopback
+  * Default behavior of redis-benchmark is to use the TCP/IP loopback
+  * Long pipelines decrease the performance benefit of unix domain sockets
+
+## Using `Rawvalue` as a Flag
+
+* `multiprocessing.RawValue` is a thin wrapper around `cyptes` block of bytes
+* It lacks synchronization, so it avoids locking, but there are no atomic operations
+* Benefit in example is that flag gets switched in one direction ("have I found a factor yet?")
+  * When this flag is read, it's just to check if searching can stop
+* Thus, because the flag is never reset, there doesn't need to be synchronization
+* Things like a shared counter will need synchronization and something like a context manager with `value.get_lock()` will be necessary
+  * `Value`'s implicit locking doesn't support atomic operations
