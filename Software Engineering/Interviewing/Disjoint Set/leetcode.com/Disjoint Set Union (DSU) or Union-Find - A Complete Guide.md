@@ -21,3 +21,28 @@
 |----------------|---|---|---|---|---|---|---|---|
 | Representative | a | a | c | c | e | e | g | g |
 
+* Combining `a` and `c` leads to `b` pointing to `a` and `c` pointing to `a` and `d` pointing to `c`
+
+| Element        | a | b | c | d | e | f | g | h |
+|----------------|---|---|---|---|---|---|---|---|
+| Representative | a | a | a | c | e | e | g | g |
+
+## `find` function
+
+* Idea is a function that will return the representative for a given element
+* Implementation is usually something like
+  * If the specified element is the representative for the specified element (via a mapping like the `Element` <> `Representative` table above) then return the element
+  * If the specified element is _not_ the representative specified element, then call `find` on the immediate reprsentative for the specified element
+    * This will continue until the "root" representative is identified
+    * So for `d` above, first `c` would be checked, then `a` would be checked
+    * Since `a`'s representative is itself, `a` would be returned as `d'`s "root" representative
+
+## `combine` function
+
+* When combining elements, first check to see if both elements have the same representative or not
+* If they do have the same representative then they are already in the same set, and they are already "combined"
+* Otherwise, pick the representative of the first element to be the representative of the seceond element's representative
+
+## Union by Size
+
+* When combining elements, and their respective sets, a larger and larger "tree" is built
