@@ -13,4 +13,24 @@
 ## High Level Design
 
 * Need to support content creators uploading video content and viewers watching video
+* CDN for storing content across the globe
+* Content Uploading Service that consumes created content and then distributes it across CDNs
+  * Will also need to store video content metadata in data storage
+* End user facing component for playing video content
+  * Playback service: responsible for serving playback requests
+  * Steering service: determines the optimal CDN urls to serve playback requests
 
+## Data Model
+
+* Need to persist video metadata and subtitles
+* Since this metadata might need to be updated frequently, use a document-based store
+* Time-series database to store subtitles
+  * "Events" are stored with start / end timestamps and subtitle values
+* Netflix has a media database which is modeled around the notion of a media timeline
+
+## Component Design
+
+### Content Uploader
+
+* Content creator uploads raw video content
+* Content storage service segments the raw video file into chunks, persisting the segments on a file storage system
