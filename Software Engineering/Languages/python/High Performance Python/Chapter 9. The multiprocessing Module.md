@@ -99,3 +99,9 @@
 * Thus, because the flag is never reset, there doesn't need to be synchronization
 * Things like a shared counter will need synchronization and something like a context manager with `value.get_lock()` will be necessary
   * `Value`'s implicit locking doesn't support atomic operations
+
+## Using `mmap` as a Flag
+
+* The bytes in a shared memory block are not synchronized and they come with very little overhead
+* They kind've act like a file, and are a block of memory with a file-like interface
+* Have to `seek` to a location and read/write sequentially
