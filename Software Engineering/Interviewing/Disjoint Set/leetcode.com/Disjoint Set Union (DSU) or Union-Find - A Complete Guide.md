@@ -46,3 +46,10 @@
 ## Union by Size
 
 * When combining elements, and their respective sets, a larger and larger "tree" is built
+* So whichever representative element has a greater "size" (i.e. the set of elements that point to the representative element) use the representative element with the _smaller_ size as the representative for the "combined" set
+
+## Path Compression
+
+* In the above example, `d` points to `c` which points to `a`, ultimately
+* What can be done instead is when traversing or "calculating" the representative for a given node, once the representative is found, set that value for all the traversed elements in the set
+* So `d` would point to `a` when looking up the representative of `d`
