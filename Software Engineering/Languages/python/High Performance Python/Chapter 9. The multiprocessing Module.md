@@ -105,3 +105,24 @@
 * The bytes in a shared memory block are not synchronized and they come with very little overhead
 * They kind've act like a file, and are a block of memory with a file-like interface
 * Have to `seek` to a location and read/write sequentially
+
+## Sharing `numpy` data with `multiprocessing`
+
+* Sharing a large matrix between processes means a single copy and no wasted RAM
+  * No time wasted when copying large blocks of RAM
+  * Share partial results between processes
+* Can use `pmap` to look at the memory map of each process, including blocks of memory that are shared
+* Use `multiprocessing.Array` to allocate a shared block of memory
+  * By default, the `Array` is wrapped in a lock to prevent concurrent edits
+  * Overwrite this default behavior and set `lock=False` when instantiating the `Array`
+* Can "wrap" this shared array using `numpy`, but `numpy` is not managing the RAM - `multiprocessing.Array` is managing it
+* While this `numpy` object may be different per forked process, the underlying bytes that are accessed are stored in shared memory
+
+## Synchronizing File and Variable Access
+
+* Example of multiple processes writing a count to a file
+* Without coordination, these processes will overwrite each other and the count may get reset or have unexpected behavior for the file
+* Build a list of `multiprocessing.Process` objects that are assigned a work function (and relevant arguments)
+* `fasteners` module introduces a synchronization method so only one process gets to write to the file at any given time
+  * The locking mechanism is only specific to Python so any other non-Python processes that are looking at the file will _not_ care about the locked nature of the file
+  * Add a `@fasteners.interprocess_locked` decorator above the work function that is passed to the `Process` object
