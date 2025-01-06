@@ -11,7 +11,7 @@
 * Python threads are real operating system (POSIX) threads that are managed by the hsot operating system
 * Python threads represent threaded execution of the Python interpreter process
 * On thread creation, Python creates a small data structure containing interpreter state (`PyThreadState`)
-* Current stack frame, current recursion depth, thread ID, per-thread execution information, < 100 bytes
+  * Contains current stack frame, current recursion depth, thread ID, per-thread execution information, < 100 bytes
 * A new POSIX thread is started
 * Then a C function runs the Python callable function (the `Thread#run` method)
 
@@ -30,7 +30,7 @@
 * A very common problem encountered with Python thread programming is that threaded programs can not be killed with keyboard interrupts
   * Have to use `kill -9`
 
-  ## Signal handling
+## Signal handling
 
 * Signal handlers only run in the main thread
 * When a signal arrives, the interpreter runs a “check” after every tick, until the main thread executes
