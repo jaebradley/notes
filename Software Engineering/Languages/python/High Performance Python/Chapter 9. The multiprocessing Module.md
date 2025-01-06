@@ -126,3 +126,12 @@
 * `fasteners` module introduces a synchronization method so only one process gets to write to the file at any given time
   * The locking mechanism is only specific to Python so any other non-Python processes that are looking at the file will _not_ care about the locked nature of the file
   * Add a `@fasteners.interprocess_locked` decorator above the work function that is passed to the `Process` object
+
+### Locking a Value
+
+* `multiprocessing.Value` object to share integer between processes
+  * Prevents simultaenous reads or writes, but does _not_ provide atomic increment
+* Suitable if a value is written from one process and read (but not modified) from another process
+* Have to use a `multiprocessing.Lock`, passed to the `multiprocessing.Process` to atomically increment the integer `Value`
+* In example, a context manager is used to acquire and release the lock - otherwise, an explicit call to `lock.acquire` and `lock.release` needs to occur
+* Generally speaking, since a `Lock` does not support atomic increment operations, for this example, it’s better to use a `Lock` + `RawValue` and achieve a little faster performance
