@@ -1,5 +1,7 @@
 # gzip
 
+## Compression
+
 * `gzip file.txt`: replaces `file.txt` with compressed version named `file.txt.gz`
 * `-k` option that leaves the original file
 * The `-c` option also keeps the file and writes the compressed output to standard output
@@ -7,6 +9,9 @@
 * `-r` option compresses all files in a directory
 * Compression levels from `-1` to `-9` with `-9` being the most compressed, but slowest
 * `gzip` can also read from standard input via a pipe
+
+## Decompression
+
 * To decompress a gzipped file use the `-d` option like `gzip -d file.gz`
 * File that is being decompressed must have a `.gz` file suffix
 * The `gunzip` command is an alias for `gzip -d`
