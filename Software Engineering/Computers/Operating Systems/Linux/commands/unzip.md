@@ -10,7 +10,3 @@
 * `-v`: Verbose mode, show extract details
 * `-P`: If a ZIP file is password-protected, you can provide the password using the `-P` option
 
-## Extracting compressed files
-
-* Use `gunzip` instead of `unzip`
-
