@@ -1,6 +1,6 @@
 # zip
 
-* Can specify multiple files to `zip` like `zip outputfile.zip file1 file2 file 3`
+* Can specify multiple files to `zip` like `zip outputfile.zip file1 file2 file3`
 * `-r` option to zip an entire directory
 * `-x` option to exclude files or directories from the `zip`ped output. Can specify wildcards (`*`)
 * `-e` option encrpts the files with a password
