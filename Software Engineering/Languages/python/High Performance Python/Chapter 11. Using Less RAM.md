@@ -23,4 +23,10 @@
   * Will be greater than an `8`-byte C integer
 * A basic object costs `24` bytes in Python 3.7
   * `sys.getsizeof(0)` outputs `24`
+  * An empty byte sequence costs 33 bytes
 * Sets of `4` bytes are added each time the size of the number crosses the previous limit
+* `sys.getsizeof([])` only calculates the cost of the list itself and _not_ the cost of the contents of the list
+  * Empty list is 64 bytes and each item in the list allocates another 8 bytes
+* Author prefers to use `memit`
+
+## Efficiently Storing Lots of Text in RAM
