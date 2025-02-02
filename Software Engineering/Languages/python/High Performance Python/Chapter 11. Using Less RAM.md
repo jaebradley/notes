@@ -28,5 +28,3 @@
 * `sys.getsizeof([])` only calculates the cost of the list itself and _not_ the cost of the contents of the list
   * Empty list is 64 bytes and each item in the list allocates another 8 bytes
 * Author prefers to use `memit`
-
-## Efficiently Storing Lots of Text in RAM
