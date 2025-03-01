@@ -32,3 +32,42 @@
 * The Internet protocol process control block has information like the origin IP address and port as well as the destination address and port
 * System call flow: kernel starts with descriptor value -> `fd_ofiles` -> descriptor `file` structure -> `socket` structure -> Internet protocol control block
 * UDP datagram arrives on network interface flow: kernel searches through all the UDP process control blocks, finding the appropriate one based on the destination UDP prot number and destination IP address, source IP address, source port numbers -> `socket` structure
+
+## Mbufs (Memory Buffers) and Output Processing
+* Socket layer verifies references in system calls, like the pointer that points to a piece of memory in the address space of the process
+  * After verification, copies socket address structure into an mbuf
+* mbufs are linked together using `m_next` and `m_nextpkt` members
+* `m_pkthdr.len` and `m_pkthdr.rcvif` are members of the mbuf header
+  * `len` member contains the total length of the mbuf chain to avoid having to go through all the mbufs on the chain to calculate the total length
+* mbufs are always 128 bytes
+* First mbuf provides 100 bytes of data storage on the first mbuf on the chain
+  * Subsequent mbufs provide 108 bytes of storage
+* When the necessary storage data exceeds 208 bytes, a larger buffer called a cluster is used instead of mbufs
+* After the socket layer copies the destination socket address structure into an mbuf, the protocol layer corresponding to the socket descriptor is executed
+* For a UDP socket, the UDP output routine is called
+  * Pointers to the mbufs are passed as arguments
+  * UDP output routine prepends an IP header and a UDP header in front of the existing mbuf content
+  * A new mbuf is allocated, made the head of the chain
+    * Packet header information (`m_pkthdr.len` and `m_pkthdr.rcvif`) is copied from the previous head of the chain
+    * IP and UDP headers are stored at the end of the new mbuf that becomes the head of the mbuf chain
+    * Any lower-level protocols (interface layer) can prepend their headers in front of the IP header, if necessary, without having to copy the header data
+* UDP output routine fills in the UDP header and as much of the IP header possible
+  * The destination address in the IP header can be set, but the IP checksum is left to the IP output routine to calculate and store
+* UDP checksum is calculated and stored in the UDP header
+* Complete pass of the original bytes of data stored in the mbuf chain
+  * So far, kernel has made two passes of the original mbuf data
+  * Once to copy data from the user's buffer into the kernel's mbufs
+  * Another time, when calculating the UDP checksum
+* UDP output routine ends up calling the IP output routine, passing pointer to the mbuf chain
+* IP output routine fills in data like the IP checksum, determines the outgoing interface for the outgoing datagram (the IP routing function), calls the interface output function
+* Ethernet output routine prepends the Ethernet header to first mbuf in chain
+* mbuf chain is added to end of the output queue for the defined interface
+* When the interface processes an mbuf on its output queue, it copies the data to its transmit buffer and initiates the output
+  * Example contains the following bytes copied to transmit buffer:
+    * 14-byte Ethernet header
+    * 20-byte IP header
+    * 8-byte UDP header
+    * 150 bytes of user data
+  * Third complete pass of the data by the kernel
+  * After copy, the mbuf chain is released by the Ethernet device driver
+  * After release, mbufs become part of the kernel's pool of free mbufs
