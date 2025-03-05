@@ -71,3 +71,19 @@
   * Third complete pass of the data by the kernel
   * After copy, the mbuf chain is released by the Ethernet device driver
   * After release, mbufs become part of the kernel's pool of free mbufs
+
+## Interrupt Levels and Concurrency
+* In basic example, socket layer is operating at `sp10` (normal operating mode, nothing blocked, lowest priority)
+* Ethernet device driver interrupt occurs
+* Interface layer now executes at a higher priority (`splimp`) indicating network device I/O
+* This interrupt preempts the socket layer code
+* While the Ethernet device driver is running, it places a received packet on the IP input queue and schedules a software interrupt
+  * This interrupt has a priority of `splnet` or network protocol processing
+  * This interrupt won't take effect immediately because the kernel is running at a higher priority level (network device I/O)
+* When the Ethernet device driver completes, the previously scheduled protocol layer begins execution
+* A terminal device interrupt occurs and it is handled immediately, preempting the protocol layer since terminal I/O has higher priority than the protocol layer
+* Let's say the terminal device interrupt involves putting a packet onto the IP input queue and scheduling another software interrupt for the protocol layer
+* Preempted protocol layer continues
+  * Finishes processing the packet received from the Ethernet device driver
+  * Then processes packet received from terminal device
+  * Only when there are no more input packets to process will control be returned to whatever was preempted (the initial socket layer operation)
