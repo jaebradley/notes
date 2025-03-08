@@ -72,6 +72,43 @@
   * After copy, the mbuf chain is released by the Ethernet device driver
   * After release, mbufs become part of the kernel's pool of free mbufs
 
+## Input Processing
+* Receive-complete interrupt to the Ethernet device driver
+* Kernel handles the device interrupt and schedules the device driver to run
+
+### Ethernet Input
+* Ethernet device driver processes the interrupt
+* Data bytes are read from the device into an mbuf chain
+* Device driver passes the mbuf to a general Ethernet input routine which looks at the type field in the Ethernet frame to determine which protocol layer should receive the packet
+  * In book's example, type field specifies an IP datagram
+  * mbuf is added to the IP input queue as a result
+  * Software interrupt is scheduled to cause the IP input process routine to execute
+
+### IP Input
+* IP input is asynchronous and scheduled to run via a software interrupt
+* When the IP input routine executes, it loops, processing each IP datagram on its input queue
+  * Returns when the entire queue has been processed
+* Verifies IP header checksum, processes IP options, verifies that the datagram was delivered to the right host, forwards the datagram if the system was configured as a routed and the datagram is destined for another IP address
+* If the IP datagram has reached its final destination, the protocol field in the IP header determines whether the ICMP, IGMP, TCP, UDP protocol's input route executes
+
+### UDP Input
+* In book example, the UDP input routine is called to process the UDP datagram
+* UDP input routine iterates over the linked list of UDP protocol control blocks
+  * Looks for the PCB with the local port number matching the destination port number of the received UDP datagram
+  * This PCB should have been created by a call to the `socket` system call
+  * The `inp_socket` member of this PCB points to the corresponding `socket` structure, allowing the received data to be queued for the correct socket
+* Receiving process is awakened
+* If the process is asleep waiting for data to arrive, the process is marked as run-able for the kernel to schedule
+* Process can also be notified of the arrival of data on a socket by the `select` system call or with the `SIGIO` signal
+
+### Process Input
+* Process has been asleep in the kernel, blocked on call to `recvfrom`
+* Process now wakes up
+* 26 bytes of data appended to the socket's receive queue by the UDP layer are copied by the kernel from the mbuf into the program's buffer
+* Can tell the kernel that the program is not interested in receiving the sender's IP address and UDP port number
+  * Causes the `recvfrom` system call to skip the first mbuf in the chain, and return the 26 bytes of data in the second mbuf
+* The two mbufs are released and returned to the pool of free mbufs
+
 ## Interrupt Levels and Concurrency
 * In basic example, socket layer is operating at `sp10` (normal operating mode, nothing blocked, lowest priority)
 * Ethernet device driver interrupt occurs
@@ -87,3 +124,4 @@
   * Finishes processing the packet received from the Ethernet device driver
   * Then processes packet received from terminal device
   * Only when there are no more input packets to process will control be returned to whatever was preempted (the initial socket layer operation)
+
