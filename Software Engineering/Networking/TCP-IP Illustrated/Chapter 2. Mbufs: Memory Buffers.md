@@ -52,6 +52,16 @@
   * `m_pullup` is called on the assumption that the remaining part of the header is in the next `mbuf` on the chain
 
 ### `m_pullup` and IP Fragmentation and Reassembly
+* IP fragmentation algorithm keeps individual fragments on a doubly-linked list
+* The source and destination IP address fields in the IP header are used as forward and backward list pointers
+* A received packet has a length of 296 bytes and is a fragment of a larger IP datagram
+  * IP header is in a cluster that is referenced by the packet header `mbuf`
+* IP fragmentation algorithm keeps the individual fragments on a doubly linked list
+  * Uses the source and destination IP addresses in the IP header to hold forward and backward list pointers
+* IP fragmentation routine always calls `m_pullup` when fragment is received and the fragment references a cluster
+  * This logic forces the 20-byte IP header into its own `mbuf`
+  * The cluster reference from the original `mbuf` is changed to the new starting point (after the IP header-related data has been moved to its own `mbuf`)
+  * New packet header `mbuf` with the IP header information references the original `mbuf` (that references the cluster with the remaining packet data)
 
 
 
