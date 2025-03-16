@@ -46,4 +46,13 @@
 * If the amount of data is greater than or equal to 208 bytes, one or more clusters are used
   * Each cluster would be referenced by a different `mbuf`
 
+### `m_pullup` Function and Contiguous Protocol Headers
+* `m_pullup` is called when a protocol (IP, ICMP, IGMP, UDP, TCP) finds that the amount of data in the first `mbuf` is less than the size of the minimum protocol header
+  * 20 for IP, 8 for UDP, 20 for TCP
+  * `m_pullup` is called on the assumption that the remaining part of the header is in the next `mbuf` on the chain
+
+### `m_pullup` and IP Fragmentation and Reassembly
+
+
+
 
