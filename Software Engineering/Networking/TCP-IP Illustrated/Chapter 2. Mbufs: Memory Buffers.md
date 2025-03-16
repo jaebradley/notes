@@ -17,4 +17,33 @@
 * `m_nextpkt` pointer links multiple packets together to form an `mbuf` queue
   * Each packet on the queue can be a single `mbuf` or an `mbuf` chain
   * First mbuf of each packet contains a packet header
-    * Only mbuf in chain that references the next packet
+    * This is the only mbuf in an mbuf chain that references the next packet
+
+## 2.6 `m_devget` and `m_pullup` Functions
+* `m_pullup` function is called to guarantee that the specified number of bytes are contiguous in the first `mbuf` of a chain
+  * The specified number of bytes are copied to a new mbuf and made contiguous
+
+### `m_devget` Function
+* When an Ethernet frame is received, the device driver calls the `m_devget` function to create an `mbuf` chain
+  * Copies frame from device into the chain
+* When the amount of data is between 0 and 84 bytes
+  * Example is 52 bytes of data
+    * 20 byte IP header
+    * 32 byte TCP header
+    * No TCP data
+  * Minimum size for the `mbuf` is 28 bytes
+    * 20 bytes for the IP header
+    * 8 bytes for a UDP header
+    * 0 bytes for a zero-length UDP datagram
+  * 16 bytes are left unused at the beginning of the `mbuf`
+    * Room is allocated for a 14 byte Ethernet header on output, if the same `mbuf` is used for output
+* If the amount of data is between 85 and 100 bytes
+  * Data still fits in a packet header `mbuf`
+  * No room for 16 bytes at the beginning of the `mbuf`
+  * Data starts at the beginning of the `m_pkdat` array and any unused space is at the end of the array
+* Two `mbuf`s are required when the amount of data is between 101 and 207 bytes
+  * First 100 bytes are stored in the first (packet header) `mbuf` and the remainder are stored in the second `mbuf`
+* If the amount of data is greater than or equal to 208 bytes, one or more clusters are used
+  * Each cluster would be referenced by a different `mbuf`
+
+
