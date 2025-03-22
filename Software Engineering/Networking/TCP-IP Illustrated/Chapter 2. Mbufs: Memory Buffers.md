@@ -63,6 +63,50 @@
   * The cluster reference from the original `mbuf` is changed to the new starting point (after the IP header-related data has been moved to its own `mbuf`)
   * New packet header `mbuf` with the IP header information references the original `mbuf` (that references the cluster with the remaining packet data)
 
+### Avoidance of `m_pullup` by TCP Reassembly
+* `m_pullup` is expensive as memory is allocated and data is copied from cluster to an `mbuf`
+* About 50% of TCP data is "bulk data" - 512+ bytes per segment
+* About 90% of the other 50% of TCP data is itneractive data (< 10 bytes of data)
+* When TCP segments arrive out of order, they are stored on a doubly linked list by TCP
+* Same problem arrives if list pointer is in IP header that is in cluster
+* TCP stores an `mbuf` pointer in some unused fields in the TCP header providing a back pointer from the cluster to the `mbuf` to avoid calling `m_pullup` for every out-of-order segment
 
+## `m_copy` and Cluster Reference Counts
+* Clusters reduce the number of `mbufs` required to contain large amounts of data
+* Would need 10 `mbufs` to contain 1024 bytes of data
+* Clusters have the potential for wasted space
+  * Takes 2176 bytes to contain 1024 bytes of data
+  * 1 cluster is 2048 bytes and 1 reference `mbuf` is 128 bytes
+* Clusters are able to be shared between multiple `mbuf`s
 
-
+### Example
+* `write` 4096 bytes to a TCP socket
+* One cluster is filled with the first 2048 bytes by the socket layer
+* Protocol's send routine is called
+* TCP send routine appends `mbuf` to send buffer and calls `tcp_output`
+* Assume TCP maximum segment size of 1460 bytes (typical for Ethernet)
+* `tcp_output` builds a segment containing the first 1460 bytes of data
+* `tcp_output` also builds an `mbuf` containing the IP and TCP headers, leaving room for a link-layer header
+* `mbuf` is passed to IP output and ends up on IP's output queue
+* In UDP example from Chapter 1, UDP did not keep the `mbuf` in the send buffer
+* TCP is a reliable protocol and must maintain a copy of the data that it sends, until the data is acknowledged by the receiver
+* `tcp_output` calls the `m_copy` function, copying the first 1460 bytes of the send buffer
+* Since the data is in a cluster, `m_copy` creates an `mbuf` to point to the correct place in the existing cluster
+  * Note that this cluster has 588 additional bytes of data (i.e. it's the cluster that was filled with the first 2048 bytes by the socket layer)
+* This sharing of clusters means the kernel doesn't have to copy data from one `mbuf` to another
+* Implemented by reference counters for each cluster
+  * Reference counter is incremented each time an `mbuf` points to the cluster
+  * Decremented each time a cluster is released
+  * Only when the reference counter reaches 0 is the memory used by the cluster available for some other use
+* When the first `mbuf` chain containing the first 1460 bytes of data reaches the Ethernet device driver, the driver releases the `mbuf` in the chain pointing to the cluster
+  * Cluster reference is decremented
+  * Cluster is still referenced by the `mbuf` in the TCP send buffer, as there is still remaining data that needs to be sent)
+* Remaining 588 bytes in the send buffer don't comprise a full-sized segment
+* Socket layer continues processing data from the application
+* Remaining 2048 bytes (of the 4096 total) are placed into an `mbuf` with a cluster
+* TCP send routine called again with a new `mbuf` appended to socket's send buffer
+* `tcp_output` builds another `mbuf` chain and the next 1460 bytes of data
+* The data comes from two clusters
+  * First 588 bytes from the first cluster in the send buffer
+  * Next 872 bytes are from the second cluster in the send buffer
+  * `m_copy` does not copy this data - only references the existing clusters
