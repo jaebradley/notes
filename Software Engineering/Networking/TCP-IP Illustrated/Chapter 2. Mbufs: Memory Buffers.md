@@ -52,8 +52,6 @@
   * `m_pullup` is called on the assumption that the remaining part of the header is in the next `mbuf` on the chain
 
 ### `m_pullup` and IP Fragmentation and Reassembly
-* IP fragmentation algorithm keeps individual fragments on a doubly-linked list
-* The source and destination IP address fields in the IP header are used as forward and backward list pointers
 * A received packet has a length of 296 bytes and is a fragment of a larger IP datagram
   * IP header is in a cluster that is referenced by the packet header `mbuf`
 * IP fragmentation algorithm keeps the individual fragments on a doubly linked list
@@ -67,8 +65,8 @@
 * `m_pullup` is expensive as memory is allocated and data is copied from cluster to an `mbuf`
 * About 50% of TCP data is "bulk data" - 512+ bytes per segment
 * About 90% of the other 50% of TCP data is itneractive data (< 10 bytes of data)
-* When TCP segments arrive out of order, they are stored on a doubly linked list by TCP
-* Same problem arrives if list pointer is in IP header that is in cluster
+* When TCP segments arrive out of order, they are stored on a doubly-linked list by TCP
+* Problem similar to when list pointer is stored in the IP header, which is stored in the cluster
 * TCP stores an `mbuf` pointer in some unused fields in the TCP header providing a back pointer from the cluster to the `mbuf` to avoid calling `m_pullup` for every out-of-order segment
 
 ## `m_copy` and Cluster Reference Counts
