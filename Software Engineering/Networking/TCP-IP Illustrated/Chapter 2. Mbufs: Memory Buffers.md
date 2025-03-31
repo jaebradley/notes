@@ -98,7 +98,7 @@
   * Only when the reference counter reaches 0 is the memory used by the cluster available for some other use
 * When the first `mbuf` chain containing the first 1460 bytes of data reaches the Ethernet device driver, the driver releases the `mbuf` in the chain pointing to the cluster
   * Cluster reference is decremented
-  * Cluster is still referenced by the `mbuf` in the TCP send buffer, as there is still remaining data that needs to be sent)
+  * Cluster is still referenced by the `mbuf` in the TCP send buffer, as there is still remaining data that needs to be sent
 * Remaining 588 bytes in the send buffer don't comprise a full-sized segment
 * Socket layer continues processing data from the application
 * Remaining 2048 bytes (of the 4096 total) are placed into an `mbuf` with a cluster
