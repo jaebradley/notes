@@ -22,3 +22,20 @@
 * Example: operating system scheduler that uses the file system to store data, and thus the file system must be present and working before any task scheduling is possible
 * There are users for whom an operating system subset without a file system would be useful
 * Even if these users don’t exist, the subset may be useful in testing and development
+
+### Information Hiding: Interface and Module Definition
+* If a programmer must develope a family of products, the programmer tries to isolate the changeable parts in modules
+  * The programmer develops an interface between the module and the rest of the product
+* Design intermodule interfaces that are insensitive to the anticipated changes
+  * The changeable aspects or "secrets" of the modules are not revealed by the interface
+* Another term for "information hiding" is encapsulation or abstraction
+* If one program uses another directly, the presence of the second program cannot be fully hidden from its user
+* However, there is never any reason for a component to "know" how many other programs use it
+
+### The Virtual Machine (VM) Concept
+* Stop thinking of systems in terms of components that correspond to steps in processing
+* The viewpoint that seems most appropriate for designing software families is often termed the virtual machine approach
+* Hardware machine provides a set of instructions that operate on a small set of data types
+* Virtual machine extends those operations to operate on additional data types
+  * These operations are "software instructions"
+* The programmer writing programs for the virtual machine does not need to distinguish between instructions that are implemented in software and those that are hardware instructions
