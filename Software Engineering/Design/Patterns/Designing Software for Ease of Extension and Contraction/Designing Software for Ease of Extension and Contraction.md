@@ -39,3 +39,15 @@
 * Virtual machine extends those operations to operate on additional data types
   * These operations are "software instructions"
 * The programmer writing programs for the virtual machine does not need to distinguish between instructions that are implemented in software and those that are hardware instructions
+
+## Designing the “Uses” Structure
+* Program A uses program B if correct execution of B may be necessary for A to complete the task described in its specification
+* In other words, the correct functioning of A depends on the correct implementation of B
+* Disadvantage of unrestrained “usage” of each others facilities is that the system parts become highly interdependent
+* There are no subsets of the system that can be used before the whole system is complete - a system in which nothing runs unless everything runs
+* By restricting the “uses” graph so that it is loop-free, we can retain the primary advantages of having system parts “use” each other while eliminating problems
+* Level 0 is the set of all programs that use no other program
+* Level X is the set of all programs that use at least one program at level X - 1, maximum
+* Each level then offers a testable and usable subset of the system
+* When there’s a situation where program A can benefit from using program B and vice-versa, split program B into B1 and B2
+* Program A now uses B1 and B2 uses A
