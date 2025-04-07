@@ -24,7 +24,7 @@
 * Even if these users don’t exist, the subset may be useful in testing and development
 
 ### Information Hiding: Interface and Module Definition
-* If a programmer must develope a family of products, the programmer tries to isolate the changeable parts in modules
+* If a programmer must develop a family of products, the programmer tries to isolate the changeable parts in modules
   * The programmer develops an interface between the module and the rest of the product
 * Design intermodule interfaces that are insensitive to the anticipated changes
   * The changeable aspects or "secrets" of the modules are not revealed by the interface
