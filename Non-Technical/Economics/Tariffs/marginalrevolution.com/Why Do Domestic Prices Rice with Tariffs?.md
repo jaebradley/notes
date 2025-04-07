@@ -1,6 +1,6 @@
 # [Why Do Domestic Prices Rise With Tarrffs?](https://marginalrevolution.com/marginalrevolution/2025/04/why-do-domestic-prices-rise-with-tarriffs.html)
 
-* Example of expanding production of wine in Napa and Sonoma after adding adding import tax on French and Italian wine
+* Example of expanding production of wine in Napa and Sonoma after adding import tax on French and Italian wine
 * Expanding production without increasing costs is difficult
 * To produce more, wine producers need more land
 * But the most productive, cost-effective land for producing wine is already used
