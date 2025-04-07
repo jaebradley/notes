@@ -22,3 +22,32 @@
 * Example: operating system scheduler that uses the file system to store data, and thus the file system must be present and working before any task scheduling is possible
 * There are users for whom an operating system subset without a file system would be useful
 * Even if these users don’t exist, the subset may be useful in testing and development
+
+### Information Hiding: Interface and Module Definition
+* If a programmer must develop a family of products, the programmer tries to isolate the changeable parts in modules
+  * The programmer develops an interface between the module and the rest of the product
+* Design intermodule interfaces that are insensitive to the anticipated changes
+  * The changeable aspects or "secrets" of the modules are not revealed by the interface
+* Another term for "information hiding" is encapsulation or abstraction
+* If one program uses another directly, the presence of the second program cannot be fully hidden from its user
+* However, there is never any reason for a component to "know" how many other programs use it
+
+### The Virtual Machine (VM) Concept
+* Stop thinking of systems in terms of components that correspond to steps in processing
+* The viewpoint that seems most appropriate for designing software families is often termed the virtual machine approach
+* Hardware machine provides a set of instructions that operate on a small set of data types
+* Virtual machine extends those operations to operate on additional data types
+  * These operations are "software instructions"
+* The programmer writing programs for the virtual machine does not need to distinguish between instructions that are implemented in software and those that are hardware instructions
+
+## Designing the “Uses” Structure
+* Program A uses program B if correct execution of B may be necessary for A to complete the task described in its specification
+* In other words, the correct functioning of A depends on the correct implementation of B
+* Disadvantage of unrestrained “usage” of each others facilities is that the system parts become highly interdependent
+* There are no subsets of the system that can be used before the whole system is complete - a system in which nothing runs unless everything runs
+* By restricting the “uses” graph so that it is loop-free, we can retain the primary advantages of having system parts “use” each other while eliminating problems
+* Level 0 is the set of all programs that use no other program
+* Level X is the set of all programs that use at least one program at level X - 1, maximum
+* Each level then offers a testable and usable subset of the system
+* When there’s a situation where program A can benefit from using program B and vice-versa, split program B into B1 and B2
+* Program A now uses B1 and B2 uses A
