@@ -29,15 +29,14 @@
 * Instead of checking if a value was set via a `for` loop, write an `else` clause as part of the `for` loop
 
 ## Advanced f-string String Formatting
-* Fomat Mini-Language
-* Debug Expressions: `print(f”{name=}, {age=}”)`
+* Debug Expressions: `print(f”{name=}, {age=}”)` references `name` and `age` variables
 * Number formatting
-* `{pi:.2f}` -> 3.14
-* `{big_num:,}` -> `1,000,000`
-* `{num:#0x}` -> `0x1a4`
-* `{num:09}` -> `000000420`
+  * `{pi:.2f}` -> 3.14
+  * `{big_num:,}` -> `1,000,000`
+  * `{num:#0x}` -> `0x1a4`
+  * `{num:09}` -> `000000420`
 * Date formatting
-* `{now:%Y-%m-%d}`
+  * `{now:%Y-%m-%d}`
 
 ## Cache/lru_cache
 * `@cache` decorator and `@lru_cache` decorator
