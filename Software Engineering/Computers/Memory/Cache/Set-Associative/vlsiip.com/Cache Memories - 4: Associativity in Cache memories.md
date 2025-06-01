@@ -13,3 +13,9 @@
   * The cache controller will then compare the 8 bits of the cache address with each of the 2 "tags" in the identified sets
   * If there is a match, there will be a single output bit (`0`, or `1`) to indicate which tag in the set matched
   * The offset portion of the address indicates where to start reading in the cache line that maps to the matched set "tag"
+
+![image](https://github.com/user-attachments/assets/24bbf074-0494-474d-beec-7c00364248f7)
+
+![image](https://github.com/user-attachments/assets/88c50f64-6f29-46e4-a78f-141ac983e182)
+
+* An n-set associative cache stores a cache line in any of the n-locations within a set of cache lines identified by the set address
