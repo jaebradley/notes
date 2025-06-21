@@ -27,3 +27,19 @@
 * Primary responds to the client with any errors
 * In the case where some subset of secondary replicas have failed to execute the mutation, the modified region is left in an inconsistent state
 * Client code retries the failed mutations
+
+## Data Flow
+* Control flows from client -> primary -> secondaries while data is pushed linearly along a carefully selected chain of chunkservers in a pipelined fashion
+* To fully utilize each machine's network bandwidth, data is pushed linearly along a chain of chunkservers
+  * This is in contrast to using another structure, like a tree
+* Each machine's full outbound bandwidth is used to transfer data as quickly as possible rather than divided amongst multiple recipients
+* To avoid network bottlenecks and high-latency, each machine forwards data to the "closest" machine in the network topology that has not yet received it
+* Network topology is simple enough that distances can be estimated through IP addresses
+* Data is transferred over TCP connections
+* Once a chunkserver receives data, it starts forwarding data immediately
+* Switched network with full-duplex links
+  * Sending data immediately does not reduce the data receiving rate
+* Ideal elapsed time for transferring `B` bytes to `R` replicas is `Bytes / Network Throughput` + `Replicas x Latency to transfer bytes between machines`
+  * Inter-machine network latency is < 1 ms
+  * Network throughput is 100 MBPS
+  * 1 MB can be distributed in ~80ms
