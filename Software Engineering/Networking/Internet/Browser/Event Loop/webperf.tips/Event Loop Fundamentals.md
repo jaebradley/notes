@@ -1,11 +1,10 @@
 # [Event Loop Fundamentals](https://webperf.tips/tip/event-loop/)
-
 * Tasks are units of execution that are scheduled on the Main Thread
 * Parsing HTML / CSS, user input, compiling/executing JS, receiving network data, rendering
-* Anything that directly requires access to the DOM must be run on the Main Thread as the DOM is not thread-save
+* Anything that directly requires access to the DOM must be run on the Main Thread as the DOM is not thread-safe
 * Only one task can run on the Main Thread at a time
 * This task must run to completion before another task can execute
-* Since it is impossible ro run multiple tasks simultaneously on the Main Thread, any task that is not actively running resides in the Task Queue data structure
+* Since it is impossible ro run multiple tasks simultaneously on the Main Thread, any task that is not actively running resides in the task queue data structure
 * A completed render task produces a frame
 * These render tasks have greater priority than other tasks on the task queue (task queue is not a FIFO)
 * Event loop is an infinite loop that checks whether to execute a task on the task queue or to execute a render task
