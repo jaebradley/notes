@@ -8,14 +8,14 @@
 * Total Blocking Time is the sum of the time it took tasks longer than 50 ms to execute
 * Interaction to Next Paint measures the time from a user’s first interaction with the page (clicking a button) to when the itneraction is visible on -screen
 
-## Traditioanl React Rendering
+## Traditional React Rendering
 * Two parts to a visual update in React: render phase and commit phase
 * Render phase is a pure computational phase where React elements are reconciled with the existing DOM
 * Phase involves creating a new tree of React elements known as the virtual DOM - lightweight in-memory representation of the actual DOM
 * React applies the virtual DOM updates calculated during the render phase in the commit phase and updates the actual DOM
 * Traditionally, synchronous rendering is an all-or-nothing operation where a component that starts rendering will always finish
 * So depending on the complexity of the component, the render phase could take time to complete
-* Main thread is blocked during this time, so users trying to interact with the application experience an unresponsive UI until React completes the render and commits the result to the DOM
+* Main thread is blocked during this time, so users trying to interact with the application experience an unresponsive UI until React completes the render phase and commits the result to the DOM
 * React 18 introduces a new concurrent renderer that exposes ways to mark certain renders as non-urgent
 * Non-urgent renders will yield back to the main thread every 5 milliseconds to see if there are more important tasks to execute instead (like user input or rendering other React components)
 * This concurrent renderer is able to to concurrently render multiple versions of the component tree without immediately committing the result
