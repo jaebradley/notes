@@ -21,3 +21,12 @@
 * Programming language, source code, tools, user interface, documentation would all be different - but the underlying logical constraints would be the same
 * Example is a business rule around an invoice having one line item
   * Whether using a GUI or magnetic tape of an SSD (so some parts of the underlying technology), these solutions would all match the one line item rule
+
+## [How to organize business logic which deals with different, but related objects](https://softwareengineering.stackexchange.com/questions/371866/how-to-organize-business-logic-which-deals-with-different-but-related-objects)
+* Data holder = collection of facts
+* Agent object is a `string EmployeeID`, a `string Name`, and an `int NumberOfCalls`
+* Just because data holders don’t seemingly do anything doesn’t mean that they don’t contain business logic
+* Agent might require all fields to exist, which is now a business rule
+* If you cannot change an employee ID for an agent after the agent has been created, that’s another business rule
+* "True" OOP = Objects do **only* *one thing
+* `CallRegisterer` has a public method `RegisterCall(Call, Agent)` and it depends on an `AgentsRegistry` and a `CallQueueRegistry`
