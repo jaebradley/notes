@@ -16,6 +16,8 @@
   * Once from user memory to kernel memory when writing, and once from kernel memory to user memory, when reading
   * Working with non-contiguous memory, as there is constant page allocation
   * Acquiring and releasing the pipe lock
+
+ ![image](https://github.com/user-attachments/assets/1d743306-24ed-4be1-95ef-4a8774a86370)
  
 ## Splicing to the rescue
 * In general, writing to a socket, file, pipe means first writing to a buffer somewhere in the kernel
@@ -26,6 +28,8 @@
 * `vmsplice` returns how much was “spliced” into the pipe, which might not be the full amount, much like how `write` returns how much was written
   * Remember that pipes are bounded by how many slots they have in the ring buffer, and `vmsplice` is not exempt from this restriction
   * Since the user memory is moved to the pipe without copying, we must ensure that the read-end consumes it before we can reuse the spliced buffer
+ 
+ ![image](https://github.com/user-attachments/assets/93f40ce3-60f5-4121-9b59-93c0f187a12b)
 
 ## A whirlwind tour of paging
 * Processes do not refer to locations in RAM directly
@@ -41,6 +45,8 @@
   * Next 9 bits are used to select an entry from the PUD
 * Next two levels are the Page Middle Directory (PMD) and Page Table Entry (PTE)
   * PTE describes the actual physical page and the last 12 bits identify the offset within that physical page
+ 
+ ![image](https://github.com/user-attachments/assets/86791a3a-477b-451e-b02f-98df145c1de0)
 
 ## The role of `struct page`
 * `vmsplice` accepts virtual memory as input while `struct page` refers to physical memory
