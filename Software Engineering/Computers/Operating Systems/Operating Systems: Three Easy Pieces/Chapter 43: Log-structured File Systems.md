@@ -4,8 +4,8 @@
 * File system performance is largely determined by write performance
 * Random I/O performance is much less performant than sequential I/O
   * Using disks in a sequential manner will lead to larger performance advantages
-* The Unix File System performans a large number of writes when creating a new file with a size of one block
-  * Writes a new indoe
+* The Unix File System performs a large number of writes when creating a new file with a size of one block
+  * Writes a new inode
   * Writes updates to the inode bitmap
   * Writes to the directory data block for the file
   * Writes to the new data block that is part of the new file
@@ -39,13 +39,13 @@
 
 ## Checkpoint Region
 * How to find the inode map, given that it is spread across disk storage?
-* LFS has a fixed place on the disk (the checkpoint region) that contains poitners to the latest pieces of the inode map
+* LFS has a fixed place on the disk (the checkpoint region) that contains pointers to the latest pieces of the inode map
 * The checkpoint region is only updated periodically, and has limited impact on performance
 
 ## What About Directories?
 * LFS also adds directories sequentially to the segment (and thus, to disk)
 * Inode map contains information for the directory file
-* To read `som/directory/file`
+* To read `some/directory/file`
   * First read the inode map (which should be cached in-memory) to find the location of the inode of directory `/some/directory`
   * Directory inode gives location of directory data
   * Reading the directory data block gives the name-to-inode number mapping of the `file`
