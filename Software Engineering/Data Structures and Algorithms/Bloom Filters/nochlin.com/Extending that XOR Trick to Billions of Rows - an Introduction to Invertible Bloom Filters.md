@@ -29,3 +29,13 @@ A_2 = [1,7,9]     B_2 = [1,7]
 * Do the same for each element in Set `B`
 * `XOR` these two "hashed + `XOR`ed" values
 * If the result is not the hash of `0` then we can't simply use the naive count-based approach to detect the missing numbers
+
+## Invertible Bloom Filters
+<img width="807" height="1184" alt="image" src="https://github.com/user-attachments/assets/12f91483-57ee-47fd-b1f7-bb2d63eed3bc" />
+
+* IBF is an array of cells
+* Each cell contains three values
+ * `XOR` of all the element values
+ * `XOR` of all the hashed element values
+ * Count of all the elements in the cell
+* IBFs have one tuneable parameter - the expected size of the symmetric difference
