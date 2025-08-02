@@ -39,3 +39,9 @@ A_2 = [1,7,9]     B_2 = [1,7]
  * `XOR` of all the hashed element values
  * Count of all the elements in the cell
 * IBFs have one tuneable parameter - the expected size of the symmetric difference
+* From [this HackerNews discussion thread](https://news.ycombinator.com/item?id=44561895):
+>The graph constructed by using bloom filter-style hash functions supports a decoding process called "peeling" where you:
+>1. Find a batch with 1 missing element
+>2. Delete that element from its other assigned partitions
+>3. Repeat, as the modified batches may now be recoverable.
+>This iterative process (surprisingly!) succeeds with very high probability as long as the number of partitions is 1.22x larger than the number of missing elements with k=3 hash functions.
