@@ -1,12 +1,15 @@
 # `df`
-* `df` reports how much disk space your filesystem is using
+* Displays a report of the system’s disk usage
+* For each listed file system, `df` displays its name, size, used space, available space, % of space used, and where the file system is mounted
+* Can specify a specific file or directory as an argument like
+  * `df /path/to/file/or/directory`
+* `df` looks at the block allocation tables and counts how many blocks are used/free
+  * In contrast, `du` will calculate the size of each individual file
+  * So a `25` byte file will use 1 block from `df`'s perspective, but will use `25` bytes from `du`’s perspective
 
 ## Options
-* `-h` for human-readable output
-* `-i`: shows inodes used on each mounted filesystem
-* `-c`: Display total
-* `-k`: Use 1KB blocks
+* `-h`: Displays values in human-readable format
+* `-c`: Display a grand total
+* `-i`: Include statistics on the free and used inodes
 * `-Y`: Include file system type
-* `-T {file system types}`: Select specific file systems to display. Multiple file systems can be specified via a comma-separated list.
-* `df -HicY`: Human-readable, display inode usage, display total, display filesystem type
-* `df` also takes a path argument to see the disk space available on a specific mount point
+* `-,`: Numerical separator (typically, comma or period)
