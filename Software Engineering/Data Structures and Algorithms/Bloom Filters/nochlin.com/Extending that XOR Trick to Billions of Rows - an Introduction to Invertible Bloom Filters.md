@@ -35,9 +35,9 @@ A_2 = [1,7,9]     B_2 = [1,7]
 
 * IBF is an array of cells
 * Each cell contains three values
- * `XOR` of all the element values
- * `XOR` of all the hashed element values
- * Count of all the elements in the cell
+  * `XOR` of all the element values in the cell
+  * `XOR` of all the hashed element values in the cell
+  * Count of all the elements in the cell
 * IBFs have one tuneable parameter - the expected size of the symmetric difference
 * From [this HackerNews discussion thread](https://news.ycombinator.com/item?id=44561895):
 >The graph constructed by using bloom filter-style hash functions supports a decoding process called "peeling" where you:
