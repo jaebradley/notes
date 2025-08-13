@@ -10,7 +10,7 @@ public void pushAll(Iterable<E> src) {
 }
 ```
 
-* If a `Stack<Number>` is created, cannot `pushAll` an `Iterable<Integer` to it since parameterized types are invariant (i.e. `List<String>` is not a subtype of `List<Object>`)
+* If a `Stack<Number>` is created, cannot `pushAll` an `Iterable<Integer>` to it since parameterized types are invariant (i.e. `List<String>` is not a subtype of `List<Object>`)
 * A bounded wildcard type like `Iterable<? extends E>` means that the `Iterable` is now made up of elements that are some subtype of `E`
   * Remember that subtype is defined so that every type is a subtype of itself, even though it does not extend itself
   * Note that the `Iterable` parameter is an `E` element "producer"
