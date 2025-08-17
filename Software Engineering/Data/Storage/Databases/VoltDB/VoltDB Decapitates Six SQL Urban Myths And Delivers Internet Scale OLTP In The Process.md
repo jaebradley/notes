@@ -1,7 +1,6 @@
 # [VoltDB Decapitates Six SQL Urban Myths And Delivers Internet Scale OLTP In The Process](http://highscalability.com/blog/2010/6/28/voltdb-decapitates-six-sql-urban-myths-and-delivers-internet.html)
 
 ## Features
-
 * All data is stored in RAM
   * No buffer pools to manage
   * No blocking disk stalls
@@ -38,13 +37,11 @@
 ## The Six SQL Urban Myths
 
 ### Myth #1A: SQL Is Too Slow Because Of Heavy Interfaces Like ODBC/JDBC
-
 * Interfaces like ODBC and JDBC cause too many round trips to the database
 * VoltDB avoids this problem by using stored procedures
 * A big advantage that stored procedures have over ODBC/JDBC protocols is that one message is sent to the database and one reply is sent back
 
 #### Downside to Stored Procedures
-
 * Difficult to prgraom, ugly to use, hard to debug
 * Putting logic into the database makes the database an application server
   * If a stored procedure needs to make an API call, introduces blocking, I/O, etc. except database servers aren't optimized for such operations
@@ -56,20 +53,16 @@
 * VoltDB does not allow SQL for getting the schema of tables, listing tables, altering tables
 
 ### Myth #1B: SQL Is Too Slow Because SQL Engine Implementations Have Too Much Overhead
-
 * Typical OLTP databases have to support "work" like managing disk buffer pools, crash recovery
 
 ### Myth #2: I like a K-V interface, so SQL is a non-starter 
-
 * VoltDB creates a thin get/put layer on top of SQL using stored procedures
 
 ### Myth #5: ACID Is Too Slow, So Avoid Using It
-
 * Implementing logical transactions (i.e. implementing transactions in user code) is the worst of all worlds
 * 99% of OLTP databases are 1TB or less, so most transactional databases can fit in main memory
 
 ### Myth #6: In CAP, Choose AP Over CA
-
 * Network partitions happen, so you have to choose between consistency or availability
 * Order matters
   * Not all transactions are commutative
