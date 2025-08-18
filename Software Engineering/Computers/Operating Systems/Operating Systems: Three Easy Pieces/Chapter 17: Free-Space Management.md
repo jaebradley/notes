@@ -57,4 +57,12 @@ head -> { address: 0, length: 10 } -> {address: 20, length: 10 } -> NULL
   * Keeping freed objects in a list in an initialized state lowers initialization overhead
 
 ### Buddy Allocation
-
+* Free memory is conceptually thought of as a big space of size `2 ** N`
+* When a request for memory occurs, search for free space recursively divides free space by two until a block big enough to accomodate the request is found
+ * 64 KB free space -> 32 KB free space -> 16 KB free space -> 8 KB free space when searching for a 7 KB block
+ * The "left-most" block (i.e. closest to start of heap) is allocated
+ * Suffers from internal fragmentation as only power-of-two-sized blocks are allocated
+* When the 8 KB block is freed, the allocator checks where its "buddy" 8 KB block is free
+ * If so, the allocator coalesces the two blocks into a 16 KB block
+ * Allocator recursively does the same check
+* The "buddy" of a given block is the address of the given block + a single bit
