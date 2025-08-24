@@ -43,3 +43,32 @@
   * Inter-machine network latency is < 1 ms
   * Network throughput is 100 MBPS
   * 1 MB can be distributed in ~80ms
+
+## Atomic Record Appends
+* Traditionally, write operations are specified by the client using some offset where the data is written
+* Concurrent writes to the same region result in the record containing data fragments from multiple clients
+* Record appends consist of the client specifying the data to write and no offset
+* GFS appends the data to the file at least once atomically, as a sequence of bytes
+  * This append occurs at an offset of GFS's choosing and the offset is written to the client
+  * Similar to writing to a file opened in `O_APPEND` mode in Unix, without the race conditions when there are multiple concurrent writers 
+* For record appends, the client pushes the data to all replicas of the last chunk of the file
+  * Sends request to the primary
+  * Primary checks to see if appending the record to the current chunk would cause the cunk to exceed the maximum size (64 MB)
+  * Pads the chunk to the maximum size, tells secondaries to do the same, and replies to the client indicating that the operation should be retried on the next chunk
+  * Most likely, the record will fit within the maximum chunk size, meaning that the primary appends the data, tells the secondaries to write data at the exact offset, and replies with a success to the client
+* If a record append fails, the client retries the operation
+* Replicas of the same chunk may contain different data and possibly include whole or partial duplicates of the same record
+  * GFS does not guarantee that all replicas are bytewise identical
+  * Only guarantees that the data is written at least once as an atomic unit
+
+## Snapshot
+* When the primary receives a snapshot request, it revokes any outstanding leases on the chunks in the files it is about to snapshot
+  * Any subsequent writes to these chunks requires an interaction with the primary to find the lease holder
+* Example: the first time a client wants to write to a chunk C after the snapshot operation, the client sends a request to the primary to find the current lease holder
+  * Primary notices that the reference count for chunk C is greater than one
+  * Defers replying to the client request and picks a new chunk handle C'
+  * Primary asks each chunkserver that has a current replica of C to create a new chunk called C'
+  * By creating the new chunk on the same chunkservers as the original, we ensure that the data can be copied locally and not over the network
+    * Disks are about 3x faster than 100 MB Ethernet links
+  * Primary handles request by granting a replica a lease on the new chunk C' replying to the client
+  * Client can write to the chunk normally, and the fact that a new chunk has been created from an existing chunk is abstracted away from the client
