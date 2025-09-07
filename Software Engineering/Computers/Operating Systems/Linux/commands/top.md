@@ -2,24 +2,26 @@
 
 * Filter by `pid` using the `-pid` flag
 * Can only ask for certain statistics using the `-stats` flag with comma-separated keys
-* `CSW`: context switch count
-* Threads are represented as `(total number of threads/running threads)`
-* `ports (prt)`: number of Mach ports
-* `mregion (mreg, reg)`: number of memory regions
-* `mem`: Internal memory size
-* `rprvt`: Resident private address space size 
-* `purg`: Purgeable memory size
-* `vsize`: Total memory size
-* `vprvt`: Private address space size
-* `kprvt`: Private kernel memory size
-* `kshrd`: Shared kernel memory size
-* `ppid`: Parent process id
-* `state (pstate)`: Process state
-* `wq (workqueue)`:  Number of tasks on the workqueue (`total/running`)
-* `faults`: Number of page faults
-* `cow`: Number of `copy-on-write` faults
-* `sysbsd`: Total BSD system calls
-* `sysmach`: Total Mach system calls
+* Example keys:
+  * `CSW`: context switch count
+  * Threads are represented as `(total number of threads/running threads)`
+  * `ports (prt)`: number of Mach ports
+  * `mregion (mreg, reg)`: number of memory regions
+  * `mem`: Internal memory size
+  * `rprvt`: Resident private address space size 
+  * `purg`: Purgeable memory size
+  * `vsize`: Total memory size
+  * `vprvt`: Private address space size
+  * `kprvt`: Private kernel memory size
+  * `kshrd`: Shared kernel memory size
+  * `ppid`: Parent process id
+  * `state (pstate)`: Process state
+  * `wq (workqueue)`:  Number of tasks on the workqueue (`total/running`)
+  * `faults`: Number of page faults
+  * `cow`: Number of `copy-on-write` faults
+  * `sysbsd`: Total BSD system calls
+  * `sysmach`: Total Mach system calls
+* Default sorts by `pid`, but can sort by another key using the `-o` option like `-o mem` to sort by internal memory size
 
 ## Display at top of page
 
