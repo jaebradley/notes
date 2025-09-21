@@ -8,3 +8,17 @@
 * Increase the use of phishing-resistant authentication
 * Reduce account recovery concerns as passkeys might be synced across cloud providers to enable passwordless sign-ins across user's devices
 * Reduce user cognitive load by eliminating auth methods liks SMS one-time-password
+
+## Flow
+<img width="1252" height="1779" alt="image" src="https://github.com/user-attachments/assets/908dc1de-41b2-4f94-98f2-a3216f48a840" />
+
+<img width="1158" height="1016" alt="Screenshot 2025-09-21 at 09 37 24@2x" src="https://github.com/user-attachments/assets/a8e8ca71-3d9f-448b-b674-2f4f74013585" />
+
+<img width="1180" height="1396" alt="Screenshot 2025-09-21 at 09 38 14@2x" src="https://github.com/user-attachments/assets/d94b4ec8-02e6-4b08-92a9-96229ad648cd" />
+
+<img width="1174" height="1390" alt="Screenshot 2025-09-21 at 09 38 26@2x" src="https://github.com/user-attachments/assets/f96f12a9-6444-4c4e-9186-8c843a43e254" />
+
+<img width="1752" height="1558" alt="Screenshot 2025-09-21 at 09 38 46@2x" src="https://github.com/user-attachments/assets/b87e6f73-a08f-4a69-9997-b203b6fd1cd4" />
+
+<img width="580" height="2060" alt="Screenshot 2025-09-21 at 09 39 09@2x" src="https://github.com/user-attachments/assets/8af3bb14-0373-4218-8e1b-94d3fa5a79dd" />
+
