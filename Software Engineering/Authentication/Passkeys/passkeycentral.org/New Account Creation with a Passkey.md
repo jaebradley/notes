@@ -22,3 +22,10 @@
 
 <img width="580" height="2060" alt="Screenshot 2025-09-21 at 09 39 09@2x" src="https://github.com/user-attachments/assets/8af3bb14-0373-4218-8e1b-94d3fa5a79dd" />
 
+* For many participants, signing in with face or touch was a familiar and trusted process
+  * Perceived to be fast, easy, and secure based on experiences with mobile apps and credential manageers
+* Privacy and security concerns led some participants to decline or create a passkey
+  * Some participants viewed passkeys as single-factor authentication, which they perceived to be less secure than MFA
+  * Other reluctant participants described being uncomfortable trusting Apple, Google, etc
+* Ensure that users are aware of the compatibility requirements for using passkeys and provide guidance on compatible devices and browsers
+* In the native mobile app context, signing in with a passkey differs from the biometric sign-in experience as a passkey requires an additional tap
