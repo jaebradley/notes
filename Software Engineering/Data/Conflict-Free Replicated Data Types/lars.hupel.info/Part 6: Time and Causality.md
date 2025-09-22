@@ -19,14 +19,14 @@
 * Events have numbers assigned to them and they have labels
   * If Node C sends a mesage to Node B then the sending event has label C1 and the receiving event has label B1
 * C1 has caused the following events
-		* B1
+  * B1
   * Everything that C does after C1 (even if B1 hasn't happened yet)
   * Everything that B does after B1
 * Lamport clock
-		* When sending a message from X to Y, increment the local clock of X and include the incremented value in the payload of the message
+  * When sending a message from X to Y, increment the local clock of X and include the incremented value in the payload of the message
   * When receiving a message from X on Y, compare the local clock on Y with the one you've received from X, take whichever is the largest, and increment
 * When C sends its first mesasge, it has a Lamport time of 0
-		* Increments this time to 1 and sends that value in the message
+  * Increments this time to 1 and sends that value in the message
   * B receives message from C, and has a local time of 0
   * B receives a time of 1, increments it, and thus B has a local time of 2
 
