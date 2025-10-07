@@ -8,3 +8,21 @@
   * Now the `ClientDetailsValidatorTest` only needs a single test around age calculation to make sure it interacts properly with the calculator
 * If a class is doing more than one thing, it usually is an indication that there should be other classes that do some of the work
 * New service is an interface describing _what it does_ and this new service is passed to the class's constructor (aka dependency injection)
+
+## BDD provides a “ubiquitous language” for analysis
+* Usually,a feature/story template looks like
+>As a [user/role]
+>I want [feature ABC]
+>so that I receive [XYZ benefit/value]
+* Example scenario (for a story / behavior-driven development)
+```
+Scenario: Account is in credit
+
+Given the account is in credit
+And the card is valid
+And the dispenser contains cash
+When the customer requests cash
+Then ensure the account is debited
+And ensure cash is dispensed
+And ensure the card is returned
+```
