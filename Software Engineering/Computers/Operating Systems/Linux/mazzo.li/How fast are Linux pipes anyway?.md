@@ -9,7 +9,7 @@
 * The `tail` node stores the read-end of the pipe
   * Readers stat consuming the pipe from there
   * The `offset` value indicates where to start reading from
-* ANy unused buffers are `NULL`
+* Any unused buffers are `NULL`
 * If a pipe is full (i.e. no `NULL`s and no page space) `write` will block
 * If the pipe is completely empty (all `NULL`s) `read` will block
 * When writing files and them reading them, each page of data is copied twice
@@ -22,7 +22,7 @@
 ## Splicing to the rescue
 * In general, writing to a socket, file, pipe means first writing to a buffer somewhere in the kernel
   * Pipes _are_ a series of buffers in the kernel
-* Linux includes the `splice` and `vmsplice` system calls to speed thing sup when we want to move data to/from pipes without copying
+* Linux includes the `splice` and `vmsplice` system calls to speed things up when we want to move data to/from pipes without copying
   * `splice` moves data from a pipe to a file descriptor and vice-versa
   * `vmsplice` moves data from user memory to a pipe
 * `vmsplice` returns how much was “spliced” into the pipe, which might not be the full amount, much like how `write` returns how much was written
