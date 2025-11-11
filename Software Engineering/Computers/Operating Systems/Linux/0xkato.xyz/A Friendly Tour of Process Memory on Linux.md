@@ -40,8 +40,24 @@
       * If the page cache is not in RAM, it reads from storage, installs the translated page, and retries the instruction
 * Minor fault means that the data is in RAM and the page table translation is missing
 * Major fault means that the kernel had to wait for I/O
-* User stacks have a guard page
+* User space stacks have a guard page
   * Touching just below the current stack can grow it
   * Touching far below looks like a bug and gets a `SIGSEGV`
 
 ## Copy on write with `fork()` and `MAP_PRIVATE`
+* `fork` does not duplicate pages
+* The child process points at the same physical pages as the parent
+* Kernel marks the page as read only for both processes
+* The first write to a page results in a copy-on-write fault
+* Kernel allocates a new page, copies the bytes, and updates the writer's page table entry to point to the new page with write permissions and returns to the user process's instructions
+* Reads still share the original page
+* Resident Set Size stays flat after `fork`ing until a process writes
+ * Resident Set Size is how many pages of this process are currently in RAM
+
+## Changing rights, and the little pause you feel
+* JIT compilers and loaders flip regions from writable to executable
+ * `Write xor Execute` - a page is never writable and executable at the same time
+* When permissions are changed, the kernel edits the page table entries for the affected address space
+ * Kernel invalidates the old translations from the CPU's (small) cache of address translations (Translation Lookaside Buffer)
+  * TLB caches recently translated pages so the CPU does not need to walk the page tables every time
+ 
