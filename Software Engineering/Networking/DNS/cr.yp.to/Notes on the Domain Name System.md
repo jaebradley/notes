@@ -31,7 +31,7 @@ disney.corp NS ns-2.disney.corp
 ## DNS server selection
 * A cache has a query to transmit to the `.com` servers and has a list of addresses for the `.com` servers - which server should it contact first?
 * `dnscache` contacts a random server to balance load as effectively as possible
-* BIND keeps track of round-trip times for queries to each server and sends queries to whichever server has the best scroe
+* BIND keeps track of round-trip times for queries to each server and sends queries to whichever server has the best score
 
 ## The five types of DNS responses
 * When a cache receives a normal DNS response, it learns one of the following things
