@@ -1,17 +1,43 @@
-1 hr of 1080p = 2 GB
-Average video = 2 GB
-1k videos per day = 2 TB
-365 days = \~1 PB
-10 years = 10 PB
-300 M subscribers
-10 M DAU -> 2x at peak (20 M DAU)
-If each watches average of 2 videos = 40 million vides
-40 million videos = 80 million GB = 40 PB / day
+# Netflix System Design Notes
 
-* how do S3 notifications work?
-  * [SNS topics and SQS queues](https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html#supported-notification-event-types) can receive events
-* Use with Kafka / Apache Pulsar?
-  * SQS connector for Kafka/Pulsar
+## Introduction
+The following is my notes for a system design interview that involves building Netflix. [This YouTube video](https://www.youtube.com/watch?v=IUrQ5_g3XKs) was a very helpful resource.
+
+## Back-of-the-envelope calculations
+* 1 hr of 1080p = 2 GB
+  * 1 hr of 4k = ~100 GB
+* Average video = 2 GB
+* 1k videos per day = 2 TB
+* 365 days = \~1 PB
+* 10 years = 10 PB
+* 300 million subscribers in 2026, according to [this report](https://www.demandsage.com/netflix-subscribers/)
+* At any given time, if there are 10 million active users with 2x that at peak (20 million active users)
+* If each user watches average of 2 videos, then we need to support streaming 40 million videos
+* 40 million videos = 80 million GB = 40 PB / day
+
+## Content producer upload process
+* Content producers (i.e. movie or show video editors) upload finalized video content
+* While they can do this in a browser, a GUI (i.e. desktop application) can also provide a useful interface to abstract away the content chunking and storage processing
+* Locally, the video content files are chunked and each chunk is stored in a cloud-based storage solution like Amazon S3
+* S3 supports [`Multipart Uploads`](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html)
+  * [Multipart upload limits](https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html)
+    * Max object size: `~50 TB`
+    * Max parts: `10 k`
+    * Part size range: `5 MB` to `5 GB`
+* The upload part sizes can be optimized for downstream processing and don't need to be optimized for client-specific transcoding (for example, splitting the content into 10 second chunks)
+
+## Video Processing
+
+### SQS
+* [Enable notifications for the ](https://stackoverflow.com/a/38956824)`s3:ObjectCreated:CompleteMultipartUpload`[ event on the target S3 bucket](https://stackoverflow.com/a/38956824)
+  * There are [*not*](https://repost.aws/questions/QUaG8yCHRCRWesKEeH-oeU2A/s3-multipart-upload-event-notifications-for-uploadpart#AN-z61XxtcSbKpfl-u40n7XA)[ notifications for each successfully uploaded part](https://repost.aws/questions/QUaG8yCHRCRWesKEeH-oeU2A/s3-multipart-upload-event-notifications-for-uploadpart#AN-z61XxtcSbKpfl-u40n7XA) in a multipart upload
+* There's an [SQS Source Connector](https://docs.confluent.io/kafka-connectors/sqs/current/overview.html) to ingest SQS messages into Apache Kafka
+
+ ### Kafka / Distributed Log Service
+ * Published log messages indicate that multipart content has been successfully uploaded
+ * This video content needs to be transcoded i.e. converted into multiple file types (like different video resolutions)
+ * We also want the entire video content to be split into 10 second (or so) chunks
+
 * Better solution of adding chunks by resolution in DynamoDB
 * How does S3 chunking work?
   * Range queries to read large S3 file into chunks
@@ -26,7 +52,6 @@ If each watches average of 2 videos = 40 million vides
   * Transcoding 5 MB and then publishing to S3
   * DLQ on transcoding or publication failure
 * How to check if all chunks have been processed? How to handle chunker failures?
-* Roughly how many DAU does Netflix have?
 * How does read-through CDN work? Cloudflare WAF?
   * Cloudfront reads-through
   * Cache headers
