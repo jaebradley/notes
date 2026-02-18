@@ -26,10 +26,18 @@ The following is my notes for a system design interview that involves building N
     * Part size range: `5 MB` to `5 GB`
 * The upload part sizes can be optimized for downstream processing and don't need to be optimized for client-specific transcoding (for example, splitting the content into 10 second chunks)
 
-* how do S3 notifications work?
-  * [SNS topics and SQS queues](https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html#supported-notification-event-types) can receive events
-* Use with Kafka / Apache Pulsar?
-  * SQS connector for Kafka/Pulsar
+## Video Processing
+
+### SQS
+* [Enable notifications for the ](https://stackoverflow.com/a/38956824)`s3:ObjectCreated:CompleteMultipartUpload`[ event on the target S3 bucket](https://stackoverflow.com/a/38956824)
+  * There are [*not*](https://repost.aws/questions/QUaG8yCHRCRWesKEeH-oeU2A/s3-multipart-upload-event-notifications-for-uploadpart#AN-z61XxtcSbKpfl-u40n7XA)[ notifications for each successfully uploaded part](https://repost.aws/questions/QUaG8yCHRCRWesKEeH-oeU2A/s3-multipart-upload-event-notifications-for-uploadpart#AN-z61XxtcSbKpfl-u40n7XA) in a multipart upload
+* There's an [SQS Source Connector](https://docs.confluent.io/kafka-connectors/sqs/current/overview.html) to ingest SQS messages into Apache Kafka
+
+ ### Kafka / Distributed Log Service
+ * Published log messages indicate that multipart content has been successfully uploaded
+ * This video content needs to be transcoded i.e. converted into multiple file types (like different video resolutions)
+ * We also want the entire video content to be split into 10 second (or so) chunks
+
 * Better solution of adding chunks by resolution in DynamoDB
 * How does S3 chunking work?
   * Range queries to read large S3 file into chunks
