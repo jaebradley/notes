@@ -23,12 +23,12 @@
   * This flag is unset when an item is unlink/re-linked or moved
 * The `HOT` LRU acts as a probationary queue, since items are likely to exhibit strong temporal locality / very short TTLs
   * Items are never unlink/re-linked in the `HOT` LRU
-  * Once an item reaches the tail of the queue, it will be moved to the `WARM` LRU if the item is active or the `COLD` LUR if it is inactive
+  * Once an item reaches the tail of the queue, it will be moved to the `WARM` LRU if the item is active or the `COLD` LRU if it is inactive
 * The `WARM` LRU acts as a buffer for scanning workloads, like web crawlers reading old posts
-  * Only items which are requested twice could enter the `WARM` LRU
-  * `WARM` items are given a greater change of living out their TTLs
-  * There is reduced lock contention as the only time an item is unlink/re-linked or moved is if for tail items
-  * Active tail items are unlink/re-linked back to the head of the `WARM` LRU while inactive items are moved to the `COLD` LRU
+  * Only items which are requested twice could ever enter the `WARM` LRU
+  * `WARM` items are given a greater chance of living out their TTLs
+  * There is reduced lock contention as the only tail items are moved
+    * Active tail items are unlink/re-linked back to the head of the `WARM` LRU while inactive items are moved to the `COLD` LRU
 * The `COLD` LRU contains the least active items
   * Inactive items flow from the `HOT` and `WARM` LRUs to the `COLD` LRU
   * Items are evicted from the tail of the `COLD` LRU once memory is full
