@@ -29,3 +29,16 @@
   * `WARM` items are given a greater change of living out their TTLs
   * There is reduced lock contention as the only time an item is unlink/re-linked or moved is if for tail items
   * Active tail items are unlink/re-linked back to the head of the `WARM` LRU while inactive items are moved to the `COLD` LRU
+* The `COLD` LRU contains the least active items
+  * Inactive items flow from the `HOT` and `WARM` LRUs to the `COLD` LRU
+  * Items are evicted from the tail of the `COLD` LRU once memory is full
+  * If an item becomes active, it will be queued up to asynchronously move to the `WARM` LRU
+  * If there is a burst of item hits to the `COLD` LRU, this queue will overflow and items will remain inactive
+* The `TEMP` LRU acts as a queue for new items and has a short TTL
+  * Items in `TEMP` are never unlinked/re-linked, never flow to other LRUs
+  * The `TEMP` LRU is disabled by default
+  * Designed to save CPU and lock contention
+* `HOT` and `WARM` LRUs are limited in size primarily by % of memory used
+* `COLD` and `TEMP` LRUs are not similarly limited in size
+* `HOT` and `WARM` LRUs also have a secondary tail age limit, relative to the age of the `tail` of the `COLD` LRU
+  * Prevents very idel items from persisting in the active queues needlessly
