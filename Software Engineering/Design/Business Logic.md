@@ -30,3 +30,13 @@
 * If you cannot change an employee ID for an agent after the agent has been created, that’s another business rule
 * "True" OOP = Objects do **only* *one thing
 * `CallRegisterer` has a public method `RegisterCall(Call, Agent)` and it depends on an `AgentsRegistry` and a `CallQueueRegistry`
+
+## [What exactly does "Business Logic" mean in software engineering?](https://www.reddit.com/r/AskProgramming/comments/1mysti5/what_exactly_does_business_logic_mean_in_software/)
+* Business logic is rules like "the bank account can never be negative" or "age cannot be negative"
+* Validation logic may exist in the domain layer
+* One definition of "business logic" is really "imperative business logic" which is logic that defines what things are
+  * Another definition of business logic might also include "how things are done", which would be put in the application layer
+* Another [commenter's mental model of business logic](https://www.reddit.com/r/AskProgramming/comments/1mysti5/comment/nap61ko/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) is that business logic is the rules the business would actually argue about in a meeting (like a bank account not going negative)
+* Another commenter said that business logic is everything that isn't code to display the data, store, or retrieve the data
+* The business probably doesn't (really) care if a UUID or an auto-incrementing ID is used as a database primary key for a table
+  * The business probably *does* care that there are records that are stored with very specific fields
