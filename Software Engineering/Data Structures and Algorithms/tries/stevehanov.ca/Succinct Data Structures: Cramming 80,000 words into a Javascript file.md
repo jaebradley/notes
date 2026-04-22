@@ -16,3 +16,9 @@
 * Nodes are encoded with a `1` for each child, and then this encoding is terminated with a `0`
 * A node with five children is encoded `111110`
 * A leaf node is encoded `0`
+* Then encode the data (in the case of a trie, the letter) for each node in a separate data array
+* Example: `10 1110 10 110 0 10 0 0 0` is the encoded bits that represent the trie's node structure
+  * And then `h i a a t s t` represent the node values
+  * The letter at each index matches with the non-sentinel node index
+* For a node `n`, the number of its first child is `select(n + 1)`
+  * The second child is `select(n + 2)`, etc
