@@ -52,7 +52,7 @@ class AuthProgram {
                 useDigest()
             if(authStrategy == "openid")
                 useOpenID()
-            if(authStrategy == "oauth")
+            if(authStrategy == "OAuth")
                 useOAuth()
         }
     }
