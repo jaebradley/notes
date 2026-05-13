@@ -1,0 +1,40 @@
+# [Learning Software Architecture](https://news.ycombinator.com/item?id=48106024)
+- Good design is a single idea pervaded throughout.
+- More generally, your goal should be to minimize surprise.
+- If your system allows it, people will do it.
+- Everyone will not just. 
+  - If your solution starts with "if everyone will just..." then you don't have a solution.
+- Isolate the parts of your system that transform data from the ones that use it. Data models outlive code.
+- Coupling is the root of most evil.
+- Versioning is inevitable.
+- Make state explicit.
+- Every piece of information should have a single source of truth.
+- You should spend more time thinking about naming things correctly.
+- If testing is difficult, the design is wrong.
+- You will regret every undocumented decision.
+- Communication is a tax that you should justify before paying it.
+- The ultimate goal of software is to solve the immediate problem at hand. 
+  - The secondary goal of software is to solve likely future problems with as little work as possible. 
+  - Any bad design which is better on those goals than a good design is actually a good design.
+- Make your interfaces easy to use correctly and hard to misuse. 
+  - Think of how people unfamiliar to the project will interact with them, make the obvious way be the correct way.
+- Correct code should be easy to write; suspicious code should stand out.
+- Fixing a bug class is better than fixing a bug.
+- Interfaces are harder to change than implementations. 
+  - An ugly implementation is ok if it has the correct interface.
+- Use comments and documentation to explain why the code is the way it is. 
+  - If it feels like there's a simpler way to do it, but that simpler way wouldn't actually work due to a constraint some people may be unaware of, document that.
+- Don't repeat yourself when it comes to data. 
+  - If you store a single fact in multiple places; those places will inevitably get out of sync, and that causes bugs.
+- There's a cost to straying off the well-trodden path. Don't be afraid to do so when it's truly worth it, but don't underestimate that cost. 
+  - Worse (boring) technology is often better technology.
+- Think in terms of expected value. Switch thinking from "Is this thing worth doing?" to "Is this thing worth doing, compared to the other things we could be doing instead?"
+- Even if you think you're smarter than everybody else, intelligence isn't always enough - some problems can't be discovered until they happen. 
+  - Other people have worked longer on this problem than you have - learn from their mistakes.
+- Friction is the silent killer.
+- Everything costs money. Designing without costs in mind will force hard choices down the line
+- Code lives longer than you expect. 
+  - You forget sooner than you expect. 
+  - Make a readme/architecture overview/theory of operation document. 
+  - Put more in it than you think is needed. 
+  - Check it in with the code.
