@@ -34,7 +34,11 @@
   * So `Access-Control-Allow-Methods: POST`, `Access-Control-Allow-Headers: Content-Type`, `Access-Control-Allow-Origin: https://google.com` means that requests to `POST /greet` with the header `Content-Type: application/json` from the origin `https://www.google.com` are accepted
 
 ## Free for all
-
-## Keeping it in the family
+* A fully public-facing website should be able to set `Access-Control-Allow-Origin: *` for its resources
+* Need to be careful when setting `Access-Control-Allow-Origin: *` on a VPN
+  * If an attacker hosts some website `dangerous.com` which contains a link to a file within the VPN, they could create a script on `dangerous.com` that can access that file (assuming the victim is on the VPN at the time of the attack)
 
 ## Skip cookies, if you can
+* `Access-Control-Allow-Credentials: true` will tell browsers that they are allowed to send credentials (cookies) in cross-origin requests
+* Only works when the server knows exactly which clients will be accessing the server
+* CORS semantics do not allow setting `Access-Control-Allow-Origin: *` when cross-origin credentials are allowed
