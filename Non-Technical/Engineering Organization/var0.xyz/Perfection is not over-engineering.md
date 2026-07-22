@@ -1,5 +1,5 @@
 # [Perfection is not over-engineering](https://var0.xyz/posts/perfection-is-not-over-engineering.html)
-* Author contends that ovver-engineering is solving the wrong problem, not solving the right problem too well
+* Author contends that "over-engineering" is solving the wrong problem, not solving the right problem too well
 * Answers to "why are things built the way they are?" are telling when understanding if/why certain systems were over-engineered
 
 ## [HackerNews Discussion](https://news.ycombinator.com/item?id=48979120)
