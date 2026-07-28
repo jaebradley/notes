@@ -8,4 +8,5 @@
 
   ## Implementing the Domain Model Pattern
   * A domain model encapsulates both data and behavior in the same objects and are where business invariants live and are consistently enforced
-  * 
+  * Refactored examples now have `Money` and `BankAccount` records that support behavior like `Add`ing and `Subtract`ing
+  * There is a `TransferMoneyHandler` class that is the "application" layer and handles orchestration only i.e. committing data to a database
