@@ -24,3 +24,11 @@
   * Based on a fixed dictionary of 25,000 items, and a bit table size of 400k bits (due to limited RAM), they used 11 hash functions to achieve this false positive rate
 * However, they kept finding words to add to the dictionary, so the dictionary size kept increasing (went from 25,000 to 30,000)
   * A bigger dictionary required a larger bit table, which was not possible from a memory perspective
+
+## Compressed Hashing Scheme for Dictionary Lookups
+* Stored the _hashes_ of the words in a hash table
+* While individual words can vary in length, the hash function should compress these words into a fixed number of bits
+* In order to handle hash collisions, the hash code needs to be long enough to support the minimum acceptable collision tolerance
+* A hash code of size `b` bits has a total hash code space of `2 ^ b` hash codes
+* If the size of the dictionary is `V`, then the probability of a hash collision is `V / (2 ^ b)`
+* Given that a collision rate of `1/(2 ^ 12)` was acceptable, a hash code size of `27` bits is needed
