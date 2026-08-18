@@ -32,3 +32,14 @@
 * A hash code of size `b` bits has a total hash code space of `2 ^ b` hash codes
 * If the size of the dictionary is `V`, then the probability of a hash collision is `V / (2 ^ b)`
 * Given that a collision rate of `1/(2 ^ 12)` was acceptable, a hash code size of `27` bits is needed
+
+## The Theoretical Minimum Limit of Hash Code Compression
+* The probability of an event and the bits needed to encode it are related
+* A 100% probable event needs no information to be stored (i.e. 0 bits are necessary to encode it)
+* Given some math, and given a dictionary size of `30,000` words the minimum number of bits needed to encode a single hash code is `~14` bits, which is `~50%` less than the original `27` bit hash code
+
+## Delta-Based Compression Scheme
+* Instead of compressing raw hash codes, they computed and stored differences between successive hash codes, stored in sorted order
+* By working with hash differences, the differences were smaller than the raw hash codes, and thus, more memory efficient
+  * Difference values would repeat leading to more effective compression
+* Finding a hash code meant starting with the first hash code, and then adding each of the differences until the matching hash code was identified
