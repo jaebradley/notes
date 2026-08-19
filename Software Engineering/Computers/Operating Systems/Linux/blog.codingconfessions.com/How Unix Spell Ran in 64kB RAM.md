@@ -43,3 +43,25 @@
 * By working with hash differences, the differences were smaller than the raw hash codes, and thus, more memory efficient
   * Difference values would repeat leading to more effective compression
 * Finding a hash code meant starting with the first hash code, and then adding each of the differences until the matching hash code was identified
+* One of the basic principles behind lossless compression is to assign shorter codes to symbols with higher probabilities and longer codes to symbols with lower probabilities
+  * Requires computing the probability distribution of all the symbols in the data set
+* Holding a probability distribution table for 30k symbols in memory would eliminate any compression advantage from this hash-based approach
+* Computing the hash difference probabilities would not have been possible to do in-memory, so an expensive disk-based solution would have been necessary to compute these probabilities
+
+## Encoding Algorithm
+* Hash difference values follow a pattern of exponential decay
+* Segment the hash difference values into blocks of size `m`
+* Each value within a block is assigned a code of `k` bits
+* The next block gets codes of size `k + 1` bits
+* The minimum number of bits required to encode the outcome of an event is calculated by its information content - `-log (probability of an event)`
+* If the event has a `1/2` probability, it needs a `1` bit code, an event with probability `1/4` needs `2` bits, etc
+
+### Example
+* The block size is `5` and the codes in the first block are `4` bits wide (starting `k` is `4`)
+* First code in the first block is `0110`
+* Next four block codes are `0111`, `1000`, `1001`, `1010`
+* The next block (block `2`) would naturally start at `1011` (`1` + the last code in block 1 (`1010`))
+* However, since this code is in the next block, its bit width needs to be `1` bit larger
+* So left bit shift `1011` to `10110`
+* Note that the last `4` bits of `10110` are the same as the first code in the first block (`0110`)
+
