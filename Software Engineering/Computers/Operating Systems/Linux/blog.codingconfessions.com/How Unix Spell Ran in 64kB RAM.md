@@ -74,7 +74,7 @@
 * Can solve for `k` to get the code width of the first block
 * Can also solve for `x`
 
-## Back to the Encoding Algorithm
+### Back to the Encoding Algorithm
 ```python
 def encode(value):
     # Case 1: Values less than x
@@ -102,3 +102,19 @@ def encode(value):
     code = ((y-1) << k) + (x*2) + value
     return code, length
 ```
+
+## The Decoding Algorithm
+* Look at the top `k-1` bits
+* If the value represented by these bits is less than `x`, then the decoded value is the value represented by the `k-1` bits
+* If the value represented by these bits is >= `x`
+  * Then include one more bit in this value
+  * Look at the least significant `k` bits
+  * If the value represented by these `k` bits is < `2x + m`
+    * then the decoded value is `x + value represented by k bits + ((# of extra bits that are in the top k - 1 bits) - 1) * m`
+    * otherwise keep including more bits until the `k` least significant bits is < `2x + m`
+
+## Efficiency
+* These codes managed to achieve an expected code length of `13.6` bits which is very close to the theoretical compression limit of `13.57`
+* Runtime performance was slow because to lookup a value, the dictionary needed to be decoded starting from the beginning of the dictionary
+* Partitioning was added to split this table of differences into `M` bins so that the correct bin was located first, and then scanned
+  * Partitioning required storing additional pointers to each bin, adding `log M` bits per word
