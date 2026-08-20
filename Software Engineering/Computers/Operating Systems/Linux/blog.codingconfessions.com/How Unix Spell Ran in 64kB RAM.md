@@ -65,3 +65,40 @@
 * So left bit shift `1011` to `10110`
 * Note that the last `4` bits of `10110` are the same as the first code in the first block (`0110`)
 
+### Bit Width of the Codes
+* Assume the first encoded value in the first block is `2x`
+* First code of the second block _should be_ `2x + m`
+  * Because codes in the next block need to be `1` bit wider, the value gets shifted to the left by `1` bit
+  * Left shifting a value by `1` bit doubles it, so the value is `2(2x + m)`
+  * `2(2x + m)` is also the same as `2^k + 2x` since adding a bit at the `k`th position from the right is equivalent to adding `2^k`
+* Can solve for `k` to get the code width of the first block
+* Can also solve for `x`
+
+## Back to the Encoding Algorithm
+```python
+def encode(value):
+    # Case 1: Values less than x
+    # These get shorter codes of length k-1
+    # Because we have unused bit patterns available
+    if value < x:
+        return value, k-1  # return (code, length)
+    
+    # Case 2: Values >= x
+    # Need to find which block they belong to
+    value = value - x     # adjust relative to first code
+    y = 1                 # tracks block number through bit shifts
+    length = k           # start with k bits
+    
+    # Find block by repeatedly subtracting block size
+    while value >= m:    # m is block size
+        value -= m       # move to next block
+        y = y << 1      # add padding bit for next block
+        length += 1     # each block needs one more bit
+    
+    # Generate final code:
+    # (y-1) << k creates padding bits based on block number
+    # x*2 adds offset for the first code
+    # value adds position within current block
+    code = ((y-1) << k) + (x*2) + value
+    return code, length
+```
