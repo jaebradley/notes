@@ -6,4 +6,3 @@
   * However, if these conditions change, the existing implementation path will break
 * Another [commenter](https://news.ycombinator.com/item?id=50444086) points out that code quality is not an issue, until it is
   * Everyone is happy while it is working, but then when symptoms arise, (broken functionality or even an increase in token usage due to an unnecessarily complex codebase) that's when people start caring
-  * 
