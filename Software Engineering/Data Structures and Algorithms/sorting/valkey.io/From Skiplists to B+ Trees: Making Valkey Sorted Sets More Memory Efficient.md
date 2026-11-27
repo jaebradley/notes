@@ -1,6 +1,6 @@
 # [From Skiplists to B+ Trees: Making Valkey Sorted Sets More Memory Efficient](https://valkey.io/blog/from-skiplist-to-b+tree/)
 * Large sorted sets are backed by a skiplist paired with a hashtable
-* Hashtable gives O(1) lookup times while the skiplists give O(log n) ordered lookup times by rank/score
+* Hashtable gives `O(1)` lookup times while the skiplists give `O(log n)` ordered lookup times by rank/score
 * Skiplist stores one element per node, scattering memory that are all connected by pointers
 
 ## Memory Overhead
@@ -11,7 +11,7 @@
 * Total is ~`37 bytes` per node before accounting for the node's value
 
 ## Cache misses and dependent fetches
-* L1 cache hit takes ~1 ns vs. DRAM access can take ~100ns
+* L1 cache hit takes ~`1 ns` vs. DRAM access can take ~`100ns`
 * Each skiplist node is a separate allocation, with memory scattered across the heap
   * This means iterating over the nodes in a skiplist can repeatedly fetching data from unrelated memory locations
   * Traditional skiplists experience 2.5-5x more cache misses than comparable B-trees
